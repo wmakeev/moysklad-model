@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0">  
+  <xs:element name="accumulationDiscount" type="accumulationDiscount"/>  
   <xs:element name="agent" type="agent"/>  
+  <xs:element name="agentDiscount" type="agentDiscount"/>  
   <xs:element name="agentPictureDocument" type="agentPictureDocument"/>  
   <xs:element name="amiroConnectorSettings" type="amiroConnectorSettings"/>  
   <xs:element name="attachmentDocument" type="attachmentDocument"/>  
@@ -25,6 +27,7 @@
   <xs:element name="customEntityMetadata" type="customEntityMetadata"/>  
   <xs:element name="customerOrder" type="customerOrder"/>  
   <xs:element name="demand" type="demand"/>  
+  <xs:element name="discount" type="discount"/>  
   <xs:element name="document" type="document"/>  
   <xs:element name="documentMiniature" type="documentMiniature"/>  
   <xs:element name="embeddedEntityMetadata" type="embeddedEntityMetadata"/>  
@@ -51,6 +54,7 @@
   <xs:element name="operationDocument" type="operationDocument"/>  
   <xs:element name="paymentIn" type="paymentIn"/>  
   <xs:element name="paymentOut" type="paymentOut"/>  
+  <xs:element name="personalDiscount" type="personalDiscount"/>  
   <xs:element name="priceList" type="priceList"/>  
   <xs:element name="priceType" type="priceType"/>  
   <xs:element name="processing" type="processing"/>  
@@ -70,6 +74,7 @@
   <xs:element name="salesReturn" type="salesReturn"/>  
   <xs:element name="service" type="service"/>  
   <xs:element name="slot" type="slot"/>  
+  <xs:element name="specialPriceDiscount" type="specialPriceDiscount"/>  
   <xs:element name="supply" type="supply"/>  
   <xs:element name="template" type="template"/>  
   <xs:element name="thing" type="thing"/>  
@@ -110,6 +115,7 @@
           <xs:element maxOccurs="unbounded" minOccurs="0" name="attribute" type="goodAttributeValue"/>
         </xs:sequence>
         <xs:attribute name="archived" type="xs:boolean" use="required"/>
+        <xs:attribute name="atolId" type="xs:int"/>
         <xs:attribute name="parentUuid" type="xs:IDREF"/>
         <xs:attribute name="productCode" type="xs:string"/>
         <xs:attribute name="vat" type="xs:long"/>
@@ -207,10 +213,7 @@
             </xs:complexType>
           </xs:element>
         </xs:sequence>
-        <xs:attribute name="discount" type="xs:double" use="required"/>
-        <xs:attribute name="autoDiscount" type="xs:double" use="required"/>
         <xs:attribute name="discountCardNumber" type="xs:string"/>
-        <xs:attribute name="discountCorrection" type="xs:double" use="required"/>
         <xs:attribute name="stateUuid" type="xs:IDREF"/>
         <xs:attribute name="priceTypeUuid" type="xs:IDREF"/>
         <xs:attribute name="archived" type="xs:boolean" use="required"/>
@@ -254,6 +257,7 @@
     <xs:complexContent>
       <xs:extension base="legendEntity">
         <xs:sequence/>
+        <xs:attribute name="atolId" type="xs:int"/>
         <xs:attribute name="attrType" type="attributeType"/>
         <xs:attribute name="dictionaryMetadataUuid" type="xs:IDREF"/>
         <xs:attribute name="entityMetadataUuid" type="xs:IDREF" use="required"/>
@@ -432,6 +436,7 @@
         <xs:attribute name="archived" type="xs:boolean" use="required"/>
         <xs:attribute name="isDefault" type="xs:boolean" use="required"/>
         <xs:attribute name="goodUuid" type="xs:IDREF" use="required"/>
+        <xs:attribute name="atolId" type="xs:int"/>
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>  
@@ -439,6 +444,7 @@
     <xs:complexContent>
       <xs:extension base="attributeValue">
         <xs:sequence/>
+        <xs:attribute name="atolId" type="xs:int"/>
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>  
@@ -551,6 +557,7 @@
           <xs:element maxOccurs="unbounded" minOccurs="0" name="attribute" type="employeeAttributeValue"/>
         </xs:sequence>
         <xs:attribute name="archived" type="xs:boolean" use="required"/>
+        <xs:attribute name="atolId" type="xs:int"/>
         <xs:attribute name="city" type="xs:string"/>
         <xs:attribute name="email" type="xs:string"/>
         <xs:attribute name="fax" type="xs:string"/>
@@ -641,11 +648,6 @@
         <xs:attribute name="value" type="xs:double"/>
       </xs:extension>
     </xs:complexContent>
-  </xs:complexType>  
-  <xs:complexType name="collectionContainer">
-    <xs:sequence>
-      <xs:any maxOccurs="unbounded" minOccurs="0" namespace="##other" processContents="lax"/>
-    </xs:sequence>
   </xs:complexType>  
   <xs:complexType name="exchangeContainer">
     <xs:sequence>
@@ -1540,6 +1542,8 @@
         <xs:attribute name="acquireAccountUuid" type="xs:IDREF"/>
         <xs:attribute name="active" type="xs:boolean"/>
         <xs:attribute name="address" type="xs:string"/>
+        <xs:attribute name="atolDeviceId" type="xs:string"/>
+        <xs:attribute name="atolId" type="xs:int"/>
         <xs:attribute name="controlCashierChoice" type="xs:boolean" use="required"/>
         <xs:attribute name="controlShippingStock" type="xs:boolean" use="required"/>
         <xs:attribute name="demandPrefix" type="xs:string"/>
@@ -1681,9 +1685,11 @@
     <xs:complexContent>
       <xs:extension base="stockOperation">
         <xs:sequence>
+          <xs:element minOccurs="0" name="overhead" type="moneyAmount"/>
           <xs:element maxOccurs="unbounded" minOccurs="0" name="movePosition" type="movePosition"/>
         </xs:sequence>
         <xs:attribute name="internalOrderUuid" type="xs:IDREF"/>
+        <xs:attribute name="overheadDistribution" type="overheadDistribution"/>
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>  
@@ -1691,6 +1697,7 @@
     <xs:complexContent>
       <xs:extension base="stockMotion">
         <xs:sequence/>
+        <xs:attribute name="overhead" type="xs:double" use="required"/>
         <xs:attribute name="sourceSlotUuid" type="xs:IDREF"/>
       </xs:extension>
     </xs:complexContent>
@@ -1771,9 +1778,11 @@
     <xs:complexContent>
       <xs:extension base="comingInOperation">
         <xs:sequence>
+          <xs:element minOccurs="0" name="overhead" type="moneyAmount"/>
           <xs:element maxOccurs="unbounded" minOccurs="0" name="enterPosition" type="enterPosition"/>
         </xs:sequence>
         <xs:attribute name="inventoryUuid" type="xs:IDREF"/>
+        <xs:attribute name="overheadDistribution" type="overheadDistribution"/>
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>  
@@ -1789,6 +1798,7 @@
             </xs:complexType>
           </xs:element>
         </xs:sequence>
+        <xs:attribute name="overhead" type="xs:double" use="required"/>
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>  
@@ -1948,6 +1958,7 @@
           </xs:element>
         </xs:sequence>
         <xs:attribute name="isSerialTrackable" type="xs:boolean" use="required"/>
+        <xs:attribute name="soldByWeight" type="xs:boolean" use="required"/>
         <xs:attribute name="minimumBalance" type="xs:double"/>
         <xs:attribute name="weight" type="xs:double" use="required"/>
         <xs:attribute name="volume" type="xs:double" use="required"/>
@@ -2166,6 +2177,7 @@
     <xs:complexContent>
       <xs:extension base="abstractDemand">
         <xs:sequence>
+          <xs:element minOccurs="0" name="noCashSum" type="moneyAmount"/>
           <xs:element minOccurs="0" name="salesReturnsUuid">
             <xs:complexType>
               <xs:sequence>
@@ -2174,14 +2186,16 @@
             </xs:complexType>
           </xs:element>
         </xs:sequence>
-        <xs:attribute name="nonCash" type="xs:boolean" use="required"/>
+        <xs:attribute name="nonCash" type="xs:boolean"/>
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>  
   <xs:complexType name="retailSalesReturn">
     <xs:complexContent>
       <xs:extension base="abstractSalesReturn">
-        <xs:sequence/>
+        <xs:sequence>
+          <xs:element minOccurs="0" name="noCashSum" type="moneyAmount"/>
+        </xs:sequence>
         <xs:attribute name="demandUuid" type="xs:IDREF"/>
       </xs:extension>
     </xs:complexContent>
@@ -2336,6 +2350,53 @@
         <xs:attribute name="retailStoreUuid" type="xs:IDREF"/>
       </xs:extension>
     </xs:complexContent>
+  </xs:complexType>  
+  <xs:complexType name="agentDiscount">
+    <xs:complexContent>
+      <xs:extension base="entity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="demandSumCorrection" type="xs:double"/>
+          <xs:element minOccurs="0" name="personalDiscount" type="xs:double"/>
+        </xs:sequence>
+        <xs:attribute name="agentUuid" type="xs:IDREF" use="required"/>
+        <xs:attribute name="discountUuid" type="xs:IDREF" use="required"/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>  
+  <xs:complexType abstract="true" name="discount">
+    <xs:complexContent>
+      <xs:extension base="entity">
+        <xs:sequence/>
+        <xs:attribute name="name" type="xs:string"/>
+        <xs:attribute name="active" type="xs:boolean" use="required"/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>  
+  <xs:complexType name="personalDiscount">
+    <xs:complexContent>
+      <xs:extension base="discount">
+        <xs:sequence/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>  
+  <xs:complexType name="accumulationDiscount">
+    <xs:complexContent>
+      <xs:extension base="discount">
+        <xs:sequence/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>  
+  <xs:complexType name="specialPriceDiscount">
+    <xs:complexContent>
+      <xs:extension base="discount">
+        <xs:sequence/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>  
+  <xs:complexType name="collectionContainer">
+    <xs:sequence>
+      <xs:any maxOccurs="unbounded" minOccurs="0" namespace="##other" processContents="lax"/>
+    </xs:sequence>
   </xs:complexType>  
   <xs:complexType name="group">
     <xs:sequence>
