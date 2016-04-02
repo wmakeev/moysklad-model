@@ -11,14 +11,14 @@ moysklad-model
 
 1. Загрузить последнюю версию XSD МойСклад
 
-```bash
-$ node MOYSKLAD_LOGIN={login} MOYSKLAD_PASSWORD={password} ./src/update-xsd.js
-```
+  ```bash
+  $ node MOYSKLAD_LOGIN={login} MOYSKLAD_PASSWORD={password} ./src/update-xsd.js
+  ```
 
 2. Сгенерировать модель
 
-```bash
-$ npm run generate
-```
+  ```bash
+  $ npm run generate
+  ```
 
 Сгенерированная модель находится в папке `dist`
