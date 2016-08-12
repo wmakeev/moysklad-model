@@ -1,11 +1,13 @@
 {
   "name": "moysklad-model",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "description": "Объектная модель REST API сервиса МойСклад",
   "main": "index.js",
   "scripts": {
     "test": "npm test",
-    "generate": "node ./src/generate"
+    "update": "node ./src/update-xsd",
+    "generate": "node ./src/generate",
+    "regenerate": "npm run update && npm run generate"
   },
   "repository": {
     "type": "git",
@@ -26,6 +28,10 @@
   },
   "homepage": "https://github.com/wmakeev/moysklad-model#readme",
   "devDependencies": {
+    "debug": "^2.2.0",
+    "dotenv": "^2.0.0",
+    "json-stable-stringify": "^1.0.1",
+    "jsondiffpatch": "^0.1.43",
     "moysklad-model-generator": "~0.1.0"
   }
 }

@@ -7,18 +7,30 @@ moysklad-model
 
 Модель предназначена для описания преобразований сущностей возращаемых REST API сервиса МойСклад из XML в JSON и обратно.
 
+# Установка
+
+```
+$ npm install moysklad-model
+```
+
 # Обновление модели
 
-1. Загрузить последнюю версию XSD МойСклад
+Заполнить логин и пароль в файл `.env` (в корне проекта) для получения последней версии [MOYsklad.xsd](https://online.moysklad.ru/exchange/schema/MOYsklad.xsd)
 
-  ```bash
-  $ node MOYSKLAD_LOGIN={login} MOYSKLAD_PASSWORD={password} ./src/update-xsd.js
-  ```
+```
+// .env
+# Логин и пароль для вашего аккаунта МойСклад (необходим для получения схемы данных)
+MOYSKLAD_LOGIN={login}
+MOYSKLAD_PASSWORD={password}
 
-2. Сгенерировать модель
+# Для включения информационных сообщений при генерации модели
+DEBUG=moysklad-model
+```
 
-  ```bash
-  $ npm run generate
-  ```
+обновить модель
 
-Сгенерированная модель находится в папке `dist`
+```bash
+$ npm run regenerate
+```
+
+Если схема данных изменилась, будут отображены изменения и файлы модели в папке `dist` обновятся.

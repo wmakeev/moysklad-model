@@ -1,3 +1,7 @@
+try {
+  require('dotenv').config()
+} catch (e) {}
+
 var https = require('https')
 var fs = require('fs')
 var path = require('path')
