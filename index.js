@@ -1,1 +1,1 @@
-module.exports = require('./dist/moysklad-model')
+module.exports = require('./dist/moysklad-model.min')
