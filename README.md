@@ -3,19 +3,17 @@ moysklad-model
 
 [![npm](https://img.shields.io/npm/v/moysklad-model.svg?maxAge=2592000&style=flat-square)](https://www.npmjs.com/package/moysklad-model)
 
-Объектная модель сервиса МойСклад
-
-# Описание
+> Объектная модель сервиса МойСклад
 
 Модель предназначена для описания преобразований сущностей возращаемых REST API сервиса МойСклад из XML в JSON и обратно.
 
-# Установка
+## Установка
 
 ```
 $ npm install moysklad-model
 ```
 
-# Обновление модели
+## Обновление модели
 
 Заполнить логин и пароль в файл `.env` (в корне проекта) для получения последней версии [MOYsklad.xsd](https://online.moysklad.ru/exchange/schema/MOYsklad.xsd)
 
