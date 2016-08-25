@@ -6,7 +6,6 @@ var fs = require('fs')
 var util = require('util')
 var path = require('path')
 var log = require('debug')('moysklad-model')
-var stringify = require('json-stable-stringify')
 var jsonDiffFormat = require('jsondiffpatch').formatters.console.format
 var diffPatch = require('./diff-patch')
 var generateModel = require('./generate-model')
@@ -29,19 +28,19 @@ generateModel(function (err, model) {
   fs.writeFileSync(
     path.resolve(__dirname,
       util.format('../dist/diffs/model-update-diff-%s.json', +(new Date))),
-    stringify(diff, { space: 2 }))
+    JSON.stringify(diff, null, 2))
 
   log('Изменения в модели:', jsonDiffFormat(diff))
 
   // min версия
   fs.writeFileSync(
     path.resolve(__dirname, '../dist/moysklad-model.min.json'),
-    stringify(model))
+    JSON.stringify(model))
 
   // beautified version
   fs.writeFileSync(
     path.resolve(__dirname, '../dist/moysklad-model.json'),
-    stringify(model, { space: 2 }))
+    JSON.stringify(model, null, 2))
 
   log('Модель обновлена')
 })

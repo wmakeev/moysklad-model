@@ -1,0 +1,6425 @@
+{
+  "elementInfos": {
+    "_t": "a",
+    "_82": [
+      "",
+      81,
+      3
+    ],
+    "_83": [
+      "",
+      44,
+      3
+    ],
+    "_84": [
+      "",
+      33,
+      3
+    ]
+  },
+  "typeInfos": {
+    "0": {
+      "localName": [
+        "paymentIn",
+        "abstractCashIn"
+      ]
+    },
+    "1": {
+      "localName": [
+        "paymentOut",
+        "abstractCashOut"
+      ]
+    },
+    "2": {
+      "localName": [
+        "predefinedLegendEntity",
+        "abstractConnectorSetting"
+      ],
+      "propertyInfos": {
+        "0": {
+          "name": [
+            "favourite",
+            "active"
+          ]
+        },
+        "1": [
+          {
+            "name": "login",
+            "type": "attribute",
+            "typeInfo": "String"
+          }
+        ],
+        "2": [
+          {
+            "name": "organizationUuid",
+            "type": "attribute",
+            "typeInfo": "String"
+          }
+        ],
+        "3": [
+          {
+            "name": "password",
+            "type": "attribute",
+            "typeInfo": "String"
+          }
+        ],
+        "4": [
+          {
+            "name": "pollPeriod",
+            "type": "attribute",
+            "typeInfo": "Int"
+          }
+        ],
+        "_t": "a"
+      }
+    },
+    "4": {
+      "propertyInfos": {
+        "1": {
+          "name": [
+            "uomUuid",
+            "buyCurrencyUuid"
+          ]
+        },
+        "2": {
+          "name": [
+            "countryUuid",
+            "buyPrice"
+          ],
+          "typeInfo": [
+            "String",
+            "Double"
+          ]
+        },
+        "3": {
+          "name": [
+            "supplierUuid",
+            "countryUuid"
+          ]
+        },
+        "5": {
+          "name": [
+            "salePrice",
+            "saleCurrencyUuid"
+          ],
+          "typeInfo": [
+            "Double",
+            "String"
+          ]
+        },
+        "6": {
+          "name": [
+            "saleCurrencyUuid",
+            "salePrice"
+          ],
+          "typeInfo": [
+            "String",
+            "Double"
+          ]
+        },
+        "8": {
+          "name": [
+            "buyCurrencyUuid",
+            "supplierUuid"
+          ]
+        },
+        "9": {
+          "name": [
+            "buyPrice",
+            "uomUuid"
+          ],
+          "typeInfo": [
+            "Double",
+            "String"
+          ]
+        },
+        "_t": "a",
+        "_8": [
+          "",
+          7,
+          3
+        ],
+        "_9": [
+          "",
+          0,
+          3
+        ]
+      }
+    },
+    "5": {
+      "localName": [
+        "supply",
+        "abstractSalesReturn"
+      ],
+      "propertyInfos": {
+        "0": [
+          {
+            "collection": true,
+            "elementName": "lossRef",
+            "name": "lossesUuid",
+            "type": "element",
+            "typeInfo": "String",
+            "wrapperElementName": "lossesUuid"
+          }
+        ],
+        "2": {
+          "name": [
+            "shipmentIn",
+            "salesReturnPosition"
+          ],
+          "typeInfo": [
+            "moysklad.shipmentIn",
+            "moysklad.salesReturnPosition"
+          ]
+        },
+        "_t": "a",
+        "_0": [
+          {
+            "name": "factureInUuid",
+            "type": "attribute",
+            "typeInfo": "String"
+          },
+          0,
+          0
+        ],
+        "_1": [
+          {
+            "name": "incomingDate",
+            "type": "attribute",
+            "typeInfo": "DateTime"
+          },
+          0,
+          0
+        ],
+        "_2": [
+          {
+            "name": "incomingNumber",
+            "type": "attribute",
+            "typeInfo": "String"
+          },
+          0,
+          0
+        ],
+        "_3": [
+          {
+            "name": "overheadDistribution",
+            "type": "attribute",
+            "typeInfo": "String"
+          },
+          0,
+          0
+        ],
+        "_4": [
+          {
+            "name": "purchaseOrderUuid",
+            "type": "attribute",
+            "typeInfo": "String"
+          },
+          0,
+          0
+        ],
+        "_5": [
+          {
+            "collection": true,
+            "elementName": "invoiceInRef",
+            "name": "invoicesInUuid",
+            "type": "element",
+            "typeInfo": "String",
+            "wrapperElementName": "invoicesInUuid"
+          },
+          0,
+          0
+        ],
+        "_6": [
+          {
+            "name": "overhead",
+            "type": "element",
+            "typeInfo": "moysklad.moneyAmount"
+          },
+          0,
+          0
+        ],
+        "_9": [
+          {
+            "collection": true,
+            "elementName": "purchaseReturnRef",
+            "name": "purchaseReturnsUuid",
+            "type": "element",
+            "typeInfo": "String",
+            "wrapperElementName": "purchaseReturnsUuid"
+          },
+          0,
+          0
+        ]
+      }
+    },
+    "7": {
+      "propertyInfos": {
+        "0": {
+          "name": [
+            "accountUuid",
+            "accountId"
+          ]
+        },
+        "1": {
+          "name": [
+            "accountId",
+            "accountUuid"
+          ]
+        },
+        "_t": "a"
+      }
+    },
+    "9": {
+      "localName": [
+        "classifier",
+        "agent"
+      ],
+      "propertyInfos": {
+        "0": [
+          {
+            "name": "archived",
+            "type": "attribute",
+            "typeInfo": "Boolean"
+          }
+        ],
+        "1": [
+          {
+            "name": "created",
+            "type": "attribute",
+            "typeInfo": "DateTime"
+          }
+        ],
+        "_t": "a"
+      }
+    },
+    "12": {
+      "localName": [
+        "barcode",
+        "agentDiscount"
+      ],
+      "propertyInfos": {
+        "0": {
+          "name": [
+            "barcode",
+            "agentUuid"
+          ]
+        },
+        "1": [
+          {
+            "name": "demandSumCorrection",
+            "type": "element",
+            "typeInfo": "Double"
+          }
+        ],
+        "2": {
+          "name": [
+            "barcodeType",
+            "discountUuid"
+          ]
+        },
+        "3": [
+          {
+            "name": "personalDiscount",
+            "type": "element",
+            "typeInfo": "Double"
+          }
+        ],
+        "_t": "a"
+      }
+    },
+    "13": {
+      "localName": [
+        "legendEntity",
+        "agentNewsItem"
+      ],
+      "propertyInfos": {
+        "0": {
+          "name": [
+            "name",
+            "moment"
+          ],
+          "typeInfo": [
+            "String",
+            "DateTime"
+          ]
+        },
+        "1": {
+          "name": [
+            "code",
+            "text"
+          ]
+        },
+        "_t": "a",
+        "_2": [
+          {
+            "name": "externalcode",
+            "type": "element",
+            "typeInfo": "String"
+          },
+          0,
+          0
+        ],
+        "_3": [
+          {
+            "name": "description",
+            "type": "element",
+            "typeInfo": "String"
+          },
+          0,
+          0
+        ]
+      }
+    },
+    "14": {
+      "localName": [
+        "attachmentDocument",
+        "agentPictureDocument"
+      ]
+    },
+    "15": {
+      "propertyInfos": {
+        "_t": "a",
+        "_20": [
+          "",
+          1,
+          3
+        ]
+      }
+    },
+    "16": {
+      "localName": [
+        "infoEntity",
+        "amiroCustomAttributeInfo"
+      ],
+      "propertyInfos": {
+        "0": {
+          "name": [
+            "updated",
+            "columnNumber"
+          ],
+          "typeInfo": [
+            "DateTime",
+            "Int"
+          ]
+        },
+        "1": {
+          "name": [
+            "updatedBy",
+            "name"
+          ]
+        },
+        "2": [
+          {
+            "name": "settingsUuid",
+            "type": "attribute",
+            "typeInfo": "String"
+          }
+        ],
+        "_t": "a",
+        "_2": [
+          {
+            "name": "deleted",
+            "type": "element",
+            "typeInfo": "DateTime"
+          },
+          0,
+          0
+        ]
+      }
+    },
+    "18": {
+      "localName": [
+        "agentPictureDocument",
+        "attachmentDocument"
+      ]
+    },
+    "19": {
+      "localName": [
+        "agent",
+        "attributeMetadata"
+      ],
+      "propertyInfos": {
+        "0": {
+          "name": [
+            "archived",
+            "atolId"
+          ],
+          "typeInfo": [
+            "Boolean",
+            "Int"
+          ]
+        },
+        "1": {
+          "name": [
+            "created",
+            "attrType"
+          ],
+          "typeInfo": [
+            "DateTime",
+            "String"
+          ]
+        },
+        "2": [
+          {
+            "name": "dictionaryMetadataUuid",
+            "type": "attribute",
+            "typeInfo": "String"
+          }
+        ],
+        "3": [
+          {
+            "name": "entityMetadataUuid",
+            "type": "attribute",
+            "typeInfo": "String"
+          }
+        ],
+        "4": [
+          {
+            "name": "feature",
+            "type": "attribute",
+            "typeInfo": "Boolean"
+          }
+        ],
+        "5": [
+          {
+            "name": "position",
+            "type": "attribute",
+            "typeInfo": "Int"
+          }
+        ],
+        "6": [
+          {
+            "name": "required",
+            "type": "attribute",
+            "typeInfo": "Boolean"
+          }
+        ],
+        "_t": "a"
+      }
+    },
+    "20": {
+      "propertyInfos": {
+        "0": {
+          "name": [
+            "metadataUuid",
+            "agentValueUuid"
+          ]
+        },
+        "1": {
+          "name": [
+            "valueText",
+            "booleanValue"
+          ],
+          "typeInfo": [
+            "String",
+            "Boolean"
+          ]
+        },
+        "2": {
+          "name": [
+            "valueString",
+            "consignmentValueUuid"
+          ]
+        },
+        "3": {
+          "name": [
+            "doubleValue",
+            "contractValueUuid"
+          ],
+          "typeInfo": [
+            "Double",
+            "String"
+          ]
+        },
+        "4": {
+          "name": [
+            "longValue",
+            "doubleValue"
+          ],
+          "typeInfo": [
+            "Long",
+            "Double"
+          ]
+        },
+        "5": {
+          "name": [
+            "booleanValue",
+            "employeeValueUuid"
+          ],
+          "typeInfo": [
+            "Boolean",
+            "String"
+          ]
+        },
+        "6": {
+          "name": [
+            "timeValue",
+            "entityValueUuid"
+          ],
+          "typeInfo": [
+            "DateTime",
+            "String"
+          ]
+        },
+        "8": {
+          "name": [
+            "entityValueUuid",
+            "goodValueUuid"
+          ]
+        },
+        "9": {
+          "name": [
+            "agentValueUuid",
+            "longValue"
+          ],
+          "typeInfo": [
+            "String",
+            "Long"
+          ]
+        },
+        "10": {
+          "name": [
+            "goodValueUuid",
+            "metadataUuid"
+          ]
+        },
+        "12": {
+          "name": [
+            "consignmentValueUuid",
+            "projectValueUuid"
+          ]
+        },
+        "13": {
+          "name": [
+            "contractValueUuid",
+            "timeValue"
+          ],
+          "typeInfo": [
+            "String",
+            "DateTime"
+          ]
+        },
+        "14": {
+          "name": [
+            "projectValueUuid",
+            "valueString"
+          ]
+        },
+        "15": {
+          "name": [
+            "employeeValueUuid",
+            "valueText"
+          ]
+        },
+        "_t": "a",
+        "_15": [
+          "",
+          7,
+          3
+        ]
+      }
+    },
+    "21": {
+      "localName": [
+        "price",
+        "barcode"
+      ],
+      "propertyInfos": {
+        "0": {
+          "name": [
+            "currencyUuid",
+            "barcode"
+          ]
+        },
+        "1": {
+          "name": [
+            "priceTypeUuid",
+            "barcodeType"
+          ]
+        },
+        "_t": "a",
+        "_2": [
+          {
+            "name": "value",
+            "type": "attribute",
+            "typeInfo": "Double"
+          },
+          0,
+          0
+        ]
+      }
+    },
+    "22": {
+      "localName": [
+        "retailCashIn",
+        "cashIn"
+      ]
+    },
+    "23": {
+      "localName": [
+        "retailCashOut",
+        "cashOut"
+      ]
+    },
+    "24": {
+      "localName": [
+        "goodPack",
+        "cashier"
+      ],
+      "propertyInfos": {
+        "0": {
+          "name": [
+            "quantity",
+            "createAndPrintRetailCashOut"
+          ],
+          "typeInfo": [
+            "Double",
+            "Boolean"
+          ]
+        },
+        "1": {
+          "name": [
+            "uomUuid",
+            "employeeUuid"
+          ]
+        },
+        "2": [
+          {
+            "name": "printCheck",
+            "type": "attribute",
+            "typeInfo": "Boolean"
+          }
+        ],
+        "3": [
+          {
+            "name": "printCheckFR",
+            "type": "attribute",
+            "typeInfo": "Boolean"
+          }
+        ],
+        "4": [
+          {
+            "name": "retailStoreUuid",
+            "type": "attribute",
+            "typeInfo": "String"
+          }
+        ],
+        "_t": "a"
+      }
+    },
+    "25": {
+      "localName": [
+        "attributeMetadata",
+        "classifier"
+      ],
+      "propertyInfos": {
+        "_t": "a",
+        "_0": [
+          {
+            "name": "atolId",
+            "type": "attribute",
+            "typeInfo": "Int"
+          },
+          0,
+          0
+        ],
+        "_1": [
+          {
+            "name": "attrType",
+            "type": "attribute",
+            "typeInfo": "String"
+          },
+          0,
+          0
+        ],
+        "_2": [
+          {
+            "name": "dictionaryMetadataUuid",
+            "type": "attribute",
+            "typeInfo": "String"
+          },
+          0,
+          0
+        ],
+        "_3": [
+          {
+            "name": "entityMetadataUuid",
+            "type": "attribute",
+            "typeInfo": "String"
+          },
+          0,
+          0
+        ],
+        "_4": [
+          {
+            "name": "feature",
+            "type": "attribute",
+            "typeInfo": "Boolean"
+          },
+          0,
+          0
+        ],
+        "_5": [
+          {
+            "name": "position",
+            "type": "attribute",
+            "typeInfo": "Int"
+          },
+          0,
+          0
+        ],
+        "_6": [
+          {
+            "name": "required",
+            "type": "attribute",
+            "typeInfo": "Boolean"
+          },
+          0,
+          0
+        ]
+      }
+    },
+    "27": {
+      "propertyInfos": {
+        "0": {
+          "name": [
+            "total",
+            "count"
+          ]
+        },
+        "2": {
+          "name": [
+            "count",
+            "total"
+          ]
+        },
+        "_t": "a"
+      }
+    },
+    "28": {
+      "localName": [
+        "unit",
+        "collectionContainer"
+      ],
+      "propertyInfos": {
+        "0": [
+          {
+            "collection": true,
+            "name": "items",
+            "type": "anyElement"
+          }
+        ],
+        "_t": "a",
+        "_0": [
+          {
+            "name": "s1",
+            "type": "attribute",
+            "typeInfo": "String"
+          },
+          0,
+          0
+        ],
+        "_1": [
+          {
+            "name": "s24",
+            "type": "attribute",
+            "typeInfo": "String"
+          },
+          0,
+          0
+        ],
+        "_2": [
+          {
+            "name": "s5",
+            "type": "attribute",
+            "typeInfo": "String"
+          },
+          0,
+          0
+        ],
+        "_3": [
+          {
+            "name": "sex",
+            "type": "attribute",
+            "typeInfo": "UnsignedShort"
+          },
+          0,
+          0
+        ]
+      }
+    },
+    "29": {
+      "localName": [
+        "movePosition",
+        "comingIn"
+      ],
+      "propertyInfos": {
+        "_t": "a",
+        "_0": [
+          {
+            "name": "overhead",
+            "type": "attribute",
+            "typeInfo": "Double"
+          },
+          0,
+          0
+        ],
+        "_1": [
+          {
+            "name": "sourceSlotUuid",
+            "type": "attribute",
+            "typeInfo": "String"
+          },
+          0,
+          0
+        ]
+      }
+    },
+    "30": {
+      "localName": [
+        "comingOutOperation",
+        "comingInOperation"
+      ]
+    },
+    "31": {
+      "localName": [
+        "comingIn",
+        "comingOut"
+      ]
+    },
+    "32": {
+      "localName": [
+        "move",
+        "comingOutOperation"
+      ],
+      "propertyInfos": {
+        "_t": "a",
+        "_0": [
+          {
+            "name": "internalOrderUuid",
+            "type": "attribute",
+            "typeInfo": "String"
+          },
+          0,
+          0
+        ],
+        "_1": [
+          {
+            "name": "overheadDistribution",
+            "type": "attribute",
+            "typeInfo": "String"
+          },
+          0,
+          0
+        ],
+        "_2": [
+          {
+            "name": "overhead",
+            "type": "element",
+            "typeInfo": "moysklad.moneyAmount"
+          },
+          0,
+          0
+        ],
+        "_3": [
+          {
+            "collection": true,
+            "name": "movePosition",
+            "type": "element",
+            "typeInfo": "moysklad.movePosition"
+          },
+          0,
+          0
+        ]
+      }
+    },
+    "33": {
+      "localName": [
+        "invoice",
+        "commissionReport"
+      ],
+      "propertyInfos": {
+        "0": {
+          "name": [
+            "paymentPlannedMoment",
+            "endCommissionPeriod"
+          ]
+        },
+        "1": [
+          {
+            "name": "rewardPercent",
+            "type": "attribute",
+            "typeInfo": "Double"
+          }
+        ],
+        "2": [
+          {
+            "name": "rewardType",
+            "type": "attribute",
+            "typeInfo": "String"
+          }
+        ],
+        "3": [
+          {
+            "name": "startCommissionPeriod",
+            "type": "attribute",
+            "typeInfo": "DateTime"
+          }
+        ],
+        "_t": "a",
+        "_1": [
+          {
+            "collection": true,
+            "name": "invoicePosition",
+            "type": "element",
+            "typeInfo": "moysklad.invoicePosition"
+          },
+          0,
+          0
+        ]
+      }
+    },
+    "34": {
+      "propertyInfos": {
+        "_t": "a",
+        "_3": [
+          "",
+          0,
+          3
+        ]
+      }
+    },
+    "36": {
+      "propertyInfos": {
+        "_t": "a",
+        "_1": [
+          "",
+          0,
+          3
+        ]
+      }
+    },
+    "38": {
+      "localName": [
+        "stockMotion",
+        "commissionReportPosition"
+      ],
+      "propertyInfos": {
+        "0": [
+          {
+            "name": "reward",
+            "type": "element",
+            "typeInfo": "moysklad.moneyAmount"
+          }
+        ],
+        "_t": "a",
+        "_0": [
+          {
+            "name": "countryUuid",
+            "type": "attribute",
+            "typeInfo": "String"
+          },
+          0,
+          0
+        ],
+        "_1": [
+          {
+            "name": "gtdUuid",
+            "type": "attribute",
+            "typeInfo": "String"
+          },
+          0,
+          0
+        ]
+      }
+    },
+    "39": {
+      "propertyInfos": {
+        "0": {
+          "name": [
+            "bankAccount",
+            "agentNewsItem"
+          ],
+          "typeInfo": [
+            "moysklad.agentAccount",
+            "moysklad.agentNewsItem"
+          ]
+        },
+        "1": {
+          "name": [
+            "contact",
+            "attribute"
+          ],
+          "typeInfo": [
+            "moysklad.contact",
+            "moysklad.agentAttributeValue"
+          ],
+          "collection": [
+            true
+          ]
+        },
+        "2": {
+          "name": [
+            "contactPerson",
+            "bankAccount"
+          ],
+          "typeInfo": [
+            "moysklad.contactPerson",
+            "moysklad.agentAccount"
+          ]
+        },
+        "3": {
+          "name": [
+            "director",
+            "chiefAccountant"
+          ]
+        },
+        "4": {
+          "name": [
+            "chiefAccountant",
+            "companyType"
+          ]
+        },
+        "5": {
+          "collection": [
+            true,
+            0,
+            0
+          ],
+          "name": [
+            "agentNewsItem",
+            "contact"
+          ],
+          "typeInfo": [
+            "moysklad.agentNewsItem",
+            "moysklad.contact"
+          ]
+        },
+        "6": {
+          "name": [
+            "directorSign",
+            "contactPerson"
+          ],
+          "typeInfo": [
+            "moysklad.agentPictureDocument",
+            "moysklad.contactPerson"
+          ],
+          "collection": [
+            true
+          ]
+        },
+        "7": {
+          "name": [
+            "payerVat",
+            "director"
+          ],
+          "typeInfo": [
+            "Boolean",
+            "String"
+          ]
+        },
+        "8": {
+          "name": [
+            "stamp",
+            "directorSign"
+          ]
+        },
+        "10": {
+          "name": [
+            "stateUuid",
+            "payerVat"
+          ],
+          "typeInfo": [
+            "String",
+            "Boolean"
+          ]
+        },
+        "12": {
+          "collection": [
+            true,
+            0,
+            0
+          ],
+          "name": [
+            "attribute",
+            "requisite"
+          ],
+          "typeInfo": [
+            "moysklad.agentAttributeValue",
+            "moysklad.requisite"
+          ]
+        },
+        "13": {
+          "name": [
+            "requisite",
+            "stamp"
+          ],
+          "typeInfo": [
+            "moysklad.requisite",
+            "moysklad.agentPictureDocument"
+          ]
+        },
+        "14": {
+          "name": [
+            "companyType",
+            "stateUuid"
+          ]
+        },
+        "_t": "a",
+        "_3": [
+          "",
+          14,
+          3
+        ],
+        "_9": [
+          "",
+          0,
+          3
+        ],
+        "_10": [
+          "",
+          1,
+          3
+        ],
+        "_11": [
+          "",
+          2,
+          3
+        ],
+        "_12": [
+          "",
+          5,
+          3
+        ],
+        "_14": [
+          "",
+          6,
+          3
+        ],
+        "_15": [
+          "",
+          8,
+          3
+        ]
+      }
+    },
+    "40": {
+      "localName": [
+        "document",
+        "consignment"
+      ],
+      "propertyInfos": {
+        "0": {
+          "name": [
+            "contents",
+            "attribute"
+          ],
+          "typeInfo": [
+            "String",
+            "moysklad.consignmentAttributeValue"
+          ],
+          "collection": [
+            true
+          ]
+        },
+        "1": [
+          {
+            "collection": true,
+            "name": "barcode",
+            "type": "element",
+            "typeInfo": "moysklad.barcode"
+          }
+        ],
+        "2": [
+          {
+            "name": "feature",
+            "type": "element",
+            "typeInfo": "moysklad.feature"
+          }
+        ],
+        "3": {
+          "name": [
+            "filename",
+            "goodUuid"
+          ]
+        },
+        "4": {
+          "name": [
+            "miniatureUuid",
+            "isDefault"
+          ],
+          "typeInfo": [
+            "String",
+            "Boolean"
+          ]
+        },
+        "_t": "a",
+        "_0": [
+          {
+            "name": "created",
+            "type": "attribute",
+            "typeInfo": "DateTime"
+          },
+          0,
+          0
+        ],
+        "_3": [
+          "",
+          0,
+          3
+        ]
+      }
+    },
+    "41": {
+      "localName": [
+        "placeAttributeValue",
+        "consignmentAttributeValue"
+      ],
+      "propertyInfos": {
+        "0": {
+          "name": [
+            "placeUuid",
+            "consignmentUuid"
+          ]
+        },
+        "_t": "a"
+      }
+    },
+    "42": {
+      "propertyInfos": {
+        "1": {
+          "name": [
+            "phones",
+            "email"
+          ]
+        },
+        "4": {
+          "name": [
+            "email",
+            "phones"
+          ]
+        },
+        "_t": "a"
+      }
+    },
+    "43": {
+      "localName": [
+        "slot",
+        "contactPerson"
+      ],
+      "propertyInfos": {
+        "0": {
+          "name": [
+            "warehouseUuid",
+            "email"
+          ]
+        },
+        "1": [
+          {
+            "name": "phone",
+            "type": "attribute",
+            "typeInfo": "String"
+          }
+        ],
+        "2": [
+          {
+            "name": "position",
+            "type": "attribute",
+            "typeInfo": "String"
+          }
+        ],
+        "_t": "a"
+      }
+    },
+    "44": {
+      "localName": [
+        "consignment",
+        "contract"
+      ],
+      "propertyInfos": {
+        "0": {
+          "name": [
+            "goodUuid",
+            "agentAccountUuid"
+          ]
+        },
+        "1": {
+          "name": [
+            "isDefault",
+            "agentUuid"
+          ],
+          "typeInfo": [
+            "Boolean",
+            "String"
+          ]
+        },
+        "2": [
+          {
+            "name": "archived",
+            "type": "attribute",
+            "typeInfo": "Boolean"
+          }
+        ],
+        "3": {
+          "name": [
+            "barcode",
+            "attribute"
+          ],
+          "typeInfo": [
+            "moysklad.barcode",
+            "moysklad.contractAttributeValue"
+          ]
+        },
+        "4": [
+          {
+            "name": "contractType",
+            "type": "attribute",
+            "typeInfo": "String"
+          }
+        ],
+        "5": [
+          {
+            "name": "currencyUuid",
+            "type": "attribute",
+            "typeInfo": "String"
+          }
+        ],
+        "6": {
+          "name": [
+            "attribute",
+            "document"
+          ],
+          "typeInfo": [
+            "moysklad.consignmentAttributeValue",
+            "moysklad.contractDocument"
+          ]
+        },
+        "7": [
+          {
+            "name": "moment",
+            "type": "attribute",
+            "typeInfo": "DateTime"
+          }
+        ],
+        "8": [
+          {
+            "name": "ownCompanyAccountUuid",
+            "type": "attribute",
+            "typeInfo": "String"
+          }
+        ],
+        "9": [
+          {
+            "name": "ownCompanyUuid",
+            "type": "attribute",
+            "typeInfo": "String"
+          }
+        ],
+        "10": [
+          {
+            "name": "rewardPercent",
+            "type": "attribute",
+            "typeInfo": "Double"
+          }
+        ],
+        "11": [
+          {
+            "name": "rewardType",
+            "type": "attribute",
+            "typeInfo": "String"
+          }
+        ],
+        "12": {
+          "name": [
+            "feature",
+            "sum"
+          ],
+          "typeInfo": [
+            "moysklad.feature",
+            "moysklad.moneyAmount"
+          ]
+        },
+        "_t": "a"
+      }
+    },
+    "45": {
+      "localName": [
+        "consignmentAttributeValue",
+        "contractAttributeValue"
+      ],
+      "propertyInfos": {
+        "0": {
+          "name": [
+            "consignmentUuid",
+            "contractUuid"
+          ]
+        },
+        "_t": "a"
+      }
+    },
+    "47": {
+      "localName": [
+        "uom",
+        "country"
+      ],
+      "propertyInfos": {
+        "_t": "a",
+        "_0": [
+          {
+            "name": "type",
+            "type": "attribute",
+            "typeInfo": "String"
+          },
+          0,
+          0
+        ]
+      }
+    },
+    "48": {
+      "localName": [
+        "feature",
+        "currency"
+      ],
+      "propertyInfos": {
+        "0": {
+          "name": [
+            "archived",
+            "enteredRate"
+          ],
+          "typeInfo": [
+            "Boolean",
+            "Double"
+          ]
+        },
+        "1": {
+          "name": [
+            "isDefault",
+            "invertRate"
+          ]
+        },
+        "2": {
+          "name": [
+            "goodUuid",
+            "isoCode"
+          ]
+        },
+        "3": {
+          "collection": [
+            true,
+            0,
+            0
+          ],
+          "name": [
+            "attribute",
+            "major"
+          ],
+          "typeInfo": [
+            "moysklad.featureAttributeValue",
+            "moysklad.unit"
+          ]
+        },
+        "4": [
+          {
+            "name": "minor",
+            "type": "element",
+            "typeInfo": "moysklad.unit"
+          }
+        ],
+        "5": {
+          "name": [
+            "atolId",
+            "rate"
+          ],
+          "typeInfo": [
+            "Int",
+            "Double"
+          ]
+        },
+        "_t": "a",
+        "_4": [
+          "",
+          3,
+          3
+        ]
+      }
+    },
+    "49": {
+      "localName": [
+        "contract",
+        "customEntity"
+      ],
+      "propertyInfos": {
+        "0": {
+          "name": [
+            "agentUuid",
+            "entityMetadataUuid"
+          ]
+        },
+        "_t": "a",
+        "_1": [
+          {
+            "name": "agentAccountUuid",
+            "type": "attribute",
+            "typeInfo": "String"
+          },
+          0,
+          0
+        ],
+        "_2": [
+          {
+            "name": "archived",
+            "type": "attribute",
+            "typeInfo": "Boolean"
+          },
+          0,
+          0
+        ],
+        "_3": [
+          {
+            "name": "contractType",
+            "type": "attribute",
+            "typeInfo": "String"
+          },
+          0,
+          0
+        ],
+        "_4": [
+          {
+            "name": "currencyUuid",
+            "type": "attribute",
+            "typeInfo": "String"
+          },
+          0,
+          0
+        ],
+        "_5": [
+          {
+            "name": "moment",
+            "type": "attribute",
+            "typeInfo": "DateTime"
+          },
+          0,
+          0
+        ],
+        "_6": [
+          {
+            "name": "ownCompanyUuid",
+            "type": "attribute",
+            "typeInfo": "String"
+          },
+          0,
+          0
+        ],
+        "_7": [
+          {
+            "name": "ownCompanyAccountUuid",
+            "type": "attribute",
+            "typeInfo": "String"
+          },
+          0,
+          0
+        ],
+        "_8": [
+          {
+            "name": "rewardPercent",
+            "type": "attribute",
+            "typeInfo": "Double"
+          },
+          0,
+          0
+        ],
+        "_9": [
+          {
+            "name": "rewardType",
+            "type": "attribute",
+            "typeInfo": "String"
+          },
+          0,
+          0
+        ],
+        "_10": [
+          {
+            "collection": true,
+            "name": "attribute",
+            "type": "element",
+            "typeInfo": "moysklad.contractAttributeValue"
+          },
+          0,
+          0
+        ],
+        "_11": [
+          {
+            "collection": true,
+            "name": "document",
+            "type": "element",
+            "typeInfo": "moysklad.contractDocument"
+          },
+          0,
+          0
+        ],
+        "_12": [
+          {
+            "name": "sum",
+            "type": "element",
+            "typeInfo": "moysklad.moneyAmount"
+          },
+          0,
+          0
+        ]
+      }
+    },
+    "51": {
+      "propertyInfos": {
+        "_t": "a",
+        "_3": [
+          "",
+          0,
+          3
+        ]
+      }
+    },
+    "53": {
+      "localName": [
+        "retailDemand",
+        "demand"
+      ],
+      "propertyInfos": {
+        "0": {
+          "name": [
+            "noCashSum",
+            "extension"
+          ],
+          "typeInfo": [
+            "moysklad.moneyAmount",
+            "moysklad.demandExtension"
+          ]
+        },
+        "1": [
+          {
+            "name": "overhead",
+            "type": "element",
+            "typeInfo": "moysklad.moneyAmount"
+          }
+        ],
+        "2": {
+          "name": [
+            "nonCash",
+            "overheadDistribution"
+          ],
+          "typeInfo": [
+            "Boolean",
+            "String"
+          ]
+        },
+        "_t": "a",
+        "_1": [
+          "",
+          0,
+          3
+        ]
+      }
+    },
+    "54": {
+      "localName": [
+        "factureOutExtension",
+        "demandExtension"
+      ],
+      "propertyInfos": {
+        "0": [
+          {
+            "name": "carNumber",
+            "type": "attribute",
+            "typeInfo": "String"
+          }
+        ],
+        "1": [
+          {
+            "name": "carrierUuid",
+            "type": "attribute",
+            "typeInfo": "String"
+          }
+        ],
+        "2": [
+          {
+            "name": "consignorIndication",
+            "type": "attribute",
+            "typeInfo": "String"
+          }
+        ],
+        "3": [
+          {
+            "name": "goodPackQuantity",
+            "type": "attribute",
+            "typeInfo": "Int"
+          }
+        ],
+        "4": [
+          {
+            "name": "loadName",
+            "type": "attribute",
+            "typeInfo": "String"
+          }
+        ],
+        "5": [
+          {
+            "name": "opened",
+            "type": "attribute",
+            "typeInfo": "Boolean"
+          }
+        ],
+        "6": [
+          {
+            "name": "transportFacility",
+            "type": "attribute",
+            "typeInfo": "String"
+          }
+        ],
+        "_t": "a"
+      }
+    },
+    "55": {
+      "localName": [
+        "goodSlotPreference",
+        "discount"
+      ],
+      "propertyInfos": {
+        "0": {
+          "name": [
+            "slotUuid",
+            "active"
+          ],
+          "typeInfo": [
+            "String",
+            "Boolean"
+          ]
+        },
+        "1": [
+          {
+            "name": "name",
+            "type": "attribute",
+            "typeInfo": "String"
+          }
+        ],
+        "_t": "a"
+      }
+    },
+    "56": {
+      "localName": [
+        "currency",
+        "document"
+      ],
+      "propertyInfos": {
+        "0": {
+          "name": [
+            "major",
+            "contents"
+          ],
+          "typeInfo": [
+            "moysklad.unit",
+            "String"
+          ]
+        },
+        "1": {
+          "name": [
+            "invertRate",
+            "created"
+          ],
+          "typeInfo": [
+            "Boolean",
+            "DateTime"
+          ]
+        },
+        "2": {
+          "name": [
+            "isoCode",
+            "filename"
+          ]
+        },
+        "3": {
+          "name": [
+            "rate",
+            "miniatureUuid"
+          ],
+          "typeInfo": [
+            "Double",
+            "String"
+          ]
+        },
+        "_t": "a",
+        "_0": [
+          {
+            "name": "enteredRate",
+            "type": "attribute",
+            "typeInfo": "Double"
+          },
+          0,
+          0
+        ],
+        "_4": [
+          "",
+          0,
+          3
+        ],
+        "_5": [
+          {
+            "name": "minor",
+            "type": "element",
+            "typeInfo": "moysklad.unit"
+          },
+          0,
+          0
+        ]
+      }
+    },
+    "57": {
+      "localName": [
+        "printedDocument",
+        "documentMiniature"
+      ],
+      "propertyInfos": {
+        "_t": "a",
+        "_0": [
+          {
+            "name": "emailedDate",
+            "type": "attribute",
+            "typeInfo": "DateTime"
+          },
+          0,
+          0
+        ],
+        "_1": [
+          {
+            "name": "publicId",
+            "type": "attribute",
+            "typeInfo": "String"
+          },
+          0,
+          0
+        ]
+      }
+    },
+    "59": {
+      "propertyInfos": {
+        "_t": "a",
+        "_15": [
+          "",
+          1,
+          3
+        ]
+      }
+    },
+    "61": {
+      "localName": [
+        "abstractSalesReturn",
+        "enter"
+      ],
+      "propertyInfos": {
+        "0": [
+          {
+            "collection": true,
+            "name": "enterPosition",
+            "type": "element",
+            "typeInfo": "moysklad.enterPosition"
+          }
+        ],
+        "1": [
+          {
+            "name": "inventoryUuid",
+            "type": "attribute",
+            "typeInfo": "String"
+          }
+        ],
+        "2": {
+          "collection": [
+            true,
+            0,
+            0
+          ],
+          "name": [
+            "salesReturnPosition",
+            "overhead"
+          ],
+          "typeInfo": [
+            "moysklad.salesReturnPosition",
+            "moysklad.moneyAmount"
+          ]
+        },
+        "3": [
+          {
+            "name": "overheadDistribution",
+            "type": "attribute",
+            "typeInfo": "String"
+          }
+        ],
+        "_t": "a",
+        "_0": [
+          {
+            "collection": true,
+            "elementName": "lossRef",
+            "name": "lossesUuid",
+            "type": "element",
+            "typeInfo": "String",
+            "wrapperElementName": "lossesUuid"
+          },
+          0,
+          0
+        ],
+        "_1": [
+          {
+            "collection": true,
+            "elementName": "financeOutRef",
+            "name": "paymentsUuid",
+            "type": "element",
+            "typeInfo": "String",
+            "wrapperElementName": "paymentsUuid"
+          },
+          0,
+          0
+        ]
+      }
+    },
+    "62": {
+      "localName": [
+        "shipmentIn",
+        "enterPosition"
+      ],
+      "propertyInfos": {
+        "1": [
+          {
+            "collection": true,
+            "elementName": "tag",
+            "name": "tags",
+            "type": "element",
+            "typeInfo": "String",
+            "wrapperElementName": "tags"
+          }
+        ],
+        "_t": "a"
+      }
+    },
+    "63": {
+      "propertyInfos": {
+        "0": {
+          "name": [
+            "readMode",
+            "changeMode"
+          ]
+        },
+        "3": {
+          "name": [
+            "changeMode",
+            "readMode"
+          ]
+        },
+        "_t": "a",
+        "_1": [
+          "",
+          3,
+          3
+        ]
+      }
+    },
+    "64": {
+      "localName": [
+        "contactPerson",
+        "entityMetadata"
+      ],
+      "propertyInfos": {
+        "0": [
+          {
+            "collection": true,
+            "name": "attributeMetadata",
+            "type": "element",
+            "typeInfo": "moysklad.attributeMetadata"
+          }
+        ],
+        "1": [
+          {
+            "name": "codeValueType",
+            "type": "attribute",
+            "typeInfo": "Int"
+          }
+        ],
+        "2": [
+          {
+            "name": "editableCalendarDays",
+            "type": "attribute",
+            "typeInfo": "Int"
+          }
+        ],
+        "3": [
+          {
+            "name": "editableFromDate",
+            "type": "attribute",
+            "typeInfo": "DateTime"
+          }
+        ],
+        "4": [
+          {
+            "name": "editablePeriod",
+            "type": "attribute",
+            "typeInfo": "String"
+          }
+        ],
+        "5": [
+          {
+            "name": "editableWorkDays",
+            "type": "attribute",
+            "typeInfo": "Int"
+          }
+        ],
+        "6": [
+          {
+            "name": "independentNameGenerator",
+            "type": "attribute",
+            "typeInfo": "Boolean"
+          }
+        ],
+        "7": [
+          {
+            "name": "noApplicableFromOtherPlaceSource",
+            "type": "attribute",
+            "typeInfo": "Boolean"
+          }
+        ],
+        "8": [
+          {
+            "name": "noApplicableFromOtherPlaceTarget",
+            "type": "attribute",
+            "typeInfo": "Boolean"
+          }
+        ],
+        "9": [
+          {
+            "name": "noEditFromOtherPlaceSource",
+            "type": "attribute",
+            "typeInfo": "Boolean"
+          }
+        ],
+        "10": {
+          "name": [
+            "email",
+            "noEditFromOtherPlaceTarget"
+          ],
+          "typeInfo": [
+            "String",
+            "Boolean"
+          ]
+        },
+        "11": {
+          "name": [
+            "phone",
+            "partialReserve"
+          ],
+          "typeInfo": [
+            "String",
+            "Boolean"
+          ]
+        },
+        "12": {
+          "name": [
+            "position",
+            "uniqueCode"
+          ],
+          "typeInfo": [
+            "String",
+            "Boolean"
+          ]
+        },
+        "_t": "a"
+      }
+    },
+    "66": {
+      "localName": [
+        "prices",
+        "error"
+      ],
+      "propertyInfos": {
+        "0": {
+          "collection": [
+            true,
+            0,
+            0
+          ],
+          "name": [
+            "price",
+            "message"
+          ],
+          "typeInfo": [
+            "moysklad.price",
+            "String"
+          ]
+        },
+        "1": [
+          {
+            "name": "moment",
+            "type": "element",
+            "typeInfo": "String"
+          }
+        ],
+        "2": [
+          {
+            "name": "stack",
+            "type": "element",
+            "typeInfo": "String"
+          }
+        ],
+        "3": [
+          {
+            "name": "uid",
+            "type": "element",
+            "typeInfo": "String"
+          }
+        ],
+        "_t": "a"
+      }
+    },
+    "67": {
+      "propertyInfos": {
+        "2": {
+          "name": [
+            "retailCashOut",
+            "cashIn"
+          ],
+          "typeInfo": [
+            "moysklad.retailCashOut",
+            "moysklad.cashIn"
+          ],
+          "wrapperElementName": [
+            "retailCashOut",
+            "cashIn"
+          ]
+        },
+        "3": {
+          "name": [
+            "commissionReportIn",
+            "cashOut"
+          ],
+          "typeInfo": [
+            "moysklad.commissionReportIn",
+            "moysklad.cashOut"
+          ],
+          "wrapperElementName": [
+            "commissionReportIn",
+            "cashOut"
+          ]
+        },
+        "5": {
+          "name": [
+            "commissionReportOut",
+            "commissionReportIn"
+          ],
+          "typeInfo": [
+            "moysklad.commissionReportOut",
+            "moysklad.commissionReportIn"
+          ],
+          "wrapperElementName": [
+            "commissionReportOut",
+            "commissionReportIn"
+          ]
+        },
+        "6": {
+          "name": [
+            "workflow",
+            "commissionReportOut"
+          ],
+          "typeInfo": [
+            "moysklad.workflow",
+            "moysklad.commissionReportOut"
+          ],
+          "wrapperElementName": [
+            "workflow",
+            "commissionReportOut"
+          ]
+        },
+        "9": {
+          "name": [
+            "customEntityMetadata",
+            "contract"
+          ],
+          "typeInfo": [
+            "moysklad.customEntityMetadata",
+            "moysklad.contract"
+          ],
+          "wrapperElementName": [
+            "customEntityMetadata",
+            "contract"
+          ]
+        },
+        "10": {
+          "name": [
+            "embeddedEntityMetadata",
+            "country"
+          ],
+          "typeInfo": [
+            "moysklad.embeddedEntityMetadata",
+            "moysklad.country"
+          ],
+          "wrapperElementName": [
+            "embeddedEntityMetadata",
+            "country"
+          ]
+        },
+        "12": {
+          "name": [
+            "entityTemplatesMetadata",
+            "customEntity"
+          ],
+          "typeInfo": [
+            "moysklad.entityTemplatesMetadata",
+            "moysklad.customEntity"
+          ],
+          "wrapperElementName": [
+            "entityTemplatesMetadata",
+            "customEntity"
+          ]
+        },
+        "13": {
+          "name": [
+            "reportTemplatesMetadata",
+            "customEntityMetadata"
+          ],
+          "typeInfo": [
+            "moysklad.reportTemplatesMetadata",
+            "moysklad.customEntityMetadata"
+          ],
+          "wrapperElementName": [
+            "reportTemplatesMetadata",
+            "customEntityMetadata"
+          ]
+        },
+        "17": {
+          "name": [
+            "customEntity",
+            "embeddedEntityMetadata"
+          ],
+          "typeInfo": [
+            "moysklad.customEntity",
+            "moysklad.embeddedEntityMetadata"
+          ],
+          "wrapperElementName": [
+            "customEntity",
+            "embeddedEntityMetadata"
+          ]
+        },
+        "20": {
+          "name": [
+            "country",
+            "entityTemplatesMetadata"
+          ],
+          "typeInfo": [
+            "moysklad.country",
+            "moysklad.entityTemplatesMetadata"
+          ],
+          "wrapperElementName": [
+            "country",
+            "entityTemplatesMetadata"
+          ]
+        },
+        "21": {
+          "name": [
+            "gtd",
+            "factureIn"
+          ],
+          "typeInfo": [
+            "moysklad.gtd",
+            "moysklad.factureIn"
+          ],
+          "wrapperElementName": [
+            "gtd",
+            "factureIn"
+          ]
+        },
+        "22": {
+          "name": [
+            "myCompany",
+            "factureOut"
+          ],
+          "typeInfo": [
+            "moysklad.myCompany",
+            "moysklad.factureOut"
+          ],
+          "wrapperElementName": [
+            "myCompany",
+            "factureOut"
+          ]
+        },
+        "26": {
+          "name": [
+            "retailDemand",
+            "gtd"
+          ],
+          "typeInfo": [
+            "moysklad.retailDemand",
+            "moysklad.gtd"
+          ],
+          "wrapperElementName": [
+            "retailDemand",
+            "gtd"
+          ]
+        },
+        "33": {
+          "name": [
+            "service",
+            "myCompany"
+          ],
+          "typeInfo": [
+            "moysklad.service",
+            "moysklad.myCompany"
+          ],
+          "wrapperElementName": [
+            "service",
+            "myCompany"
+          ]
+        },
+        "34": {
+          "name": [
+            "project",
+            "paymentIn"
+          ],
+          "typeInfo": [
+            "moysklad.project",
+            "moysklad.paymentIn"
+          ],
+          "wrapperElementName": [
+            "project",
+            "paymentIn"
+          ]
+        },
+        "35": {
+          "name": [
+            "contract",
+            "paymentOut"
+          ],
+          "typeInfo": [
+            "moysklad.contract",
+            "moysklad.paymentOut"
+          ],
+          "wrapperElementName": [
+            "contract",
+            "paymentOut"
+          ]
+        },
+        "40": {
+          "name": [
+            "paymentIn",
+            "project"
+          ],
+          "typeInfo": [
+            "moysklad.paymentIn",
+            "moysklad.project"
+          ],
+          "wrapperElementName": [
+            "paymentIn",
+            "project"
+          ]
+        },
+        "43": {
+          "name": [
+            "paymentOut",
+            "reportTemplatesMetadata"
+          ],
+          "typeInfo": [
+            "moysklad.paymentOut",
+            "moysklad.reportTemplatesMetadata"
+          ],
+          "wrapperElementName": [
+            "paymentOut",
+            "reportTemplatesMetadata"
+          ]
+        },
+        "44": {
+          "name": [
+            "factureIn",
+            "retailCashIn"
+          ],
+          "typeInfo": [
+            "moysklad.factureIn",
+            "moysklad.retailCashIn"
+          ],
+          "wrapperElementName": [
+            "factureIn",
+            "retailCashIn"
+          ]
+        },
+        "45": {
+          "name": [
+            "factureOut",
+            "retailCashOut"
+          ],
+          "typeInfo": [
+            "moysklad.factureOut",
+            "moysklad.retailCashOut"
+          ],
+          "wrapperElementName": [
+            "factureOut",
+            "retailCashOut"
+          ]
+        },
+        "46": {
+          "name": [
+            "cashIn",
+            "retailDemand"
+          ],
+          "typeInfo": [
+            "moysklad.cashIn",
+            "moysklad.retailDemand"
+          ],
+          "wrapperElementName": [
+            "cashIn",
+            "retailDemand"
+          ]
+        },
+        "47": {
+          "name": [
+            "cashOut",
+            "retailSalesReturn"
+          ],
+          "typeInfo": [
+            "moysklad.cashOut",
+            "moysklad.retailSalesReturn"
+          ],
+          "wrapperElementName": [
+            "cashOut",
+            "retailSalesReturn"
+          ]
+        },
+        "49": {
+          "name": [
+            "retailCashIn",
+            "service"
+          ],
+          "typeInfo": [
+            "moysklad.retailCashIn",
+            "moysklad.service"
+          ],
+          "wrapperElementName": [
+            "retailCashIn",
+            "service"
+          ]
+        },
+        "53": {
+          "name": [
+            "retailSalesReturn",
+            "workflow"
+          ],
+          "typeInfo": [
+            "moysklad.retailSalesReturn",
+            "moysklad.workflow"
+          ],
+          "wrapperElementName": [
+            "retailSalesReturn",
+            "workflow"
+          ]
+        },
+        "_t": "a",
+        "_8": [
+          "",
+          11,
+          3
+        ],
+        "_11": [
+          "",
+          51,
+          3
+        ],
+        "_13": [
+          "",
+          0,
+          3
+        ],
+        "_14": [
+          "",
+          7,
+          3
+        ],
+        "_18": [
+          "",
+          50,
+          3
+        ],
+        "_19": [
+          "",
+          18,
+          3
+        ],
+        "_20": [
+          "",
+          52,
+          3
+        ],
+        "_24": [
+          "",
+          23,
+          3
+        ],
+        "_25": [
+          "",
+          8,
+          3
+        ],
+        "_26": [
+          "",
+          36,
+          3
+        ],
+        "_33": [
+          "",
+          15,
+          3
+        ],
+        "_34": [
+          "",
+          16,
+          3
+        ],
+        "_36": [
+          "",
+          2,
+          3
+        ],
+        "_37": [
+          "",
+          26,
+          3
+        ],
+        "_39": [
+          "",
+          28,
+          3
+        ],
+        "_40": [
+          "",
+          32,
+          3
+        ],
+        "_41": [
+          "",
+          31,
+          3
+        ],
+        "_42": [
+          "",
+          19,
+          3
+        ],
+        "_43": [
+          "",
+          29,
+          3
+        ],
+        "_44": [
+          "",
+          30,
+          3
+        ],
+        "_45": [
+          "",
+          48,
+          3
+        ],
+        "_46": [
+          "",
+          42,
+          3
+        ],
+        "_47": [
+          "",
+          39,
+          3
+        ],
+        "_48": [
+          "",
+          14,
+          3
+        ],
+        "_49": [
+          "",
+          41,
+          3
+        ],
+        "_50": [
+          "",
+          27,
+          3
+        ],
+        "_51": [
+          "",
+          37,
+          3
+        ],
+        "_52": [
+          "",
+          1,
+          3
+        ],
+        "_53": [
+          "",
+          4,
+          3
+        ]
+      }
+    },
+    "68": {
+      "localName": [
+        "country",
+        "expenseItem"
+      ]
+    },
+    "69": {
+      "localName": [
+        "commissionReport",
+        "facture"
+      ],
+      "propertyInfos": {
+        "_t": "a",
+        "_0": [
+          {
+            "name": "endCommissionPeriod",
+            "type": "attribute",
+            "typeInfo": "DateTime"
+          },
+          0,
+          0
+        ],
+        "_1": [
+          {
+            "name": "rewardPercent",
+            "type": "attribute",
+            "typeInfo": "Double"
+          },
+          0,
+          0
+        ],
+        "_2": [
+          {
+            "name": "rewardType",
+            "type": "attribute",
+            "typeInfo": "String"
+          },
+          0,
+          0
+        ],
+        "_3": [
+          {
+            "name": "startCommissionPeriod",
+            "type": "attribute",
+            "typeInfo": "DateTime"
+          },
+          0,
+          0
+        ]
+      }
+    },
+    "71": {
+      "propertyInfos": {
+        "_t": "a",
+        "_2": [
+          "",
+          0,
+          3
+        ],
+        "_3": [
+          "",
+          1,
+          3
+        ]
+      }
+    },
+    "72": {
+      "localName": [
+        "demandExtension",
+        "factureOutExtension"
+      ],
+      "propertyInfos": {
+        "_t": "a",
+        "_0": [
+          {
+            "name": "opened",
+            "type": "attribute",
+            "typeInfo": "Boolean"
+          },
+          0,
+          0
+        ],
+        "_1": [
+          {
+            "name": "carrierUuid",
+            "type": "attribute",
+            "typeInfo": "String"
+          },
+          0,
+          0
+        ],
+        "_2": [
+          {
+            "name": "loadName",
+            "type": "attribute",
+            "typeInfo": "String"
+          },
+          0,
+          0
+        ],
+        "_3": [
+          {
+            "name": "consignorIndication",
+            "type": "attribute",
+            "typeInfo": "String"
+          },
+          0,
+          0
+        ],
+        "_4": [
+          {
+            "name": "transportFacility",
+            "type": "attribute",
+            "typeInfo": "String"
+          },
+          0,
+          0
+        ],
+        "_5": [
+          {
+            "name": "goodPackQuantity",
+            "type": "attribute",
+            "typeInfo": "Int"
+          },
+          0,
+          0
+        ],
+        "_6": [
+          {
+            "name": "carNumber",
+            "type": "attribute",
+            "typeInfo": "String"
+          },
+          0,
+          0
+        ]
+      }
+    },
+    "73": {
+      "localName": [
+        "entityMetadata",
+        "feature"
+      ],
+      "propertyInfos": {
+        "0": {
+          "name": [
+            "uniqueCode",
+            "archived"
+          ]
+        },
+        "1": {
+          "name": [
+            "codeValueType",
+            "atolId"
+          ]
+        },
+        "2": {
+          "name": [
+            "attributeMetadata",
+            "attribute"
+          ],
+          "typeInfo": [
+            "moysklad.attributeMetadata",
+            "moysklad.featureAttributeValue"
+          ]
+        },
+        "3": {
+          "name": [
+            "editableWorkDays",
+            "goodUuid"
+          ],
+          "typeInfo": [
+            "Int",
+            "String"
+          ]
+        },
+        "4": {
+          "name": [
+            "editableFromDate",
+            "isDefault"
+          ],
+          "typeInfo": [
+            "DateTime",
+            "Boolean"
+          ]
+        },
+        "_t": "a",
+        "_2": [
+          {
+            "name": "independentNameGenerator",
+            "type": "attribute",
+            "typeInfo": "Boolean"
+          },
+          0,
+          0
+        ],
+        "_3": [
+          {
+            "name": "partialReserve",
+            "type": "attribute",
+            "typeInfo": "Boolean"
+          },
+          0,
+          0
+        ],
+        "_4": [
+          {
+            "name": "noEditFromOtherPlaceSource",
+            "type": "attribute",
+            "typeInfo": "Boolean"
+          },
+          0,
+          0
+        ],
+        "_5": [
+          {
+            "name": "noApplicableFromOtherPlaceSource",
+            "type": "attribute",
+            "typeInfo": "Boolean"
+          },
+          0,
+          0
+        ],
+        "_6": [
+          {
+            "name": "noEditFromOtherPlaceTarget",
+            "type": "attribute",
+            "typeInfo": "Boolean"
+          },
+          0,
+          0
+        ],
+        "_7": [
+          {
+            "name": "noApplicableFromOtherPlaceTarget",
+            "type": "attribute",
+            "typeInfo": "Boolean"
+          },
+          0,
+          0
+        ],
+        "_8": [
+          {
+            "name": "editablePeriod",
+            "type": "attribute",
+            "typeInfo": "String"
+          },
+          0,
+          0
+        ],
+        "_9": [
+          {
+            "name": "editableCalendarDays",
+            "type": "attribute",
+            "typeInfo": "Int"
+          },
+          0,
+          0
+        ],
+        "_12": [
+          "",
+          2,
+          3
+        ]
+      }
+    },
+    "74": {
+      "localName": [
+        "goodAttributeValue",
+        "featureAttributeValue"
+      ],
+      "propertyInfos": {
+        "0": {
+          "name": [
+            "goodUuid",
+            "atolId"
+          ],
+          "typeInfo": [
+            "String",
+            "Int"
+          ]
+        },
+        "_t": "a"
+      }
+    },
+    "75": {
+      "localName": [
+        "operationWithPositions",
+        "finance"
+      ],
+      "propertyInfos": {
+        "0": [
+          {
+            "name": "expenseItemUuid",
+            "type": "attribute",
+            "typeInfo": "String"
+          }
+        ],
+        "1": [
+          {
+            "name": "incomingDate",
+            "type": "attribute",
+            "typeInfo": "DateTime"
+          }
+        ],
+        "2": [
+          {
+            "name": "incomingNumber",
+            "type": "attribute",
+            "typeInfo": "String"
+          }
+        ],
+        "3": [
+          {
+            "name": "paymentPurpose",
+            "type": "attribute",
+            "typeInfo": "String"
+          }
+        ],
+        "4": [
+          {
+            "name": "vatSum",
+            "type": "attribute",
+            "typeInfo": "Double"
+          }
+        ],
+        "_t": "a"
+      }
+    },
+    "76": {
+      "localName": [
+        "financeOut",
+        "financeIn"
+      ],
+      "propertyInfos": {
+        "0": {
+          "name": [
+            "commissionreportoutUuid",
+            "commissionReportUuid"
+          ]
+        },
+        "1": {
+          "name": [
+            "factureInUuid",
+            "customerOrderUuid"
+          ]
+        },
+        "2": [
+          {
+            "collection": true,
+            "elementName": "demandRef",
+            "name": "demandsUuid",
+            "type": "element",
+            "typeInfo": "String",
+            "wrapperElementName": "demandsUuid"
+          }
+        ],
+        "3": {
+          "name": [
+            "purchaseOrderUuid",
+            "factureOutUuid"
+          ]
+        },
+        "4": {
+          "name": [
+            "salesReturnUuid",
+            "invoiceOutUuid"
+          ]
+        },
+        "5": {
+          "name": [
+            "supplyUuid",
+            "purchaseReturnUuid"
+          ]
+        },
+        "_t": "a",
+        "_2": [
+          {
+            "name": "invoiceInUuid",
+            "type": "attribute",
+            "typeInfo": "String"
+          },
+          0,
+          0
+        ]
+      }
+    },
+    "77": {
+      "localName": [
+        "financeIn",
+        "financeOut"
+      ],
+      "propertyInfos": {
+        "0": {
+          "name": [
+            "commissionReportUuid",
+            "commissionreportoutUuid"
+          ]
+        },
+        "1": {
+          "name": [
+            "customerOrderUuid",
+            "factureInUuid"
+          ]
+        },
+        "2": {
+          "name": [
+            "factureOutUuid",
+            "invoiceInUuid"
+          ]
+        },
+        "3": {
+          "name": [
+            "invoiceOutUuid",
+            "purchaseOrderUuid"
+          ]
+        },
+        "4": {
+          "name": [
+            "purchaseReturnUuid",
+            "salesReturnUuid"
+          ]
+        },
+        "5": [
+          {
+            "name": "supplyUuid",
+            "type": "attribute",
+            "typeInfo": "String"
+          }
+        ],
+        "_t": "a",
+        "_5": [
+          {
+            "collection": true,
+            "elementName": "demandRef",
+            "name": "demandsUuid",
+            "type": "element",
+            "typeInfo": "String",
+            "wrapperElementName": "demandsUuid"
+          },
+          0,
+          0
+        ]
+      }
+    },
+    "78": {
+      "localName": [
+        "service",
+        "good"
+      ],
+      "propertyInfos": {
+        "0": [
+          {
+            "collection": true,
+            "elementName": "image",
+            "name": "images",
+            "type": "element",
+            "typeInfo": "moysklad.goodImage",
+            "wrapperElementName": "images"
+          }
+        ],
+        "1": [
+          {
+            "name": "isSerialTrackable",
+            "type": "attribute",
+            "typeInfo": "Boolean"
+          }
+        ],
+        "2": [
+          {
+            "name": "minimumBalance",
+            "type": "attribute",
+            "typeInfo": "Double"
+          }
+        ],
+        "3": [
+          {
+            "collection": true,
+            "name": "pack",
+            "type": "element",
+            "typeInfo": "moysklad.goodPack"
+          }
+        ],
+        "4": [
+          {
+            "collection": true,
+            "elementName": "preference",
+            "name": "preferences",
+            "type": "element",
+            "typeInfo": "moysklad.goodSlotPreference",
+            "wrapperElementName": "preferences"
+          }
+        ],
+        "5": [
+          {
+            "name": "soldByWeight",
+            "type": "attribute",
+            "typeInfo": "Boolean"
+          }
+        ],
+        "6": [
+          {
+            "name": "volume",
+            "type": "attribute",
+            "typeInfo": "Double"
+          }
+        ],
+        "7": [
+          {
+            "name": "weight",
+            "type": "attribute",
+            "typeInfo": "Double"
+          }
+        ],
+        "_t": "a"
+      }
+    },
+    "79": {
+      "localName": [
+        "operationAttributeValue",
+        "goodAttributeValue"
+      ],
+      "propertyInfos": {
+        "0": {
+          "name": [
+            "operationUuid",
+            "goodUuid"
+          ]
+        },
+        "_t": "a"
+      }
+    },
+    "80": {
+      "propertyInfos": {
+        "_t": "a",
+        "_5": [
+          "",
+          2,
+          3
+        ]
+      }
+    },
+    "82": {
+      "localName": [
+        "priceListCell",
+        "goodPack"
+      ],
+      "propertyInfos": {
+        "0": {
+          "name": [
+            "columnName",
+            "quantity"
+          ],
+          "typeInfo": [
+            "String",
+            "Double"
+          ]
+        },
+        "1": [
+          {
+            "name": "uomUuid",
+            "type": "attribute",
+            "typeInfo": "String"
+          }
+        ],
+        "_t": "a",
+        "_1": [
+          {
+            "name": "sum",
+            "type": "element",
+            "typeInfo": "moysklad.moneyAmount"
+          },
+          0,
+          0
+        ]
+      }
+    },
+    "83": {
+      "localName": [
+        "amiroCustomAttributeInfo",
+        "goodSlotPreference"
+      ],
+      "propertyInfos": {
+        "0": {
+          "name": [
+            "columnNumber",
+            "slotUuid"
+          ],
+          "typeInfo": [
+            "Int",
+            "String"
+          ]
+        },
+        "_t": "a",
+        "_1": [
+          {
+            "name": "name",
+            "type": "attribute",
+            "typeInfo": "String"
+          },
+          0,
+          0
+        ],
+        "_2": [
+          {
+            "name": "settingsUuid",
+            "type": "attribute",
+            "typeInfo": "String"
+          },
+          0,
+          0
+        ]
+      }
+    },
+    "84": {
+      "localName": [
+        "moneyAmount",
+        "group"
+      ],
+      "propertyInfos": {
+        "0": [
+          {
+            "name": "accountUuid",
+            "type": "element",
+            "typeInfo": "String"
+          }
+        ],
+        "1": {
+          "name": [
+            "sum",
+            "name"
+          ],
+          "typeInfo": [
+            "Double",
+            "String"
+          ]
+        },
+        "2": [
+          {
+            "name": "uuid",
+            "type": "element",
+            "typeInfo": "String"
+          }
+        ],
+        "_t": "a",
+        "_1": [
+          {
+            "name": "sumInCurrency",
+            "type": "attribute",
+            "typeInfo": "Double"
+          },
+          0,
+          0
+        ]
+      }
+    },
+    "85": {
+      "localName": [
+        "retailStore",
+        "gtd"
+      ],
+      "propertyInfos": {
+        "_t": "a",
+        "_0": [
+          {
+            "name": "acquireUuid",
+            "type": "attribute",
+            "typeInfo": "String"
+          },
+          0,
+          0
+        ],
+        "_1": [
+          {
+            "name": "acquireAccountUuid",
+            "type": "attribute",
+            "typeInfo": "String"
+          },
+          0,
+          0
+        ],
+        "_2": [
+          {
+            "name": "active",
+            "type": "attribute",
+            "typeInfo": "Boolean"
+          },
+          0,
+          0
+        ],
+        "_3": [
+          {
+            "name": "address",
+            "type": "attribute",
+            "typeInfo": "String"
+          },
+          0,
+          0
+        ],
+        "_4": [
+          {
+            "name": "atolDeviceId",
+            "type": "attribute",
+            "typeInfo": "String"
+          },
+          0,
+          0
+        ],
+        "_5": [
+          {
+            "name": "atolId",
+            "type": "attribute",
+            "typeInfo": "Int"
+          },
+          0,
+          0
+        ],
+        "_6": [
+          {
+            "name": "controlCashierChoice",
+            "type": "attribute",
+            "typeInfo": "Boolean"
+          },
+          0,
+          0
+        ],
+        "_7": [
+          {
+            "name": "controlShippingStock",
+            "type": "attribute",
+            "typeInfo": "Boolean"
+          },
+          0,
+          0
+        ],
+        "_8": [
+          {
+            "name": "demandPrefix",
+            "type": "attribute",
+            "typeInfo": "String"
+          },
+          0,
+          0
+        ],
+        "_9": [
+          {
+            "name": "enableDiscount",
+            "type": "attribute",
+            "typeInfo": "Boolean"
+          },
+          0,
+          0
+        ],
+        "_10": [
+          {
+            "name": "maxDiscount",
+            "type": "attribute",
+            "typeInfo": "Double"
+          },
+          0,
+          0
+        ],
+        "_11": [
+          {
+            "name": "myCompanyUuid",
+            "type": "attribute",
+            "typeInfo": "String"
+          },
+          0,
+          0
+        ],
+        "_12": [
+          {
+            "name": "myCompanyAccountUuid",
+            "type": "attribute",
+            "typeInfo": "String"
+          },
+          0,
+          0
+        ],
+        "_13": [
+          {
+            "name": "priceTypeUuid",
+            "type": "attribute",
+            "typeInfo": "String"
+          },
+          0,
+          0
+        ],
+        "_14": [
+          {
+            "name": "warehouseUuid",
+            "type": "attribute",
+            "typeInfo": "String"
+          },
+          0,
+          0
+        ]
+      }
+    },
+    "86": {
+      "localName": [
+        "cashier",
+        "infoEntity"
+      ],
+      "propertyInfos": {
+        "0": [
+          {
+            "name": "deleted",
+            "type": "element",
+            "typeInfo": "DateTime"
+          }
+        ],
+        "1": {
+          "name": [
+            "printCheckFR",
+            "updated"
+          ],
+          "typeInfo": [
+            "Boolean",
+            "DateTime"
+          ]
+        },
+        "2": {
+          "name": [
+            "retailStoreUuid",
+            "updatedBy"
+          ]
+        },
+        "_t": "a",
+        "_0": [
+          {
+            "name": "createAndPrintRetailCashOut",
+            "type": "attribute",
+            "typeInfo": "Boolean"
+          },
+          0,
+          0
+        ],
+        "_1": [
+          {
+            "name": "employeeUuid",
+            "type": "attribute",
+            "typeInfo": "String"
+          },
+          0,
+          0
+        ],
+        "_2": [
+          {
+            "name": "printCheck",
+            "type": "attribute",
+            "typeInfo": "Boolean"
+          },
+          0,
+          0
+        ]
+      }
+    },
+    "87": {
+      "localName": [
+        "purchaseOrder",
+        "internalOrder"
+      ],
+      "propertyInfos": {
+        "0": [
+          {
+            "collection": true,
+            "elementName": "moveRef",
+            "name": "demandsUuid",
+            "type": "element",
+            "typeInfo": "String",
+            "wrapperElementName": "demandsUuid"
+          }
+        ],
+        "2": [
+          {
+            "collection": true,
+            "elementName": "purchaseOrderRef",
+            "name": "purchaseOrdersUuid",
+            "type": "element",
+            "typeInfo": "String",
+            "wrapperElementName": "purchaseOrdersUuid"
+          }
+        ],
+        "_t": "a",
+        "_0": [
+          {
+            "collection": true,
+            "elementName": "customerOrderRef",
+            "name": "customerOrdersUuid",
+            "type": "element",
+            "typeInfo": "String",
+            "wrapperElementName": "customerOrdersUuid"
+          },
+          0,
+          0
+        ],
+        "_1": [
+          {
+            "collection": true,
+            "elementName": "internalOrderRef",
+            "name": "internalOrders",
+            "type": "element",
+            "typeInfo": "moysklad.internalOrder",
+            "wrapperElementName": "internalOrders"
+          },
+          0,
+          0
+        ],
+        "_2": [
+          {
+            "collection": true,
+            "elementName": "invoiceInRef",
+            "name": "invoicesUuid",
+            "type": "element",
+            "typeInfo": "String",
+            "wrapperElementName": "invoicesUuid"
+          },
+          0,
+          0
+        ],
+        "_3": [
+          {
+            "collection": true,
+            "elementName": "financeOutRef",
+            "name": "paymentsUuid",
+            "type": "element",
+            "typeInfo": "String",
+            "wrapperElementName": "paymentsUuid"
+          },
+          0,
+          0
+        ],
+        "_5": [
+          {
+            "collection": true,
+            "elementName": "supplyRef",
+            "name": "suppliesUuid",
+            "type": "element",
+            "typeInfo": "String",
+            "wrapperElementName": "suppliesUuid"
+          },
+          0,
+          0
+        ]
+      }
+    },
+    "88": {
+      "localName": [
+        "stockOperation",
+        "inventory"
+      ],
+      "propertyInfos": {
+        "0": [
+          {
+            "collection": true,
+            "elementName": "enterRef",
+            "name": "entersUuid",
+            "type": "element",
+            "typeInfo": "String",
+            "wrapperElementName": "entersUuid"
+          }
+        ],
+        "1": [
+          {
+            "collection": true,
+            "name": "inventoryPosition",
+            "type": "element",
+            "typeInfo": "moysklad.inventoryPosition"
+          }
+        ],
+        "2": [
+          {
+            "collection": true,
+            "elementName": "lossRef",
+            "name": "lossesUuid",
+            "type": "element",
+            "typeInfo": "String",
+            "wrapperElementName": "lossesUuid"
+          }
+        ],
+        "_t": "a"
+      }
+    },
+    "89": {
+      "localName": [
+        "commissionReportPosition",
+        "inventoryPosition"
+      ],
+      "propertyInfos": {
+        "0": [
+          {
+            "name": "correctionAmount",
+            "type": "attribute",
+            "typeInfo": "Double"
+          }
+        ],
+        "_t": "a",
+        "_0": [
+          {
+            "name": "reward",
+            "type": "element",
+            "typeInfo": "moysklad.moneyAmount"
+          },
+          0,
+          0
+        ]
+      }
+    },
+    "90": {
+      "localName": [
+        "order",
+        "invoice"
+      ],
+      "propertyInfos": {
+        "0": [
+          {
+            "collection": true,
+            "name": "invoicePosition",
+            "type": "element",
+            "typeInfo": "moysklad.invoicePosition"
+          }
+        ],
+        "1": {
+          "name": [
+            "reservedSum",
+            "paymentPlannedMoment"
+          ],
+          "typeInfo": [
+            "Double",
+            "DateTime"
+          ]
+        },
+        "_t": "a",
+        "_0": [
+          {
+            "name": "deliveryPlannedMoment",
+            "type": "attribute",
+            "typeInfo": "DateTime"
+          },
+          0,
+          0
+        ]
+      }
+    },
+    "91": {
+      "propertyInfos": {
+        "_t": "a",
+        "_3": [
+          "",
+          0,
+          3
+        ]
+      }
+    },
+    "94": {
+      "localName": [
+        "agentNewsItem",
+        "legendEntity"
+      ],
+      "propertyInfos": {
+        "0": {
+          "name": [
+            "text",
+            "code"
+          ]
+        },
+        "1": [
+          {
+            "name": "description",
+            "type": "element",
+            "typeInfo": "String"
+          }
+        ],
+        "2": [
+          {
+            "name": "externalcode",
+            "type": "element",
+            "typeInfo": "String"
+          }
+        ],
+        "3": {
+          "name": [
+            "moment",
+            "name"
+          ],
+          "typeInfo": [
+            "DateTime",
+            "String"
+          ]
+        },
+        "_t": "a",
+        "_1": [
+          "",
+          0,
+          3
+        ]
+      }
+    },
+    "95": {
+      "localName": [
+        "purchaseReturn",
+        "loss"
+      ],
+      "propertyInfos": {
+        "0": {
+          "name": [
+            "factureUuid",
+            "expenseItemUuid"
+          ]
+        },
+        "1": {
+          "name": [
+            "supplyUuid",
+            "inventoryUuid"
+          ]
+        },
+        "2": {
+          "name": [
+            "purchaseReturnPosition",
+            "lossPosition"
+          ],
+          "typeInfo": [
+            "moysklad.purchaseReturnPosition",
+            "moysklad.lossPosition"
+          ]
+        },
+        "3": [
+          {
+            "name": "salesReturnUuid",
+            "type": "attribute",
+            "typeInfo": "String"
+          }
+        ],
+        "_t": "a",
+        "_2": [
+          {
+            "collection": true,
+            "elementName": "financeInRef",
+            "name": "paymentsUuid",
+            "type": "element",
+            "typeInfo": "String",
+            "wrapperElementName": "paymentsUuid"
+          },
+          0,
+          0
+        ]
+      }
+    },
+    "98": {
+      "localName": [
+        "requisite",
+        "moneyAmount"
+      ],
+      "propertyInfos": {
+        "0": {
+          "name": [
+            "nomerSvidetelstva",
+            "sum"
+          ],
+          "typeInfo": [
+            "String",
+            "Double"
+          ]
+        },
+        "1": {
+          "name": [
+            "dataSvidetelstva",
+            "sumInCurrency"
+          ],
+          "typeInfo": [
+            "DateTime",
+            "Double"
+          ]
+        },
+        "_t": "a",
+        "_0": [
+          {
+            "name": "bankAccount",
+            "type": "element",
+            "typeInfo": "moysklad.agentAccount"
+          },
+          0,
+          0
+        ],
+        "_1": [
+          {
+            "name": "legalTitle",
+            "type": "attribute",
+            "typeInfo": "String"
+          },
+          0,
+          0
+        ],
+        "_2": [
+          {
+            "name": "legalAddress",
+            "type": "attribute",
+            "typeInfo": "String"
+          },
+          0,
+          0
+        ],
+        "_3": [
+          {
+            "name": "actualAddress",
+            "type": "attribute",
+            "typeInfo": "String"
+          },
+          0,
+          0
+        ],
+        "_4": [
+          {
+            "name": "inn",
+            "type": "attribute",
+            "typeInfo": "String"
+          },
+          0,
+          0
+        ],
+        "_5": [
+          {
+            "name": "kpp",
+            "type": "attribute",
+            "typeInfo": "String"
+          },
+          0,
+          0
+        ],
+        "_6": [
+          {
+            "name": "okpo",
+            "type": "attribute",
+            "typeInfo": "String"
+          },
+          0,
+          0
+        ],
+        "_7": [
+          {
+            "name": "ogrn",
+            "type": "attribute",
+            "typeInfo": "String"
+          },
+          0,
+          0
+        ],
+        "_8": [
+          {
+            "name": "ogrnip",
+            "type": "attribute",
+            "typeInfo": "String"
+          },
+          0,
+          0
+        ]
+      }
+    },
+    "99": {
+      "propertyInfos": {
+        "1": {
+          "name": [
+            "discount",
+            "consignmentUuid"
+          ],
+          "typeInfo": [
+            "Double",
+            "String"
+          ]
+        },
+        "2": {
+          "name": [
+            "quantity",
+            "discount"
+          ]
+        },
+        "4": {
+          "name": [
+            "consignmentUuid",
+            "goodUuid"
+          ]
+        },
+        "6": {
+          "name": [
+            "goodUuid",
+            "quantity"
+          ],
+          "typeInfo": [
+            "String",
+            "Double"
+          ]
+        },
+        "_t": "a",
+        "_7": [
+          "",
+          0,
+          3
+        ],
+        "_8": [
+          "",
+          5,
+          3
+        ],
+        "_9": [
+          "",
+          8,
+          3
+        ]
+      }
+    },
+    "100": {
+      "localName": [
+        "comingInOperation",
+        "move"
+      ],
+      "propertyInfos": {
+        "0": [
+          {
+            "name": "internalOrderUuid",
+            "type": "attribute",
+            "typeInfo": "String"
+          }
+        ],
+        "1": [
+          {
+            "collection": true,
+            "name": "movePosition",
+            "type": "element",
+            "typeInfo": "moysklad.movePosition"
+          }
+        ],
+        "2": [
+          {
+            "name": "overhead",
+            "type": "element",
+            "typeInfo": "moysklad.moneyAmount"
+          }
+        ],
+        "3": [
+          {
+            "name": "overheadDistribution",
+            "type": "attribute",
+            "typeInfo": "String"
+          }
+        ],
+        "_t": "a"
+      }
+    },
+    "101": {
+      "localName": [
+        "comingOut",
+        "movePosition"
+      ],
+      "propertyInfos": {
+        "0": [
+          {
+            "name": "overhead",
+            "type": "attribute",
+            "typeInfo": "Double"
+          }
+        ],
+        "1": [
+          {
+            "name": "sourceSlotUuid",
+            "type": "attribute",
+            "typeInfo": "String"
+          }
+        ],
+        "_t": "a"
+      }
+    },
+    "103": {
+      "localName": [
+        "thing",
+        "operation"
+      ],
+      "propertyInfos": {
+        "0": {
+          "name": [
+            "goodUuid",
+            "applicable"
+          ],
+          "typeInfo": [
+            "String",
+            "Boolean"
+          ]
+        },
+        "1": {
+          "typeInfo": [
+            "moysklad.thingAttributeValue",
+            "moysklad.operationAttributeValue"
+          ]
+        },
+        "2": [
+          {
+            "name": "contractUuid",
+            "type": "attribute",
+            "typeInfo": "String"
+          }
+        ],
+        "3": [
+          {
+            "name": "created",
+            "type": "attribute",
+            "typeInfo": "DateTime"
+          }
+        ],
+        "4": [
+          {
+            "name": "createdBy",
+            "type": "attribute",
+            "typeInfo": "String"
+          }
+        ],
+        "5": [
+          {
+            "name": "currencyUuid",
+            "type": "attribute",
+            "typeInfo": "String"
+          }
+        ],
+        "6": [
+          {
+            "collection": true,
+            "name": "document",
+            "type": "element",
+            "typeInfo": "moysklad.operationDocument"
+          }
+        ],
+        "7": [
+          {
+            "name": "moment",
+            "type": "attribute",
+            "typeInfo": "DateTime"
+          }
+        ],
+        "8": [
+          {
+            "name": "payerVat",
+            "type": "attribute",
+            "typeInfo": "Boolean"
+          }
+        ],
+        "9": [
+          {
+            "name": "projectUuid",
+            "type": "attribute",
+            "typeInfo": "String"
+          }
+        ],
+        "10": [
+          {
+            "name": "rate",
+            "type": "attribute",
+            "typeInfo": "Double"
+          }
+        ],
+        "11": [
+          {
+            "name": "retailShiftUuid",
+            "type": "attribute",
+            "typeInfo": "String"
+          }
+        ],
+        "12": [
+          {
+            "name": "retailStoreUuid",
+            "type": "attribute",
+            "typeInfo": "String"
+          }
+        ],
+        "13": [
+          {
+            "name": "sourceAccountUuid",
+            "type": "attribute",
+            "typeInfo": "String"
+          }
+        ],
+        "14": [
+          {
+            "name": "sourceAgentUuid",
+            "type": "attribute",
+            "typeInfo": "String"
+          }
+        ],
+        "15": [
+          {
+            "name": "sourceStoreUuid",
+            "type": "attribute",
+            "typeInfo": "String"
+          }
+        ],
+        "16": [
+          {
+            "name": "stateUuid",
+            "type": "attribute",
+            "typeInfo": "String"
+          }
+        ],
+        "17": [
+          {
+            "name": "sum",
+            "type": "element",
+            "typeInfo": "moysklad.moneyAmount"
+          }
+        ],
+        "18": [
+          {
+            "name": "targetAccountUuid",
+            "type": "attribute",
+            "typeInfo": "String"
+          }
+        ],
+        "19": [
+          {
+            "name": "targetAgentUuid",
+            "type": "attribute",
+            "typeInfo": "String"
+          }
+        ],
+        "20": [
+          {
+            "name": "targetStoreUuid",
+            "type": "attribute",
+            "typeInfo": "String"
+          }
+        ],
+        "21": [
+          {
+            "name": "vatIncluded",
+            "type": "attribute",
+            "typeInfo": "Boolean"
+          }
+        ],
+        "_t": "a"
+      }
+    },
+    "104": {
+      "localName": [
+        "thingAttributeValue",
+        "operationAttributeValue"
+      ],
+      "propertyInfos": {
+        "0": {
+          "name": [
+            "thingUuid",
+            "operationUuid"
+          ]
+        },
+        "_t": "a"
+      }
+    },
+    "108": {
+      "localName": [
+        "finance",
+        "operationWithPositions"
+      ],
+      "propertyInfos": {
+        "_t": "a",
+        "_0": [
+          {
+            "name": "expenseItemUuid",
+            "type": "attribute",
+            "typeInfo": "String"
+          },
+          0,
+          0
+        ],
+        "_1": [
+          {
+            "name": "incomingDate",
+            "type": "attribute",
+            "typeInfo": "DateTime"
+          },
+          0,
+          0
+        ],
+        "_2": [
+          {
+            "name": "incomingNumber",
+            "type": "attribute",
+            "typeInfo": "String"
+          },
+          0,
+          0
+        ],
+        "_3": [
+          {
+            "name": "paymentPurpose",
+            "type": "attribute",
+            "typeInfo": "String"
+          },
+          0,
+          0
+        ],
+        "_4": [
+          {
+            "name": "vatSum",
+            "type": "attribute",
+            "typeInfo": "Double"
+          },
+          0,
+          0
+        ]
+      }
+    },
+    "109": {
+      "localName": [
+        "priceList",
+        "order"
+      ],
+      "propertyInfos": {
+        "0": [
+          {
+            "name": "deliveryPlannedMoment",
+            "type": "attribute",
+            "typeInfo": "DateTime"
+          }
+        ],
+        "1": [
+          {
+            "name": "reservedSum",
+            "type": "attribute",
+            "typeInfo": "Double"
+          }
+        ],
+        "_t": "a",
+        "_0": [
+          {
+            "name": "metadata",
+            "type": "element",
+            "typeInfo": "moysklad.priceListMetadata"
+          },
+          0,
+          0
+        ],
+        "_1": [
+          {
+            "collection": true,
+            "name": "priceListRow",
+            "type": "element",
+            "typeInfo": "moysklad.priceListRow"
+          },
+          0,
+          0
+        ]
+      }
+    },
+    "111": {
+      "localName": [
+        "abstractCashIn",
+        "paymentIn"
+      ]
+    },
+    "112": {
+      "localName": [
+        "abstractCashOut",
+        "paymentOut"
+      ]
+    },
+    "113": {
+      "localName": [
+        "specialPriceDiscount",
+        "personalDiscount"
+      ]
+    },
+    "114": {
+      "localName": [
+        "featureAttributeValue",
+        "placeAttributeValue"
+      ],
+      "propertyInfos": {
+        "0": {
+          "name": [
+            "atolId",
+            "placeUuid"
+          ],
+          "typeInfo": [
+            "Int",
+            "String"
+          ]
+        },
+        "_t": "a"
+      }
+    },
+    "115": {
+      "localName": [
+        "gtd",
+        "predefinedLegendEntity"
+      ],
+      "propertyInfos": {
+        "0": [
+          {
+            "name": "favourite",
+            "type": "attribute",
+            "typeInfo": "Boolean"
+          }
+        ],
+        "_t": "a"
+      }
+    },
+    "116": {
+      "localName": [
+        "agentDiscount",
+        "price"
+      ],
+      "propertyInfos": {
+        "0": {
+          "name": [
+            "agentUuid",
+            "currencyUuid"
+          ]
+        },
+        "1": {
+          "name": [
+            "discountUuid",
+            "priceTypeUuid"
+          ]
+        },
+        "2": [
+          {
+            "name": "value",
+            "type": "attribute",
+            "typeInfo": "Double"
+          }
+        ],
+        "_t": "a",
+        "_2": [
+          {
+            "name": "demandSumCorrection",
+            "type": "element",
+            "typeInfo": "Double"
+          },
+          0,
+          0
+        ],
+        "_3": [
+          {
+            "name": "personalDiscount",
+            "type": "element",
+            "typeInfo": "Double"
+          },
+          0,
+          0
+        ]
+      }
+    },
+    "117": {
+      "localName": [
+        "facture",
+        "priceList"
+      ],
+      "propertyInfos": {
+        "0": [
+          {
+            "name": "metadata",
+            "type": "element",
+            "typeInfo": "moysklad.priceListMetadata"
+          }
+        ],
+        "1": [
+          {
+            "collection": true,
+            "name": "priceListRow",
+            "type": "element",
+            "typeInfo": "moysklad.priceListRow"
+          }
+        ],
+        "_t": "a"
+      }
+    },
+    "118": {
+      "localName": [
+        "discount",
+        "priceListCell"
+      ],
+      "propertyInfos": {
+        "0": {
+          "name": [
+            "name",
+            "columnName"
+          ]
+        },
+        "1": [
+          {
+            "name": "sum",
+            "type": "element",
+            "typeInfo": "moysklad.moneyAmount"
+          }
+        ],
+        "_t": "a",
+        "_1": [
+          {
+            "name": "active",
+            "type": "attribute",
+            "typeInfo": "Boolean"
+          },
+          0,
+          0
+        ]
+      }
+    },
+    "119": {
+      "localName": [
+        "workflow",
+        "priceListMetadata"
+      ],
+      "propertyInfos": {
+        "0": {
+          "name": [
+            "state",
+            "column"
+          ],
+          "typeInfo": [
+            "moysklad.state",
+            "moysklad.priceListMetadataColumn"
+          ]
+        },
+        "1": [
+          {
+            "name": "priceTypeUuid",
+            "type": "attribute",
+            "typeInfo": "String"
+          }
+        ],
+        "_t": "a"
+      }
+    },
+    "120": {
+      "localName": [
+        "templatesMetadata",
+        "priceListMetadataColumn"
+      ],
+      "propertyInfos": {
+        "0": [
+          {
+            "name": "percentageDiscount",
+            "type": "attribute",
+            "typeInfo": "Int"
+          }
+        ],
+        "_t": "a",
+        "_0": [
+          {
+            "collection": true,
+            "name": "template",
+            "type": "element",
+            "typeInfo": "moysklad.template"
+          },
+          0,
+          0
+        ]
+      }
+    },
+    "123": {
+      "localName": [
+        "collectionContainer",
+        "prices"
+      ],
+      "propertyInfos": {
+        "0": [
+          {
+            "collection": true,
+            "name": "price",
+            "type": "element",
+            "typeInfo": "moysklad.price"
+          }
+        ],
+        "_t": "a",
+        "_0": [
+          {
+            "collection": true,
+            "name": "items",
+            "type": "anyElement"
+          },
+          0,
+          0
+        ]
+      }
+    },
+    "124": {
+      "localName": [
+        "template",
+        "printedDocument"
+      ],
+      "propertyInfos": {
+        "0": [
+          {
+            "name": "emailedDate",
+            "type": "attribute",
+            "typeInfo": "DateTime"
+          }
+        ],
+        "1": [
+          {
+            "name": "publicId",
+            "type": "attribute",
+            "typeInfo": "String"
+          }
+        ],
+        "_t": "a"
+      }
+    },
+    "125": {
+      "propertyInfos": {
+        "_t": "a",
+        "_4": [
+          "",
+          0,
+          3
+        ]
+      }
+    },
+    "126": {
+      "localName": [
+        "internalOrder",
+        "processingOrder"
+      ],
+      "propertyInfos": {
+        "0": [
+          {
+            "name": "planUuid",
+            "type": "attribute",
+            "typeInfo": "String"
+          }
+        ],
+        "1": [
+          {
+            "collection": true,
+            "elementName": "processingRef",
+            "name": "processings",
+            "type": "element",
+            "typeInfo": "moysklad.processing",
+            "wrapperElementName": "processings"
+          }
+        ],
+        "2": {
+          "typeInfo": [
+            "moysklad.purchaseOrderPosition",
+            "moysklad.customerOrderPosition"
+          ]
+        },
+        "3": [
+          {
+            "name": "quantity",
+            "type": "attribute",
+            "typeInfo": "Double"
+          }
+        ],
+        "_t": "a",
+        "_1": [
+          {
+            "collection": true,
+            "elementName": "purchaseOrderRef",
+            "name": "purchaseOrdersUuid",
+            "type": "element",
+            "typeInfo": "String",
+            "wrapperElementName": "purchaseOrdersUuid"
+          },
+          0,
+          0
+        ],
+        "_2": [
+          {
+            "collection": true,
+            "elementName": "moveRef",
+            "name": "demandsUuid",
+            "type": "element",
+            "typeInfo": "String",
+            "wrapperElementName": "demandsUuid"
+          },
+          0,
+          0
+        ]
+      }
+    },
+    "133": {
+      "localName": [
+        "priceListMetadata",
+        "project"
+      ],
+      "propertyInfos": {
+        "0": {
+          "name": [
+            "priceTypeUuid",
+            "archived"
+          ],
+          "typeInfo": [
+            "String",
+            "Boolean"
+          ]
+        },
+        "1": {
+          "name": [
+            "column",
+            "attribute"
+          ],
+          "typeInfo": [
+            "moysklad.priceListMetadataColumn",
+            "moysklad.projectAttributeValue"
+          ]
+        },
+        "_t": "a"
+      }
+    },
+    "134": {
+      "localName": [
+        "contractAttributeValue",
+        "projectAttributeValue"
+      ],
+      "propertyInfos": {
+        "0": {
+          "name": [
+            "contractUuid",
+            "projectUuid"
+          ]
+        },
+        "_t": "a"
+      }
+    },
+    "135": {
+      "localName": [
+        "processingOrder",
+        "purchaseOrder"
+      ],
+      "propertyInfos": {
+        "0": [
+          {
+            "collection": true,
+            "elementName": "customerOrderRef",
+            "name": "customerOrdersUuid",
+            "type": "element",
+            "typeInfo": "String",
+            "wrapperElementName": "customerOrdersUuid"
+          }
+        ],
+        "1": [
+          {
+            "collection": true,
+            "elementName": "internalOrderRef",
+            "name": "internalOrders",
+            "type": "element",
+            "typeInfo": "moysklad.internalOrder",
+            "wrapperElementName": "internalOrders"
+          }
+        ],
+        "2": [
+          {
+            "collection": true,
+            "elementName": "invoiceInRef",
+            "name": "invoicesUuid",
+            "type": "element",
+            "typeInfo": "String",
+            "wrapperElementName": "invoicesUuid"
+          }
+        ],
+        "3": [
+          {
+            "collection": true,
+            "elementName": "financeOutRef",
+            "name": "paymentsUuid",
+            "type": "element",
+            "typeInfo": "String",
+            "wrapperElementName": "paymentsUuid"
+          }
+        ],
+        "4": {
+          "typeInfo": [
+            "moysklad.customerOrderPosition",
+            "moysklad.purchaseOrderPosition"
+          ]
+        },
+        "5": [
+          {
+            "collection": true,
+            "elementName": "supplyRef",
+            "name": "suppliesUuid",
+            "type": "element",
+            "typeInfo": "String",
+            "wrapperElementName": "suppliesUuid"
+          }
+        ],
+        "_t": "a",
+        "_0": [
+          {
+            "name": "planUuid",
+            "type": "attribute",
+            "typeInfo": "String"
+          },
+          0,
+          0
+        ],
+        "_1": [
+          {
+            "name": "quantity",
+            "type": "attribute",
+            "typeInfo": "Double"
+          },
+          0,
+          0
+        ],
+        "_3": [
+          {
+            "collection": true,
+            "elementName": "processingRef",
+            "name": "processings",
+            "type": "element",
+            "typeInfo": "moysklad.processing",
+            "wrapperElementName": "processings"
+          },
+          0,
+          0
+        ]
+      }
+    },
+    "137": {
+      "localName": [
+        "loss",
+        "purchaseReturn"
+      ],
+      "propertyInfos": {
+        "0": {
+          "name": [
+            "expenseItemUuid",
+            "factureUuid"
+          ]
+        },
+        "1": [
+          {
+            "collection": true,
+            "elementName": "financeInRef",
+            "name": "paymentsUuid",
+            "type": "element",
+            "typeInfo": "String",
+            "wrapperElementName": "paymentsUuid"
+          }
+        ],
+        "2": {
+          "name": [
+            "lossPosition",
+            "purchaseReturnPosition"
+          ],
+          "typeInfo": [
+            "moysklad.lossPosition",
+            "moysklad.purchaseReturnPosition"
+          ]
+        },
+        "3": {
+          "name": [
+            "salesReturnUuid",
+            "supplyUuid"
+          ]
+        },
+        "_t": "a",
+        "_1": [
+          {
+            "name": "inventoryUuid",
+            "type": "attribute",
+            "typeInfo": "String"
+          },
+          0,
+          0
+        ],
+        "_3": [
+          "",
+          2,
+          3
+        ]
+      }
+    },
+    "140": {
+      "localName": [
+        "error",
+        "requisite"
+      ],
+      "propertyInfos": {
+        "0": [
+          {
+            "name": "actualAddress",
+            "type": "attribute",
+            "typeInfo": "String"
+          }
+        ],
+        "1": {
+          "name": [
+            "uid",
+            "bankAccount"
+          ],
+          "typeInfo": [
+            "String",
+            "moysklad.agentAccount"
+          ]
+        },
+        "2": [
+          {
+            "name": "dataSvidetelstva",
+            "type": "attribute",
+            "typeInfo": "DateTime"
+          }
+        ],
+        "3": [
+          {
+            "name": "inn",
+            "type": "attribute",
+            "typeInfo": "String"
+          }
+        ],
+        "4": [
+          {
+            "name": "kpp",
+            "type": "attribute",
+            "typeInfo": "String"
+          }
+        ],
+        "5": [
+          {
+            "name": "legalAddress",
+            "type": "attribute",
+            "typeInfo": "String"
+          }
+        ],
+        "6": [
+          {
+            "name": "legalTitle",
+            "type": "attribute",
+            "typeInfo": "String"
+          }
+        ],
+        "7": [
+          {
+            "name": "nomerSvidetelstva",
+            "type": "attribute",
+            "typeInfo": "String"
+          }
+        ],
+        "8": [
+          {
+            "name": "ogrn",
+            "type": "attribute",
+            "typeInfo": "String"
+          }
+        ],
+        "9": [
+          {
+            "name": "ogrnip",
+            "type": "attribute",
+            "typeInfo": "String"
+          }
+        ],
+        "10": [
+          {
+            "name": "okpo",
+            "type": "attribute",
+            "typeInfo": "String"
+          }
+        ],
+        "_t": "a",
+        "_1": [
+          {
+            "name": "moment",
+            "type": "element",
+            "typeInfo": "String"
+          },
+          0,
+          0
+        ],
+        "_2": [
+          {
+            "name": "message",
+            "type": "element",
+            "typeInfo": "String"
+          },
+          0,
+          0
+        ],
+        "_3": [
+          {
+            "name": "stack",
+            "type": "element",
+            "typeInfo": "String"
+          },
+          0,
+          0
+        ]
+      }
+    },
+    "141": {
+      "localName": [
+        "cashIn",
+        "retailCashIn"
+      ]
+    },
+    "142": {
+      "localName": [
+        "cashOut",
+        "retailCashOut"
+      ]
+    },
+    "143": {
+      "localName": [
+        "demand",
+        "retailDemand"
+      ],
+      "propertyInfos": {
+        "0": {
+          "name": [
+            "extension",
+            "noCashSum"
+          ],
+          "typeInfo": [
+            "moysklad.demandExtension",
+            "moysklad.moneyAmount"
+          ]
+        },
+        "1": {
+          "name": [
+            "overheadDistribution",
+            "nonCash"
+          ],
+          "typeInfo": [
+            "String",
+            "Boolean"
+          ]
+        },
+        "_t": "a",
+        "_1": [
+          "",
+          0,
+          3
+        ],
+        "_2": [
+          {
+            "name": "overhead",
+            "type": "element",
+            "typeInfo": "moysklad.moneyAmount"
+          },
+          0,
+          0
+        ]
+      }
+    },
+    "146": {
+      "localName": [
+        "customEntity",
+        "retailStore"
+      ],
+      "propertyInfos": {
+        "0": {
+          "name": [
+            "entityMetadataUuid",
+            "acquireAccountUuid"
+          ]
+        },
+        "1": [
+          {
+            "name": "acquireUuid",
+            "type": "attribute",
+            "typeInfo": "String"
+          }
+        ],
+        "2": [
+          {
+            "name": "active",
+            "type": "attribute",
+            "typeInfo": "Boolean"
+          }
+        ],
+        "3": [
+          {
+            "name": "address",
+            "type": "attribute",
+            "typeInfo": "String"
+          }
+        ],
+        "4": [
+          {
+            "name": "atolDeviceId",
+            "type": "attribute",
+            "typeInfo": "String"
+          }
+        ],
+        "5": [
+          {
+            "name": "atolId",
+            "type": "attribute",
+            "typeInfo": "Int"
+          }
+        ],
+        "6": [
+          {
+            "name": "controlCashierChoice",
+            "type": "attribute",
+            "typeInfo": "Boolean"
+          }
+        ],
+        "7": [
+          {
+            "name": "controlShippingStock",
+            "type": "attribute",
+            "typeInfo": "Boolean"
+          }
+        ],
+        "8": [
+          {
+            "name": "demandPrefix",
+            "type": "attribute",
+            "typeInfo": "String"
+          }
+        ],
+        "9": [
+          {
+            "name": "enableDiscount",
+            "type": "attribute",
+            "typeInfo": "Boolean"
+          }
+        ],
+        "10": [
+          {
+            "name": "maxDiscount",
+            "type": "attribute",
+            "typeInfo": "Double"
+          }
+        ],
+        "11": [
+          {
+            "name": "myCompanyAccountUuid",
+            "type": "attribute",
+            "typeInfo": "String"
+          }
+        ],
+        "12": [
+          {
+            "name": "myCompanyUuid",
+            "type": "attribute",
+            "typeInfo": "String"
+          }
+        ],
+        "13": [
+          {
+            "name": "priceTypeUuid",
+            "type": "attribute",
+            "typeInfo": "String"
+          }
+        ],
+        "14": [
+          {
+            "name": "warehouseUuid",
+            "type": "attribute",
+            "typeInfo": "String"
+          }
+        ],
+        "_t": "a"
+      }
+    },
+    "148": {
+      "localName": [
+        "enterPosition",
+        "salesReturnPosition"
+      ],
+      "propertyInfos": {
+        "_t": "a",
+        "_0": [
+          {
+            "name": "overhead",
+            "type": "attribute",
+            "typeInfo": "Double"
+          },
+          0,
+          0
+        ],
+        "_1": [
+          {
+            "collection": true,
+            "elementName": "tag",
+            "name": "tags",
+            "type": "element",
+            "typeInfo": "String",
+            "wrapperElementName": "tags"
+          },
+          0,
+          0
+        ]
+      }
+    },
+    "149": {
+      "localName": [
+        "good",
+        "service"
+      ],
+      "propertyInfos": {
+        "_t": "a",
+        "_0": [
+          {
+            "name": "isSerialTrackable",
+            "type": "attribute",
+            "typeInfo": "Boolean"
+          },
+          0,
+          0
+        ],
+        "_1": [
+          {
+            "name": "soldByWeight",
+            "type": "attribute",
+            "typeInfo": "Boolean"
+          },
+          0,
+          0
+        ],
+        "_2": [
+          {
+            "name": "minimumBalance",
+            "type": "attribute",
+            "typeInfo": "Double"
+          },
+          0,
+          0
+        ],
+        "_3": [
+          {
+            "name": "weight",
+            "type": "attribute",
+            "typeInfo": "Double"
+          },
+          0,
+          0
+        ],
+        "_4": [
+          {
+            "name": "volume",
+            "type": "attribute",
+            "typeInfo": "Double"
+          },
+          0,
+          0
+        ],
+        "_5": [
+          {
+            "collection": true,
+            "name": "pack",
+            "type": "element",
+            "typeInfo": "moysklad.goodPack"
+          },
+          0,
+          0
+        ],
+        "_6": [
+          {
+            "collection": true,
+            "elementName": "preference",
+            "name": "preferences",
+            "type": "element",
+            "typeInfo": "moysklad.goodSlotPreference",
+            "wrapperElementName": "preferences"
+          },
+          0,
+          0
+        ],
+        "_7": [
+          {
+            "collection": true,
+            "elementName": "image",
+            "name": "images",
+            "type": "element",
+            "typeInfo": "moysklad.goodImage",
+            "wrapperElementName": "images"
+          },
+          0,
+          0
+        ]
+      }
+    },
+    "150": {
+      "localName": [
+        "salesReturnPosition",
+        "shipmentIn"
+      ],
+      "propertyInfos": {
+        "0": [
+          {
+            "name": "overhead",
+            "type": "attribute",
+            "typeInfo": "Double"
+          }
+        ],
+        "_t": "a"
+      }
+    },
+    "152": {
+      "localName": [
+        "abstractConnectorSetting",
+        "slot"
+      ],
+      "propertyInfos": {
+        "0": {
+          "name": [
+            "active",
+            "warehouseUuid"
+          ],
+          "typeInfo": [
+            "Boolean",
+            "String"
+          ]
+        },
+        "_t": "a",
+        "_1": [
+          {
+            "name": "login",
+            "type": "attribute",
+            "typeInfo": "String"
+          },
+          0,
+          0
+        ],
+        "_2": [
+          {
+            "name": "organizationUuid",
+            "type": "attribute",
+            "typeInfo": "String"
+          },
+          0,
+          0
+        ],
+        "_3": [
+          {
+            "name": "password",
+            "type": "attribute",
+            "typeInfo": "String"
+          },
+          0,
+          0
+        ],
+        "_4": [
+          {
+            "name": "pollPeriod",
+            "type": "attribute",
+            "typeInfo": "Int"
+          },
+          0,
+          0
+        ]
+      }
+    },
+    "153": {
+      "localName": [
+        "personalDiscount",
+        "specialPriceDiscount"
+      ]
+    },
+    "154": {
+      "localName": [
+        "project",
+        "state"
+      ],
+      "propertyInfos": {
+        "_t": "a",
+        "_0": [
+          {
+            "name": "archived",
+            "type": "attribute",
+            "typeInfo": "Boolean"
+          },
+          0,
+          0
+        ],
+        "_1": [
+          {
+            "collection": true,
+            "name": "attribute",
+            "type": "element",
+            "typeInfo": "moysklad.projectAttributeValue"
+          },
+          0,
+          0
+        ]
+      }
+    },
+    "155": {
+      "localName": [
+        "inventoryPosition",
+        "stockMotion"
+      ],
+      "propertyInfos": {
+        "0": {
+          "name": [
+            "correctionAmount",
+            "countryUuid"
+          ],
+          "typeInfo": [
+            "Double",
+            "String"
+          ]
+        },
+        "1": [
+          {
+            "name": "gtdUuid",
+            "type": "attribute",
+            "typeInfo": "String"
+          }
+        ],
+        "_t": "a"
+      }
+    },
+    "156": {
+      "localName": [
+        "inventory",
+        "stockOperation"
+      ],
+      "propertyInfos": {
+        "_t": "a",
+        "_0": [
+          {
+            "collection": true,
+            "elementName": "enterRef",
+            "name": "entersUuid",
+            "type": "element",
+            "typeInfo": "String",
+            "wrapperElementName": "entersUuid"
+          },
+          0,
+          0
+        ],
+        "_1": [
+          {
+            "collection": true,
+            "elementName": "lossRef",
+            "name": "lossesUuid",
+            "type": "element",
+            "typeInfo": "String",
+            "wrapperElementName": "lossesUuid"
+          },
+          0,
+          0
+        ],
+        "_2": [
+          {
+            "collection": true,
+            "name": "inventoryPosition",
+            "type": "element",
+            "typeInfo": "moysklad.inventoryPosition"
+          },
+          0,
+          0
+        ]
+      }
+    },
+    "157": {
+      "localName": [
+        "enter",
+        "supply"
+      ],
+      "propertyInfos": {
+        "0": {
+          "name": [
+            "inventoryUuid",
+            "factureInUuid"
+          ]
+        },
+        "1": {
+          "name": [
+            "overheadDistribution",
+            "incomingDate"
+          ],
+          "typeInfo": [
+            "String",
+            "DateTime"
+          ]
+        },
+        "2": [
+          {
+            "name": "incomingNumber",
+            "type": "attribute",
+            "typeInfo": "String"
+          }
+        ],
+        "3": [
+          {
+            "collection": true,
+            "elementName": "invoiceInRef",
+            "name": "invoicesInUuid",
+            "type": "element",
+            "typeInfo": "String",
+            "wrapperElementName": "invoicesInUuid"
+          }
+        ],
+        "5": [
+          {
+            "name": "overheadDistribution",
+            "type": "attribute",
+            "typeInfo": "String"
+          }
+        ],
+        "6": [
+          {
+            "collection": true,
+            "elementName": "financeOutRef",
+            "name": "paymentsUuid",
+            "type": "element",
+            "typeInfo": "String",
+            "wrapperElementName": "paymentsUuid"
+          }
+        ],
+        "7": [
+          {
+            "name": "purchaseOrderUuid",
+            "type": "attribute",
+            "typeInfo": "String"
+          }
+        ],
+        "8": [
+          {
+            "collection": true,
+            "elementName": "purchaseReturnRef",
+            "name": "purchaseReturnsUuid",
+            "type": "element",
+            "typeInfo": "String",
+            "wrapperElementName": "purchaseReturnsUuid"
+          }
+        ],
+        "9": {
+          "name": [
+            "enterPosition",
+            "shipmentIn"
+          ],
+          "typeInfo": [
+            "moysklad.enterPosition",
+            "moysklad.shipmentIn"
+          ]
+        },
+        "_t": "a"
+      }
+    },
+    "158": {
+      "localName": [
+        "documentMiniature",
+        "template"
+      ]
+    },
+    "159": {
+      "localName": [
+        "state",
+        "templatesMetadata"
+      ],
+      "propertyInfos": {
+        "0": [
+          {
+            "collection": true,
+            "name": "template",
+            "type": "element",
+            "typeInfo": "moysklad.template"
+          }
+        ],
+        "_t": "a"
+      }
+    },
+    "160": {
+      "localName": [
+        "operation",
+        "thing"
+      ],
+      "propertyInfos": {
+        "0": {
+          "typeInfo": [
+            "moysklad.operationAttributeValue",
+            "moysklad.thingAttributeValue"
+          ]
+        },
+        "1": {
+          "name": [
+            "createdBy",
+            "goodUuid"
+          ]
+        },
+        "_t": "a",
+        "_0": [
+          {
+            "name": "stateUuid",
+            "type": "attribute",
+            "typeInfo": "String"
+          },
+          0,
+          0
+        ],
+        "_1": [
+          {
+            "name": "targetAgentUuid",
+            "type": "attribute",
+            "typeInfo": "String"
+          },
+          0,
+          0
+        ],
+        "_2": [
+          {
+            "name": "sourceAgentUuid",
+            "type": "attribute",
+            "typeInfo": "String"
+          },
+          0,
+          0
+        ],
+        "_3": [
+          {
+            "name": "targetStoreUuid",
+            "type": "attribute",
+            "typeInfo": "String"
+          },
+          0,
+          0
+        ],
+        "_4": [
+          {
+            "name": "sourceStoreUuid",
+            "type": "attribute",
+            "typeInfo": "String"
+          },
+          0,
+          0
+        ],
+        "_5": [
+          {
+            "name": "applicable",
+            "type": "attribute",
+            "typeInfo": "Boolean"
+          },
+          0,
+          0
+        ],
+        "_6": [
+          {
+            "name": "projectUuid",
+            "type": "attribute",
+            "typeInfo": "String"
+          },
+          0,
+          0
+        ],
+        "_7": [
+          {
+            "name": "contractUuid",
+            "type": "attribute",
+            "typeInfo": "String"
+          },
+          0,
+          0
+        ],
+        "_8": [
+          {
+            "name": "retailShiftUuid",
+            "type": "attribute",
+            "typeInfo": "String"
+          },
+          0,
+          0
+        ],
+        "_9": [
+          {
+            "name": "moment",
+            "type": "attribute",
+            "typeInfo": "DateTime"
+          },
+          0,
+          0
+        ],
+        "_10": [
+          {
+            "name": "targetAccountUuid",
+            "type": "attribute",
+            "typeInfo": "String"
+          },
+          0,
+          0
+        ],
+        "_11": [
+          {
+            "name": "sourceAccountUuid",
+            "type": "attribute",
+            "typeInfo": "String"
+          },
+          0,
+          0
+        ],
+        "_12": [
+          {
+            "name": "payerVat",
+            "type": "attribute",
+            "typeInfo": "Boolean"
+          },
+          0,
+          0
+        ],
+        "_13": [
+          {
+            "name": "retailStoreUuid",
+            "type": "attribute",
+            "typeInfo": "String"
+          },
+          0,
+          0
+        ],
+        "_14": [
+          {
+            "name": "currencyUuid",
+            "type": "attribute",
+            "typeInfo": "String"
+          },
+          0,
+          0
+        ],
+        "_15": [
+          {
+            "name": "rate",
+            "type": "attribute",
+            "typeInfo": "Double"
+          },
+          0,
+          0
+        ],
+        "_16": [
+          {
+            "name": "vatIncluded",
+            "type": "attribute",
+            "typeInfo": "Boolean"
+          },
+          0,
+          0
+        ],
+        "_17": [
+          {
+            "name": "created",
+            "type": "attribute",
+            "typeInfo": "DateTime"
+          },
+          0,
+          0
+        ],
+        "_19": [
+          "",
+          0,
+          3
+        ],
+        "_20": [
+          {
+            "collection": true,
+            "name": "document",
+            "type": "element",
+            "typeInfo": "moysklad.operationDocument"
+          },
+          0,
+          0
+        ],
+        "_21": [
+          {
+            "name": "sum",
+            "type": "element",
+            "typeInfo": "moysklad.moneyAmount"
+          },
+          0,
+          0
+        ]
+      }
+    },
+    "161": {
+      "localName": [
+        "projectAttributeValue",
+        "thingAttributeValue"
+      ],
+      "propertyInfos": {
+        "0": {
+          "name": [
+            "projectUuid",
+            "thingUuid"
+          ]
+        },
+        "_t": "a"
+      }
+    },
+    "163": {
+      "localName": [
+        "group",
+        "unit"
+      ],
+      "propertyInfos": {
+        "0": [
+          {
+            "name": "s1",
+            "type": "attribute",
+            "typeInfo": "String"
+          }
+        ],
+        "1": [
+          {
+            "name": "s24",
+            "type": "attribute",
+            "typeInfo": "String"
+          }
+        ],
+        "2": [
+          {
+            "name": "s5",
+            "type": "attribute",
+            "typeInfo": "String"
+          }
+        ],
+        "3": {
+          "name": [
+            "name",
+            "sex"
+          ],
+          "typeInfo": [
+            "String",
+            "UnsignedShort"
+          ]
+        },
+        "_t": "a",
+        "_0": [
+          {
+            "name": "uuid",
+            "type": "element",
+            "typeInfo": "String"
+          },
+          0,
+          0
+        ],
+        "_1": [
+          {
+            "name": "accountUuid",
+            "type": "element",
+            "typeInfo": "String"
+          },
+          0,
+          0
+        ]
+      }
+    },
+    "164": {
+      "localName": [
+        "expenseItem",
+        "uom"
+      ],
+      "propertyInfos": {
+        "0": [
+          {
+            "name": "type",
+            "type": "attribute",
+            "typeInfo": "String"
+          }
+        ],
+        "_t": "a"
+      }
+    },
+    "165": {
+      "propertyInfos": {
+        "_t": "a",
+        "_1": [
+          "",
+          3,
+          3
+        ]
+      }
+    },
+    "166": {
+      "localName": [
+        "priceListMetadataColumn",
+        "workflow"
+      ],
+      "propertyInfos": {
+        "0": [
+          {
+            "collection": true,
+            "name": "state",
+            "type": "element",
+            "typeInfo": "moysklad.state"
+          }
+        ],
+        "_t": "a",
+        "_0": [
+          {
+            "name": "percentageDiscount",
+            "type": "attribute",
+            "typeInfo": "Int"
+          },
+          0,
+          0
+        ]
+      }
+    },
+    "_t": "a",
+    "_0": [
+      "",
+      78,
+      3
+    ],
+    "_2": [
+      "",
+      80,
+      3
+    ],
+    "_6": [
+      "",
+      63,
+      3
+    ],
+    "_7": [
+      "",
+      7,
+      3
+    ],
+    "_8": [
+      "",
+      47,
+      3
+    ],
+    "_9": [
+      "",
+      2,
+      3
+    ],
+    "_10": [
+      "",
+      68,
+      3
+    ],
+    "_11": [
+      "",
+      39,
+      3
+    ],
+    "_13": [
+      "",
+      11,
+      3
+    ],
+    "_16": [
+      "",
+      73,
+      3
+    ],
+    "_17": [
+      "",
+      146,
+      3
+    ],
+    "_18": [
+      "",
+      50,
+      3
+    ],
+    "_19": [
+      "",
+      14,
+      3
+    ],
+    "_20": [
+      "",
+      17,
+      3
+    ],
+    "_22": [
+      "",
+      158,
+      3
+    ],
+    "_23": [
+      "",
+      74,
+      3
+    ],
+    "_24": [
+      "",
+      165,
+      3
+    ],
+    "_29": [
+      "",
+      12,
+      3
+    ],
+    "_32": [
+      "",
+      114,
+      3
+    ],
+    "_34": [
+      "",
+      10,
+      3
+    ],
+    "_35": [
+      "",
+      134,
+      3
+    ],
+    "_37": [
+      "",
+      28,
+      3
+    ],
+    "_38": [
+      "",
+      46,
+      3
+    ],
+    "_40": [
+      "",
+      84,
+      3
+    ],
+    "_41": [
+      "",
+      154,
+      3
+    ],
+    "_42": [
+      "",
+      161,
+      3
+    ],
+    "_45": [
+      "",
+      98,
+      3
+    ],
+    "_47": [
+      "",
+      94,
+      3
+    ],
+    "_48": [
+      "",
+      18,
+      3
+    ],
+    "_49": [
+      "",
+      159,
+      3
+    ],
+    "_50": [
+      "",
+      122,
+      3
+    ],
+    "_52": [
+      "",
+      21,
+      3
+    ],
+    "_54": [
+      "",
+      34,
+      3
+    ],
+    "_57": [
+      "",
+      160,
+      3
+    ],
+    "_59": [
+      "",
+      108,
+      3
+    ],
+    "_61": [
+      "",
+      106,
+      3
+    ],
+    "_62": [
+      "",
+      145,
+      3
+    ],
+    "_64": [
+      "",
+      102,
+      3
+    ],
+    "_65": [
+      "",
+      3,
+      3
+    ],
+    "_66": [
+      "",
+      30,
+      3
+    ],
+    "_68": [
+      "",
+      51,
+      3
+    ],
+    "_71": [
+      "",
+      33,
+      3
+    ],
+    "_76": [
+      "",
+      24,
+      3
+    ],
+    "_77": [
+      "",
+      52,
+      3
+    ],
+    "_79": [
+      "",
+      87,
+      3
+    ],
+    "_80": [
+      "",
+      126,
+      3
+    ],
+    "_81": [
+      "",
+      136,
+      3
+    ],
+    "_82": [
+      "",
+      32,
+      3
+    ],
+    "_83": [
+      "",
+      29,
+      3
+    ],
+    "_84": [
+      "",
+      38,
+      3
+    ],
+    "_86": [
+      "",
+      91,
+      3
+    ],
+    "_87": [
+      "",
+      76,
+      3
+    ],
+    "_88": [
+      "",
+      70,
+      3
+    ],
+    "_90": [
+      "",
+      5,
+      3
+    ],
+    "_91": [
+      "",
+      100,
+      3
+    ],
+    "_92": [
+      "",
+      62,
+      3
+    ],
+    "_93": [
+      "",
+      31,
+      3
+    ],
+    "_94": [
+      "",
+      95,
+      3
+    ],
+    "_95": [
+      "",
+      71,
+      3
+    ],
+    "_96": [
+      "",
+      54,
+      3
+    ],
+    "_97": [
+      "",
+      107,
+      3
+    ],
+    "_98": [
+      "",
+      138,
+      3
+    ],
+    "_99": [
+      "",
+      6,
+      3
+    ],
+    "_100": [
+      "",
+      101,
+      3
+    ],
+    "_101": [
+      "",
+      164,
+      3
+    ],
+    "_102": [
+      "",
+      151,
+      3
+    ],
+    "_103": [
+      "",
+      35,
+      3
+    ],
+    "_104": [
+      "",
+      89,
+      3
+    ],
+    "_105": [
+      "",
+      36,
+      3
+    ],
+    "_106": [
+      "",
+      37,
+      3
+    ],
+    "_108": [
+      "",
+      58,
+      3
+    ],
+    "_109": [
+      "",
+      65,
+      3
+    ],
+    "_112": [
+      "",
+      139,
+      3
+    ],
+    "_113": [
+      "",
+      149,
+      3
+    ],
+    "_114": [
+      "",
+      55,
+      3
+    ],
+    "_115": [
+      "",
+      81,
+      3
+    ],
+    "_116": [
+      "",
+      162,
+      3
+    ],
+    "_119": [
+      "",
+      97,
+      3
+    ],
+    "_122": [
+      "",
+      109,
+      3
+    ],
+    "_124": [
+      "",
+      166,
+      3
+    ],
+    "_125": [
+      "",
+      121,
+      3
+    ],
+    "_126": [
+      "",
+      82,
+      3
+    ],
+    "_127": [
+      "",
+      0,
+      3
+    ],
+    "_128": [
+      "",
+      1,
+      3
+    ],
+    "_130": [
+      "",
+      111,
+      3
+    ],
+    "_132": [
+      "",
+      112,
+      3
+    ],
+    "_134": [
+      "",
+      72,
+      3
+    ],
+    "_136": [
+      "",
+      61,
+      3
+    ],
+    "_137": [
+      "",
+      137,
+      3
+    ],
+    "_138": [
+      "",
+      156,
+      3
+    ],
+    "_139": [
+      "",
+      157,
+      3
+    ],
+    "_141": [
+      "",
+      155,
+      3
+    ],
+    "_142": [
+      "",
+      96,
+      3
+    ],
+    "_144": [
+      "",
+      22,
+      3
+    ],
+    "_145": [
+      "",
+      23,
+      3
+    ],
+    "_146": [
+      "",
+      53,
+      3
+    ],
+    "_147": [
+      "",
+      144,
+      3
+    ],
+    "_148": [
+      "",
+      125,
+      3
+    ],
+    "_149": [
+      "",
+      130,
+      3
+    ],
+    "_150": [
+      "",
+      135,
+      3
+    ],
+    "_151": [
+      "",
+      131,
+      3
+    ],
+    "_152": [
+      "",
+      15,
+      3
+    ],
+    "_153": [
+      "",
+      105,
+      3
+    ],
+    "_155": [
+      "",
+      83,
+      3
+    ],
+    "_156": [
+      "",
+      26,
+      3
+    ],
+    "_157": [
+      "",
+      167,
+      3
+    ],
+    "_158": [
+      "",
+      123,
+      3
+    ],
+    "_159": [
+      "",
+      86,
+      3
+    ],
+    "_160": [
+      "",
+      116,
+      3
+    ],
+    "_161": [
+      "",
+      118,
+      3
+    ],
+    "_163": [
+      "",
+      8,
+      3
+    ],
+    "_164": [
+      "",
+      113,
+      3
+    ],
+    "_166": [
+      "",
+      27,
+      3
+    ],
+    "_167": [
+      "",
+      140,
+      3
+    ]
+  }
+}
