@@ -1,0 +1,26 @@
+{
+  "typeInfos": {
+    "109": {
+      "propertyInfos": {
+        "1": [
+          {
+            "name": "reservedSum",
+            "type": "element",
+            "typeInfo": "Double"
+          }
+        ],
+        "_t": "a",
+        "_1": [
+          {
+            "name": "reservedSum",
+            "type": "attribute",
+            "typeInfo": "Double"
+          },
+          0,
+          0
+        ]
+      }
+    },
+    "_t": "a"
+  }
+}

@@ -3543,7 +3543,7 @@
         },
         {
           "name": "reservedSum",
-          "type": "attribute",
+          "type": "element",
           "typeInfo": "Double"
         }
       ],
