@@ -178,7 +178,7 @@
     },
     {
       "elementName": "id",
-      "typeInfo": "String"
+      "typeInfo": "ID"
     },
     {
       "elementName": "internalOrder",
@@ -265,16 +265,16 @@
       "typeInfo": "moysklad.reportTemplatesMetadata"
     },
     {
-      "elementName": "retailCashIn",
-      "typeInfo": "moysklad.retailCashIn"
-    },
-    {
-      "elementName": "retailCashOut",
-      "typeInfo": "moysklad.retailCashOut"
-    },
-    {
       "elementName": "retailDemand",
       "typeInfo": "moysklad.retailDemand"
+    },
+    {
+      "elementName": "retailDrawerCashIn",
+      "typeInfo": "moysklad.retailDrawerCashIn"
+    },
+    {
+      "elementName": "retailDrawerCashOut",
+      "typeInfo": "moysklad.retailDrawerCashOut"
     },
     {
       "elementName": "retailSalesReturn",
@@ -326,7 +326,7 @@
     },
     {
       "elementName": "uuid",
-      "typeInfo": "String"
+      "typeInfo": "ID"
     },
     {
       "elementName": "warehouse",
@@ -450,7 +450,7 @@
         {
           "name": "organizationUuid",
           "type": "attribute",
-          "typeInfo": "String"
+          "typeInfo": "IDREF"
         },
         {
           "name": "password",
@@ -472,19 +472,19 @@
         {
           "name": "customerOrderUuid",
           "type": "attribute",
-          "typeInfo": "String"
+          "typeInfo": "IDREF"
         },
         {
           "name": "factureUuid",
           "type": "attribute",
-          "typeInfo": "String"
+          "typeInfo": "IDREF"
         },
         {
           "collection": true,
           "elementName": "invoiceOutRef",
           "name": "invoicesOutUuid",
           "type": "element",
-          "typeInfo": "String",
+          "typeInfo": "IDREF",
           "wrapperElementName": "invoicesOutUuid"
         },
         {
@@ -492,8 +492,16 @@
           "elementName": "financeInRef",
           "name": "paymentsUuid",
           "type": "element",
-          "typeInfo": "String",
+          "typeInfo": "IDREF",
           "wrapperElementName": "paymentsUuid"
+        },
+        {
+          "collection": true,
+          "elementName": "salesReturnRef",
+          "name": "salesReturnsUuid",
+          "type": "element",
+          "typeInfo": "IDREF",
+          "wrapperElementName": "salesReturnsUuid"
         },
         {
           "collection": true,
@@ -517,7 +525,7 @@
         {
           "name": "buyCurrencyUuid",
           "type": "attribute",
-          "typeInfo": "String"
+          "typeInfo": "IDREF"
         },
         {
           "name": "buyPrice",
@@ -527,7 +535,7 @@
         {
           "name": "countryUuid",
           "type": "attribute",
-          "typeInfo": "String"
+          "typeInfo": "IDREF"
         },
         {
           "name": "minPrice",
@@ -537,7 +545,7 @@
         {
           "name": "saleCurrencyUuid",
           "type": "attribute",
-          "typeInfo": "String"
+          "typeInfo": "IDREF"
         },
         {
           "name": "salePrice",
@@ -555,12 +563,12 @@
         {
           "name": "supplierUuid",
           "type": "attribute",
-          "typeInfo": "String"
+          "typeInfo": "IDREF"
         },
         {
           "name": "uomUuid",
           "type": "attribute",
-          "typeInfo": "String"
+          "typeInfo": "IDREF"
         }
       ],
       "type": "classInfo"
@@ -570,11 +578,16 @@
       "localName": "abstractSalesReturn",
       "propertyInfos": [
         {
+          "name": "demandUuid",
+          "type": "attribute",
+          "typeInfo": "IDREF"
+        },
+        {
           "collection": true,
           "elementName": "lossRef",
           "name": "lossesUuid",
           "type": "element",
-          "typeInfo": "String",
+          "typeInfo": "IDREF",
           "wrapperElementName": "lossesUuid"
         },
         {
@@ -582,7 +595,7 @@
           "elementName": "financeOutRef",
           "name": "paymentsUuid",
           "type": "element",
-          "typeInfo": "String",
+          "typeInfo": "IDREF",
           "wrapperElementName": "paymentsUuid"
         },
         {
@@ -616,7 +629,7 @@
         {
           "name": "uuid",
           "type": "element",
-          "typeInfo": "String"
+          "typeInfo": "ID"
         }
       ],
       "type": "classInfo"
@@ -688,7 +701,7 @@
         {
           "name": "agentUuid",
           "type": "attribute",
-          "typeInfo": "String"
+          "typeInfo": "IDREF"
         }
       ],
       "type": "classInfo"
@@ -700,7 +713,7 @@
         {
           "name": "agentUuid",
           "type": "attribute",
-          "typeInfo": "String"
+          "typeInfo": "IDREF"
         },
         {
           "name": "demandSumCorrection",
@@ -710,7 +723,7 @@
         {
           "name": "discountUuid",
           "type": "attribute",
-          "typeInfo": "String"
+          "typeInfo": "IDREF"
         },
         {
           "name": "personalDiscount",
@@ -873,7 +886,7 @@
         {
           "name": "settingsUuid",
           "type": "attribute",
-          "typeInfo": "String"
+          "typeInfo": "IDREF"
         }
       ],
       "type": "classInfo"
@@ -907,12 +920,12 @@
         {
           "name": "dictionaryMetadataUuid",
           "type": "attribute",
-          "typeInfo": "String"
+          "typeInfo": "IDREF"
         },
         {
           "name": "entityMetadataUuid",
           "type": "attribute",
-          "typeInfo": "String"
+          "typeInfo": "IDREF"
         },
         {
           "name": "feature",
@@ -939,7 +952,7 @@
         {
           "name": "agentValueUuid",
           "type": "attribute",
-          "typeInfo": "String"
+          "typeInfo": "IDREF"
         },
         {
           "name": "booleanValue",
@@ -949,12 +962,12 @@
         {
           "name": "consignmentValueUuid",
           "type": "attribute",
-          "typeInfo": "String"
+          "typeInfo": "IDREF"
         },
         {
           "name": "contractValueUuid",
           "type": "attribute",
-          "typeInfo": "String"
+          "typeInfo": "IDREF"
         },
         {
           "name": "doubleValue",
@@ -964,12 +977,12 @@
         {
           "name": "employeeValueUuid",
           "type": "attribute",
-          "typeInfo": "String"
+          "typeInfo": "IDREF"
         },
         {
           "name": "entityValueUuid",
           "type": "attribute",
-          "typeInfo": "String"
+          "typeInfo": "IDREF"
         },
         {
           "name": "file",
@@ -979,7 +992,7 @@
         {
           "name": "goodValueUuid",
           "type": "attribute",
-          "typeInfo": "String"
+          "typeInfo": "IDREF"
         },
         {
           "name": "longValue",
@@ -989,17 +1002,17 @@
         {
           "name": "metadataUuid",
           "type": "attribute",
-          "typeInfo": "String"
+          "typeInfo": "IDREF"
         },
         {
           "name": "placeValueUuid",
           "type": "attribute",
-          "typeInfo": "String"
+          "typeInfo": "IDREF"
         },
         {
           "name": "projectValueUuid",
           "type": "attribute",
-          "typeInfo": "String"
+          "typeInfo": "IDREF"
         },
         {
           "name": "timeValue",
@@ -1060,7 +1073,17 @@
         {
           "name": "employeeUuid",
           "type": "attribute",
-          "typeInfo": "String"
+          "typeInfo": "IDREF"
+        },
+        {
+          "name": "printCashin",
+          "type": "attribute",
+          "typeInfo": "Boolean"
+        },
+        {
+          "name": "printCashout",
+          "type": "attribute",
+          "typeInfo": "Boolean"
         },
         {
           "name": "printCheck",
@@ -1073,9 +1096,19 @@
           "typeInfo": "Boolean"
         },
         {
+          "name": "printReturnCheck",
+          "type": "attribute",
+          "typeInfo": "Boolean"
+        },
+        {
+          "name": "printZ",
+          "type": "attribute",
+          "typeInfo": "Boolean"
+        },
+        {
           "name": "retailStoreUuid",
           "type": "attribute",
-          "typeInfo": "String"
+          "typeInfo": "IDREF"
         }
       ],
       "type": "classInfo"
@@ -1098,7 +1131,7 @@
         {
           "name": "goodFolderUuid",
           "type": "attribute",
-          "typeInfo": "String"
+          "typeInfo": "IDREF"
         },
         {
           "name": "shopType",
@@ -1232,7 +1265,7 @@
           "elementName": "financeInRef",
           "name": "paymentsUuid",
           "type": "element",
-          "typeInfo": "String",
+          "typeInfo": "IDREF",
           "wrapperElementName": "paymentsUuid"
         }
       ],
@@ -1259,7 +1292,7 @@
           "elementName": "financeOutRef",
           "name": "paymentsUuid",
           "type": "element",
-          "typeInfo": "String",
+          "typeInfo": "IDREF",
           "wrapperElementName": "paymentsUuid"
         }
       ],
@@ -1349,7 +1382,7 @@
         {
           "name": "priceTypeUuid",
           "type": "attribute",
-          "typeInfo": "String"
+          "typeInfo": "IDREF"
         },
         {
           "name": "requisite",
@@ -1364,7 +1397,7 @@
         {
           "name": "stateUuid",
           "type": "attribute",
-          "typeInfo": "String"
+          "typeInfo": "IDREF"
         },
         {
           "collection": true,
@@ -1401,7 +1434,7 @@
         {
           "name": "goodUuid",
           "type": "attribute",
-          "typeInfo": "String"
+          "typeInfo": "IDREF"
         },
         {
           "name": "isDefault",
@@ -1418,7 +1451,7 @@
         {
           "name": "consignmentUuid",
           "type": "attribute",
-          "typeInfo": "String"
+          "typeInfo": "IDREF"
         }
       ],
       "type": "classInfo"
@@ -1483,12 +1516,12 @@
         {
           "name": "agentAccountUuid",
           "type": "attribute",
-          "typeInfo": "String"
+          "typeInfo": "IDREF"
         },
         {
           "name": "agentUuid",
           "type": "attribute",
-          "typeInfo": "String"
+          "typeInfo": "IDREF"
         },
         {
           "name": "archived",
@@ -1509,7 +1542,7 @@
         {
           "name": "currencyUuid",
           "type": "attribute",
-          "typeInfo": "String"
+          "typeInfo": "IDREF"
         },
         {
           "collection": true,
@@ -1525,12 +1558,12 @@
         {
           "name": "ownCompanyAccountUuid",
           "type": "attribute",
-          "typeInfo": "String"
+          "typeInfo": "IDREF"
         },
         {
           "name": "ownCompanyUuid",
           "type": "attribute",
-          "typeInfo": "String"
+          "typeInfo": "IDREF"
         },
         {
           "name": "rewardPercent",
@@ -1557,7 +1590,7 @@
         {
           "name": "contractUuid",
           "type": "attribute",
-          "typeInfo": "String"
+          "typeInfo": "IDREF"
         }
       ],
       "type": "classInfo"
@@ -1569,7 +1602,7 @@
         {
           "name": "contractUuid",
           "type": "attribute",
-          "typeInfo": "String"
+          "typeInfo": "IDREF"
         }
       ],
       "type": "classInfo"
@@ -1624,7 +1657,7 @@
         {
           "name": "entityMetadataUuid",
           "type": "attribute",
-          "typeInfo": "String"
+          "typeInfo": "IDREF"
         }
       ],
       "type": "classInfo"
@@ -1650,7 +1683,7 @@
           "elementName": "demandRef",
           "name": "demandsUuid",
           "type": "element",
-          "typeInfo": "String",
+          "typeInfo": "IDREF",
           "wrapperElementName": "demandsUuid"
         },
         {
@@ -1658,7 +1691,7 @@
           "elementName": "invoiceOutRef",
           "name": "invoicesOutUuid",
           "type": "element",
-          "typeInfo": "String",
+          "typeInfo": "IDREF",
           "wrapperElementName": "invoicesOutUuid"
         },
         {
@@ -1666,7 +1699,7 @@
           "elementName": "financeInRef",
           "name": "paymentsUuid",
           "type": "element",
-          "typeInfo": "String",
+          "typeInfo": "IDREF",
           "wrapperElementName": "paymentsUuid"
         },
         {
@@ -1674,7 +1707,7 @@
           "elementName": "purchaseOrderRef",
           "name": "purchaseOrdersUuid",
           "type": "element",
-          "typeInfo": "String",
+          "typeInfo": "IDREF",
           "wrapperElementName": "purchaseOrdersUuid"
         }
       ],
@@ -1704,14 +1737,6 @@
           "name": "overheadDistribution",
           "type": "attribute",
           "typeInfo": "String"
-        },
-        {
-          "collection": true,
-          "elementName": "salesReturnRef",
-          "name": "salesReturnsUuid",
-          "type": "element",
-          "typeInfo": "String",
-          "wrapperElementName": "salesReturnsUuid"
         }
       ],
       "type": "classInfo"
@@ -1728,7 +1753,7 @@
         {
           "name": "carrierUuid",
           "type": "attribute",
-          "typeInfo": "String"
+          "typeInfo": "IDREF"
         },
         {
           "name": "consignorIndication",
@@ -1782,7 +1807,7 @@
         {
           "name": "contents",
           "type": "element",
-          "typeInfo": "String"
+          "typeInfo": "Base64Binary"
         },
         {
           "name": "created",
@@ -1797,7 +1822,7 @@
         {
           "name": "miniatureUuid",
           "type": "attribute",
-          "typeInfo": "String"
+          "typeInfo": "IDREF"
         }
       ],
       "type": "classInfo"
@@ -1909,7 +1934,7 @@
         {
           "name": "employeeUuid",
           "type": "attribute",
-          "typeInfo": "String"
+          "typeInfo": "IDREF"
         }
       ],
       "type": "classInfo"
@@ -1927,7 +1952,7 @@
         {
           "name": "inventoryUuid",
           "type": "attribute",
-          "typeInfo": "String"
+          "typeInfo": "IDREF"
         },
         {
           "name": "overhead",
@@ -2438,20 +2463,6 @@
         },
         {
           "collection": true,
-          "name": "retailCashIn",
-          "type": "element",
-          "typeInfo": "moysklad.retailCashIn",
-          "wrapperElementName": "retailCashIn"
-        },
-        {
-          "collection": true,
-          "name": "retailCashOut",
-          "type": "element",
-          "typeInfo": "moysklad.retailCashOut",
-          "wrapperElementName": "retailCashOut"
-        },
-        {
-          "collection": true,
           "name": "retailDemand",
           "type": "element",
           "typeInfo": "moysklad.retailDemand",
@@ -2552,7 +2563,7 @@
           "elementName": "financeOutRef",
           "name": "paymentsUuid",
           "type": "element",
-          "typeInfo": "String",
+          "typeInfo": "IDREF",
           "wrapperElementName": "paymentsUuid"
         },
         {
@@ -2560,7 +2571,7 @@
           "elementName": "supplyRef",
           "name": "suppliesUuid",
           "type": "element",
-          "typeInfo": "String",
+          "typeInfo": "IDREF",
           "wrapperElementName": "suppliesUuid"
         }
       ],
@@ -2575,7 +2586,7 @@
           "elementName": "demandRef",
           "name": "demandsUuid",
           "type": "element",
-          "typeInfo": "String",
+          "typeInfo": "IDREF",
           "wrapperElementName": "demandsUuid"
         },
         {
@@ -2598,7 +2609,7 @@
           "elementName": "financeInRef",
           "name": "paymentsUuid",
           "type": "element",
-          "typeInfo": "String",
+          "typeInfo": "IDREF",
           "wrapperElementName": "paymentsUuid"
         },
         {
@@ -2606,7 +2617,7 @@
           "elementName": "returnRef",
           "name": "returnsUuid",
           "type": "element",
-          "typeInfo": "String",
+          "typeInfo": "IDREF",
           "wrapperElementName": "returnsUuid"
         }
       ],
@@ -2641,7 +2652,7 @@
         {
           "name": "goodUuid",
           "type": "attribute",
-          "typeInfo": "String"
+          "typeInfo": "IDREF"
         },
         {
           "name": "isDefault",
@@ -2670,7 +2681,7 @@
         {
           "name": "expenseItemUuid",
           "type": "attribute",
-          "typeInfo": "String"
+          "typeInfo": "IDREF"
         },
         {
           "name": "incomingDate",
@@ -2702,35 +2713,35 @@
         {
           "name": "commissionReportUuid",
           "type": "attribute",
-          "typeInfo": "String"
+          "typeInfo": "IDREF"
         },
         {
           "name": "customerOrderUuid",
           "type": "attribute",
-          "typeInfo": "String"
+          "typeInfo": "IDREF"
         },
         {
           "collection": true,
           "elementName": "demandRef",
           "name": "demandsUuid",
           "type": "element",
-          "typeInfo": "String",
+          "typeInfo": "IDREF",
           "wrapperElementName": "demandsUuid"
         },
         {
           "name": "factureOutUuid",
           "type": "attribute",
-          "typeInfo": "String"
+          "typeInfo": "IDREF"
         },
         {
           "name": "invoiceOutUuid",
           "type": "attribute",
-          "typeInfo": "String"
+          "typeInfo": "IDREF"
         },
         {
           "name": "purchaseReturnUuid",
           "type": "attribute",
-          "typeInfo": "String"
+          "typeInfo": "IDREF"
         }
       ],
       "type": "classInfo"
@@ -2742,32 +2753,32 @@
         {
           "name": "commissionreportoutUuid",
           "type": "attribute",
-          "typeInfo": "String"
+          "typeInfo": "IDREF"
         },
         {
           "name": "factureInUuid",
           "type": "attribute",
-          "typeInfo": "String"
+          "typeInfo": "IDREF"
         },
         {
           "name": "invoiceInUuid",
           "type": "attribute",
-          "typeInfo": "String"
+          "typeInfo": "IDREF"
         },
         {
           "name": "purchaseOrderUuid",
           "type": "attribute",
-          "typeInfo": "String"
+          "typeInfo": "IDREF"
         },
         {
           "name": "salesReturnUuid",
           "type": "attribute",
-          "typeInfo": "String"
+          "typeInfo": "IDREF"
         },
         {
           "name": "supplyUuid",
           "type": "attribute",
-          "typeInfo": "String"
+          "typeInfo": "IDREF"
         }
       ],
       "type": "classInfo"
@@ -2833,7 +2844,7 @@
         {
           "name": "goodUuid",
           "type": "attribute",
-          "typeInfo": "String"
+          "typeInfo": "IDREF"
         }
       ],
       "type": "classInfo"
@@ -2861,7 +2872,7 @@
         {
           "name": "parentUuid",
           "type": "attribute",
-          "typeInfo": "String"
+          "typeInfo": "IDREF"
         },
         {
           "name": "productCode",
@@ -2883,7 +2894,7 @@
         {
           "name": "tinyUuid",
           "type": "attribute",
-          "typeInfo": "String"
+          "typeInfo": "IDREF"
         }
       ],
       "type": "classInfo"
@@ -2900,7 +2911,7 @@
         {
           "name": "uomUuid",
           "type": "attribute",
-          "typeInfo": "String"
+          "typeInfo": "IDREF"
         }
       ],
       "type": "classInfo"
@@ -2912,7 +2923,7 @@
         {
           "name": "slotUuid",
           "type": "attribute",
-          "typeInfo": "String"
+          "typeInfo": "IDREF"
         }
       ],
       "type": "classInfo"
@@ -2933,7 +2944,7 @@
         {
           "name": "uuid",
           "type": "element",
-          "typeInfo": "String"
+          "typeInfo": "ID"
         }
       ],
       "type": "classInfo"
@@ -2975,7 +2986,7 @@
           "elementName": "moveRef",
           "name": "demandsUuid",
           "type": "element",
-          "typeInfo": "String",
+          "typeInfo": "IDREF",
           "wrapperElementName": "demandsUuid"
         },
         {
@@ -2989,7 +3000,7 @@
           "elementName": "purchaseOrderRef",
           "name": "purchaseOrdersUuid",
           "type": "element",
-          "typeInfo": "String",
+          "typeInfo": "IDREF",
           "wrapperElementName": "purchaseOrdersUuid"
         }
       ],
@@ -3004,7 +3015,7 @@
           "elementName": "enterRef",
           "name": "entersUuid",
           "type": "element",
-          "typeInfo": "String",
+          "typeInfo": "IDREF",
           "wrapperElementName": "entersUuid"
         },
         {
@@ -3018,7 +3029,7 @@
           "elementName": "lossRef",
           "name": "lossesUuid",
           "type": "element",
-          "typeInfo": "String",
+          "typeInfo": "IDREF",
           "wrapperElementName": "lossesUuid"
         }
       ],
@@ -3063,7 +3074,7 @@
           "elementName": "financeOutRef",
           "name": "financesOutUuid",
           "type": "element",
-          "typeInfo": "String",
+          "typeInfo": "IDREF",
           "wrapperElementName": "financesOutUuid"
         },
         {
@@ -3079,14 +3090,14 @@
         {
           "name": "purchaseOrderUuid",
           "type": "attribute",
-          "typeInfo": "String"
+          "typeInfo": "IDREF"
         },
         {
           "collection": true,
           "elementName": "supplyRef",
           "name": "suppliesUuid",
           "type": "element",
-          "typeInfo": "String",
+          "typeInfo": "IDREF",
           "wrapperElementName": "suppliesUuid"
         }
       ],
@@ -3099,14 +3110,14 @@
         {
           "name": "customerOrderUuid",
           "type": "attribute",
-          "typeInfo": "String"
+          "typeInfo": "IDREF"
         },
         {
           "collection": true,
           "elementName": "demandRef",
           "name": "demandsUuid",
           "type": "element",
-          "typeInfo": "String",
+          "typeInfo": "IDREF",
           "wrapperElementName": "demandsUuid"
         },
         {
@@ -3114,7 +3125,7 @@
           "elementName": "financeInRef",
           "name": "paymentsUuid",
           "type": "element",
-          "typeInfo": "String",
+          "typeInfo": "IDREF",
           "wrapperElementName": "paymentsUuid"
         }
       ],
@@ -3160,12 +3171,12 @@
         {
           "name": "expenseItemUuid",
           "type": "attribute",
-          "typeInfo": "String"
+          "typeInfo": "IDREF"
         },
         {
           "name": "inventoryUuid",
           "type": "attribute",
-          "typeInfo": "String"
+          "typeInfo": "IDREF"
         },
         {
           "collection": true,
@@ -3176,7 +3187,7 @@
         {
           "name": "salesReturnUuid",
           "type": "attribute",
-          "typeInfo": "String"
+          "typeInfo": "IDREF"
         }
       ],
       "type": "classInfo"
@@ -3236,7 +3247,7 @@
         {
           "name": "consignmentUuid",
           "type": "attribute",
-          "typeInfo": "String"
+          "typeInfo": "IDREF"
         },
         {
           "name": "discount",
@@ -3246,12 +3257,12 @@
         {
           "name": "goodPackUuid",
           "type": "attribute",
-          "typeInfo": "String"
+          "typeInfo": "IDREF"
         },
         {
           "name": "goodUuid",
           "type": "attribute",
-          "typeInfo": "String"
+          "typeInfo": "IDREF"
         },
         {
           "name": "price",
@@ -3266,7 +3277,7 @@
         {
           "name": "slotUuid",
           "type": "attribute",
-          "typeInfo": "String"
+          "typeInfo": "IDREF"
         },
         {
           "collection": true,
@@ -3291,7 +3302,7 @@
         {
           "name": "internalOrderUuid",
           "type": "attribute",
-          "typeInfo": "String"
+          "typeInfo": "IDREF"
         },
         {
           "collection": true,
@@ -3324,7 +3335,7 @@
         {
           "name": "sourceSlotUuid",
           "type": "attribute",
-          "typeInfo": "String"
+          "typeInfo": "IDREF"
         }
       ],
       "type": "classInfo"
@@ -3353,7 +3364,7 @@
         {
           "name": "contractUuid",
           "type": "attribute",
-          "typeInfo": "String"
+          "typeInfo": "IDREF"
         },
         {
           "name": "created",
@@ -3368,7 +3379,7 @@
         {
           "name": "currencyUuid",
           "type": "attribute",
-          "typeInfo": "String"
+          "typeInfo": "IDREF"
         },
         {
           "collection": true,
@@ -3389,7 +3400,7 @@
         {
           "name": "projectUuid",
           "type": "attribute",
-          "typeInfo": "String"
+          "typeInfo": "IDREF"
         },
         {
           "name": "rate",
@@ -3399,32 +3410,32 @@
         {
           "name": "retailShiftUuid",
           "type": "attribute",
-          "typeInfo": "String"
+          "typeInfo": "IDREF"
         },
         {
           "name": "retailStoreUuid",
           "type": "attribute",
-          "typeInfo": "String"
+          "typeInfo": "IDREF"
         },
         {
           "name": "sourceAccountUuid",
           "type": "attribute",
-          "typeInfo": "String"
+          "typeInfo": "IDREF"
         },
         {
           "name": "sourceAgentUuid",
           "type": "attribute",
-          "typeInfo": "String"
+          "typeInfo": "IDREF"
         },
         {
           "name": "sourceStoreUuid",
           "type": "attribute",
-          "typeInfo": "String"
+          "typeInfo": "IDREF"
         },
         {
           "name": "stateUuid",
           "type": "attribute",
-          "typeInfo": "String"
+          "typeInfo": "IDREF"
         },
         {
           "name": "sum",
@@ -3434,17 +3445,17 @@
         {
           "name": "targetAccountUuid",
           "type": "attribute",
-          "typeInfo": "String"
+          "typeInfo": "IDREF"
         },
         {
           "name": "targetAgentUuid",
           "type": "attribute",
-          "typeInfo": "String"
+          "typeInfo": "IDREF"
         },
         {
           "name": "targetStoreUuid",
           "type": "attribute",
-          "typeInfo": "String"
+          "typeInfo": "IDREF"
         },
         {
           "name": "vatIncluded",
@@ -3461,7 +3472,7 @@
         {
           "name": "operationUuid",
           "type": "attribute",
-          "typeInfo": "String"
+          "typeInfo": "IDREF"
         }
       ],
       "type": "classInfo"
@@ -3483,7 +3494,7 @@
         {
           "name": "orderplaceUuid",
           "type": "attribute",
-          "typeInfo": "String"
+          "typeInfo": "IDREF"
         },
         {
           "name": "shopDomain",
@@ -3510,7 +3521,7 @@
         {
           "name": "operationUuid",
           "type": "attribute",
-          "typeInfo": "String"
+          "typeInfo": "IDREF"
         }
       ],
       "type": "classInfo"
@@ -3521,7 +3532,7 @@
         {
           "name": "consigneeUuid",
           "type": "attribute",
-          "typeInfo": "String"
+          "typeInfo": "IDREF"
         }
       ],
       "type": "classInfo"
@@ -3586,7 +3597,7 @@
         {
           "name": "placeUuid",
           "type": "attribute",
-          "typeInfo": "String"
+          "typeInfo": "IDREF"
         }
       ],
       "type": "classInfo"
@@ -3610,12 +3621,12 @@
         {
           "name": "currencyUuid",
           "type": "attribute",
-          "typeInfo": "String"
+          "typeInfo": "IDREF"
         },
         {
           "name": "priceTypeUuid",
           "type": "attribute",
-          "typeInfo": "String"
+          "typeInfo": "IDREF"
         },
         {
           "name": "value",
@@ -3673,7 +3684,7 @@
         {
           "name": "priceTypeUuid",
           "type": "attribute",
-          "typeInfo": "String"
+          "typeInfo": "IDREF"
         }
       ],
       "type": "classInfo"
@@ -3737,11 +3748,6 @@
       "localName": "printedDocument",
       "propertyInfos": [
         {
-          "name": "emailedDate",
-          "type": "attribute",
-          "typeInfo": "DateTime"
-        },
-        {
           "name": "publicId",
           "type": "attribute",
           "typeInfo": "String"
@@ -3762,12 +3768,12 @@
         {
           "name": "planUuid",
           "type": "attribute",
-          "typeInfo": "String"
+          "typeInfo": "IDREF"
         },
         {
           "name": "processingOrderUuid",
           "type": "attribute",
-          "typeInfo": "String"
+          "typeInfo": "IDREF"
         },
         {
           "name": "processingSum",
@@ -3797,7 +3803,7 @@
         {
           "name": "planUuid",
           "type": "attribute",
-          "typeInfo": "String"
+          "typeInfo": "IDREF"
         },
         {
           "collection": true,
@@ -3852,7 +3858,7 @@
         {
           "name": "parentUuid",
           "type": "attribute",
-          "typeInfo": "String"
+          "typeInfo": "IDREF"
         }
       ],
       "type": "classInfo"
@@ -3864,12 +3870,12 @@
         {
           "name": "goodUuid",
           "type": "attribute",
-          "typeInfo": "String"
+          "typeInfo": "IDREF"
         },
         {
           "name": "planUuid",
           "type": "attribute",
-          "typeInfo": "String"
+          "typeInfo": "IDREF"
         },
         {
           "name": "quantity",
@@ -3928,7 +3934,7 @@
         {
           "name": "projectUuid",
           "type": "attribute",
-          "typeInfo": "String"
+          "typeInfo": "IDREF"
         }
       ],
       "type": "classInfo"
@@ -3942,7 +3948,7 @@
           "elementName": "customerOrderRef",
           "name": "customerOrdersUuid",
           "type": "element",
-          "typeInfo": "String",
+          "typeInfo": "IDREF",
           "wrapperElementName": "customerOrdersUuid"
         },
         {
@@ -3958,7 +3964,7 @@
           "elementName": "invoiceInRef",
           "name": "invoicesUuid",
           "type": "element",
-          "typeInfo": "String",
+          "typeInfo": "IDREF",
           "wrapperElementName": "invoicesUuid"
         },
         {
@@ -3966,7 +3972,7 @@
           "elementName": "financeOutRef",
           "name": "paymentsUuid",
           "type": "element",
-          "typeInfo": "String",
+          "typeInfo": "IDREF",
           "wrapperElementName": "paymentsUuid"
         },
         {
@@ -3980,7 +3986,7 @@
           "elementName": "supplyRef",
           "name": "suppliesUuid",
           "type": "element",
-          "typeInfo": "String",
+          "typeInfo": "IDREF",
           "wrapperElementName": "suppliesUuid"
         }
       ],
@@ -3999,14 +4005,14 @@
         {
           "name": "factureUuid",
           "type": "attribute",
-          "typeInfo": "String"
+          "typeInfo": "IDREF"
         },
         {
           "collection": true,
           "elementName": "financeInRef",
           "name": "paymentsUuid",
           "type": "element",
-          "typeInfo": "String",
+          "typeInfo": "IDREF",
           "wrapperElementName": "paymentsUuid"
         },
         {
@@ -4018,7 +4024,7 @@
         {
           "name": "supplyUuid",
           "type": "attribute",
-          "typeInfo": "String"
+          "typeInfo": "IDREF"
         }
       ],
       "type": "classInfo"
@@ -4097,18 +4103,6 @@
       "type": "classInfo"
     },
     {
-      "baseTypeInfo": "moysklad.abstractCashIn",
-      "localName": "retailCashIn",
-      "propertyInfos": [],
-      "type": "classInfo"
-    },
-    {
-      "baseTypeInfo": "moysklad.abstractCashOut",
-      "localName": "retailCashOut",
-      "propertyInfos": [],
-      "type": "classInfo"
-    },
-    {
       "baseTypeInfo": "moysklad.abstractDemand",
       "localName": "retailDemand",
       "propertyInfos": [
@@ -4121,27 +4115,32 @@
           "name": "nonCash",
           "type": "attribute",
           "typeInfo": "Boolean"
-        },
-        {
-          "collection": true,
-          "elementName": "salesReturnRef",
-          "name": "salesReturnsUuid",
-          "type": "element",
-          "typeInfo": "String",
-          "wrapperElementName": "salesReturnsUuid"
         }
       ],
+      "type": "classInfo"
+    },
+    {
+      "baseTypeInfo": "moysklad.retailDrawerCashOperation",
+      "localName": "retailDrawerCashIn",
+      "propertyInfos": [],
+      "type": "classInfo"
+    },
+    {
+      "baseTypeInfo": "moysklad.operation",
+      "localName": "retailDrawerCashOperation",
+      "propertyInfos": [],
+      "type": "classInfo"
+    },
+    {
+      "baseTypeInfo": "moysklad.retailDrawerCashOperation",
+      "localName": "retailDrawerCashOut",
+      "propertyInfos": [],
       "type": "classInfo"
     },
     {
       "baseTypeInfo": "moysklad.abstractSalesReturn",
       "localName": "retailSalesReturn",
       "propertyInfos": [
-        {
-          "name": "demandUuid",
-          "type": "attribute",
-          "typeInfo": "String"
-        },
         {
           "name": "noCashSum",
           "type": "element",
@@ -4169,12 +4168,12 @@
         {
           "name": "acquireAccountUuid",
           "type": "attribute",
-          "typeInfo": "String"
+          "typeInfo": "IDREF"
         },
         {
           "name": "acquireUuid",
           "type": "attribute",
-          "typeInfo": "String"
+          "typeInfo": "IDREF"
         },
         {
           "name": "active",
@@ -4224,22 +4223,22 @@
         {
           "name": "myCompanyAccountUuid",
           "type": "attribute",
-          "typeInfo": "String"
+          "typeInfo": "IDREF"
         },
         {
           "name": "myCompanyUuid",
           "type": "attribute",
-          "typeInfo": "String"
+          "typeInfo": "IDREF"
         },
         {
           "name": "priceTypeUuid",
           "type": "attribute",
-          "typeInfo": "String"
+          "typeInfo": "IDREF"
         },
         {
           "name": "warehouseUuid",
           "type": "attribute",
-          "typeInfo": "String"
+          "typeInfo": "IDREF"
         }
       ],
       "type": "classInfo"
@@ -4247,13 +4246,7 @@
     {
       "baseTypeInfo": "moysklad.abstractSalesReturn",
       "localName": "salesReturn",
-      "propertyInfos": [
-        {
-          "name": "demandUuid",
-          "type": "attribute",
-          "typeInfo": "String"
-        }
-      ],
+      "propertyInfos": [],
       "type": "classInfo"
     },
     {
@@ -4299,7 +4292,7 @@
         {
           "name": "warehouseUuid",
           "type": "attribute",
-          "typeInfo": "String"
+          "typeInfo": "IDREF"
         }
       ],
       "type": "classInfo"
@@ -4323,12 +4316,12 @@
         {
           "name": "countryUuid",
           "type": "attribute",
-          "typeInfo": "String"
+          "typeInfo": "IDREF"
         },
         {
           "name": "gtdUuid",
           "type": "attribute",
-          "typeInfo": "String"
+          "typeInfo": "IDREF"
         }
       ],
       "type": "classInfo"
@@ -4346,7 +4339,7 @@
         {
           "name": "factureInUuid",
           "type": "attribute",
-          "typeInfo": "String"
+          "typeInfo": "IDREF"
         },
         {
           "name": "incomingDate",
@@ -4363,7 +4356,7 @@
           "elementName": "invoiceInRef",
           "name": "invoicesInUuid",
           "type": "element",
-          "typeInfo": "String",
+          "typeInfo": "IDREF",
           "wrapperElementName": "invoicesInUuid"
         },
         {
@@ -4381,20 +4374,20 @@
           "elementName": "financeOutRef",
           "name": "paymentsUuid",
           "type": "element",
-          "typeInfo": "String",
+          "typeInfo": "IDREF",
           "wrapperElementName": "paymentsUuid"
         },
         {
           "name": "purchaseOrderUuid",
           "type": "attribute",
-          "typeInfo": "String"
+          "typeInfo": "IDREF"
         },
         {
           "collection": true,
           "elementName": "purchaseReturnRef",
           "name": "purchaseReturnsUuid",
           "type": "element",
-          "typeInfo": "String",
+          "typeInfo": "IDREF",
           "wrapperElementName": "purchaseReturnsUuid"
         },
         {
@@ -4438,7 +4431,7 @@
         {
           "name": "goodUuid",
           "type": "attribute",
-          "typeInfo": "String"
+          "typeInfo": "IDREF"
         }
       ],
       "type": "classInfo"
@@ -4450,7 +4443,7 @@
         {
           "name": "thingUuid",
           "type": "attribute",
-          "typeInfo": "String"
+          "typeInfo": "IDREF"
         }
       ],
       "type": "classInfo"
@@ -4522,7 +4515,7 @@
         {
           "name": "parentUuid",
           "type": "attribute",
-          "typeInfo": "String"
+          "typeInfo": "IDREF"
         },
         {
           "collection": true,

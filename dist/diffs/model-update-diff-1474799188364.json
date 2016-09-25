@@ -1,0 +1,1298 @@
+{
+  "elementInfos": {
+    "44": {
+      "typeInfo": [
+        "String",
+        "ID"
+      ]
+    },
+    "81": {
+      "typeInfo": [
+        "String",
+        "ID"
+      ]
+    },
+    "_t": "a"
+  },
+  "typeInfos": {
+    "2": {
+      "propertyInfos": {
+        "2": {
+          "typeInfo": [
+            "String",
+            "IDREF"
+          ]
+        },
+        "_t": "a"
+      }
+    },
+    "3": {
+      "propertyInfos": {
+        "0": {
+          "typeInfo": [
+            "String",
+            "IDREF"
+          ]
+        },
+        "1": {
+          "typeInfo": [
+            "String",
+            "IDREF"
+          ]
+        },
+        "2": {
+          "typeInfo": [
+            "String",
+            "IDREF"
+          ]
+        },
+        "3": {
+          "typeInfo": [
+            "String",
+            "IDREF"
+          ]
+        },
+        "_t": "a"
+      }
+    },
+    "4": {
+      "propertyInfos": {
+        "1": {
+          "typeInfo": [
+            "String",
+            "IDREF"
+          ]
+        },
+        "3": {
+          "typeInfo": [
+            "String",
+            "IDREF"
+          ]
+        },
+        "5": {
+          "typeInfo": [
+            "String",
+            "IDREF"
+          ]
+        },
+        "8": {
+          "typeInfo": [
+            "String",
+            "IDREF"
+          ]
+        },
+        "9": {
+          "typeInfo": [
+            "String",
+            "IDREF"
+          ]
+        },
+        "_t": "a"
+      }
+    },
+    "5": {
+      "propertyInfos": {
+        "0": {
+          "typeInfo": [
+            "String",
+            "IDREF"
+          ]
+        },
+        "1": {
+          "typeInfo": [
+            "String",
+            "IDREF"
+          ]
+        },
+        "_t": "a"
+      }
+    },
+    "7": {
+      "propertyInfos": {
+        "2": {
+          "typeInfo": [
+            "String",
+            "ID"
+          ]
+        },
+        "_t": "a"
+      }
+    },
+    "11": {
+      "propertyInfos": {
+        "0": {
+          "typeInfo": [
+            "String",
+            "IDREF"
+          ]
+        },
+        "_t": "a"
+      }
+    },
+    "12": {
+      "propertyInfos": {
+        "0": {
+          "typeInfo": [
+            "String",
+            "IDREF"
+          ]
+        },
+        "2": {
+          "typeInfo": [
+            "String",
+            "IDREF"
+          ]
+        },
+        "_t": "a"
+      }
+    },
+    "16": {
+      "propertyInfos": {
+        "2": {
+          "typeInfo": [
+            "String",
+            "IDREF"
+          ]
+        },
+        "_t": "a"
+      }
+    },
+    "19": {
+      "propertyInfos": {
+        "2": {
+          "typeInfo": [
+            "String",
+            "IDREF"
+          ]
+        },
+        "3": {
+          "typeInfo": [
+            "String",
+            "IDREF"
+          ]
+        },
+        "_t": "a"
+      }
+    },
+    "20": {
+      "propertyInfos": {
+        "0": {
+          "typeInfo": [
+            "String",
+            "IDREF"
+          ]
+        },
+        "2": {
+          "typeInfo": [
+            "String",
+            "IDREF"
+          ]
+        },
+        "3": {
+          "typeInfo": [
+            "String",
+            "IDREF"
+          ]
+        },
+        "5": {
+          "typeInfo": [
+            "String",
+            "IDREF"
+          ]
+        },
+        "6": {
+          "typeInfo": [
+            "String",
+            "IDREF"
+          ]
+        },
+        "8": {
+          "typeInfo": [
+            "String",
+            "IDREF"
+          ]
+        },
+        "10": {
+          "typeInfo": [
+            "String",
+            "IDREF"
+          ]
+        },
+        "11": {
+          "typeInfo": [
+            "String",
+            "IDREF"
+          ]
+        },
+        "12": {
+          "typeInfo": [
+            "String",
+            "IDREF"
+          ]
+        },
+        "_t": "a"
+      }
+    },
+    "24": {
+      "propertyInfos": {
+        "1": {
+          "typeInfo": [
+            "String",
+            "IDREF"
+          ]
+        },
+        "4": {
+          "typeInfo": [
+            "String",
+            "IDREF"
+          ]
+        },
+        "_t": "a"
+      }
+    },
+    "26": {
+      "propertyInfos": {
+        "1": {
+          "typeInfo": [
+            "String",
+            "IDREF"
+          ]
+        },
+        "_t": "a"
+      }
+    },
+    "34": {
+      "propertyInfos": {
+        "3": {
+          "typeInfo": [
+            "String",
+            "IDREF"
+          ]
+        },
+        "_t": "a"
+      }
+    },
+    "36": {
+      "propertyInfos": {
+        "1": {
+          "typeInfo": [
+            "String",
+            "IDREF"
+          ]
+        },
+        "_t": "a"
+      }
+    },
+    "39": {
+      "propertyInfos": {
+        "11": {
+          "typeInfo": [
+            "String",
+            "IDREF"
+          ]
+        },
+        "14": {
+          "typeInfo": [
+            "String",
+            "IDREF"
+          ]
+        },
+        "_t": "a"
+      }
+    },
+    "40": {
+      "propertyInfos": {
+        "3": {
+          "typeInfo": [
+            "String",
+            "IDREF"
+          ]
+        },
+        "_t": "a"
+      }
+    },
+    "41": {
+      "propertyInfos": {
+        "0": {
+          "typeInfo": [
+            "String",
+            "IDREF"
+          ]
+        },
+        "_t": "a"
+      }
+    },
+    "44": {
+      "propertyInfos": {
+        "0": {
+          "typeInfo": [
+            "String",
+            "IDREF"
+          ]
+        },
+        "1": {
+          "typeInfo": [
+            "String",
+            "IDREF"
+          ]
+        },
+        "5": {
+          "typeInfo": [
+            "String",
+            "IDREF"
+          ]
+        },
+        "8": {
+          "typeInfo": [
+            "String",
+            "IDREF"
+          ]
+        },
+        "9": {
+          "typeInfo": [
+            "String",
+            "IDREF"
+          ]
+        },
+        "_t": "a"
+      }
+    },
+    "45": {
+      "propertyInfos": {
+        "0": {
+          "typeInfo": [
+            "String",
+            "IDREF"
+          ]
+        },
+        "_t": "a"
+      }
+    },
+    "46": {
+      "propertyInfos": {
+        "0": {
+          "typeInfo": [
+            "String",
+            "IDREF"
+          ]
+        },
+        "_t": "a"
+      }
+    },
+    "49": {
+      "propertyInfos": {
+        "0": {
+          "typeInfo": [
+            "String",
+            "IDREF"
+          ]
+        },
+        "_t": "a"
+      }
+    },
+    "51": {
+      "propertyInfos": {
+        "1": {
+          "typeInfo": [
+            "String",
+            "IDREF"
+          ]
+        },
+        "2": {
+          "typeInfo": [
+            "String",
+            "IDREF"
+          ]
+        },
+        "3": {
+          "typeInfo": [
+            "String",
+            "IDREF"
+          ]
+        },
+        "4": {
+          "typeInfo": [
+            "String",
+            "IDREF"
+          ]
+        },
+        "_t": "a"
+      }
+    },
+    "53": {
+      "propertyInfos": {
+        "3": {
+          "typeInfo": [
+            "String",
+            "IDREF"
+          ]
+        },
+        "_t": "a"
+      }
+    },
+    "54": {
+      "propertyInfos": {
+        "1": {
+          "typeInfo": [
+            "String",
+            "IDREF"
+          ]
+        },
+        "_t": "a"
+      }
+    },
+    "56": {
+      "propertyInfos": {
+        "0": {
+          "typeInfo": [
+            "String",
+            "Base64Binary"
+          ]
+        },
+        "3": {
+          "typeInfo": [
+            "String",
+            "IDREF"
+          ]
+        },
+        "_t": "a"
+      }
+    },
+    "60": {
+      "propertyInfos": {
+        "0": {
+          "typeInfo": [
+            "String",
+            "IDREF"
+          ]
+        },
+        "_t": "a"
+      }
+    },
+    "61": {
+      "propertyInfos": {
+        "1": {
+          "typeInfo": [
+            "String",
+            "IDREF"
+          ]
+        },
+        "_t": "a"
+      }
+    },
+    "70": {
+      "propertyInfos": {
+        "2": {
+          "typeInfo": [
+            "String",
+            "IDREF"
+          ]
+        },
+        "3": {
+          "typeInfo": [
+            "String",
+            "IDREF"
+          ]
+        },
+        "_t": "a"
+      }
+    },
+    "71": {
+      "propertyInfos": {
+        "0": {
+          "typeInfo": [
+            "String",
+            "IDREF"
+          ]
+        },
+        "4": {
+          "typeInfo": [
+            "String",
+            "IDREF"
+          ]
+        },
+        "5": {
+          "typeInfo": [
+            "String",
+            "IDREF"
+          ]
+        },
+        "_t": "a"
+      }
+    },
+    "73": {
+      "propertyInfos": {
+        "3": {
+          "typeInfo": [
+            "String",
+            "IDREF"
+          ]
+        },
+        "_t": "a"
+      }
+    },
+    "75": {
+      "propertyInfos": {
+        "0": {
+          "typeInfo": [
+            "String",
+            "IDREF"
+          ]
+        },
+        "_t": "a"
+      }
+    },
+    "76": {
+      "propertyInfos": {
+        "0": {
+          "typeInfo": [
+            "String",
+            "IDREF"
+          ]
+        },
+        "1": {
+          "typeInfo": [
+            "String",
+            "IDREF"
+          ]
+        },
+        "2": {
+          "typeInfo": [
+            "String",
+            "IDREF"
+          ]
+        },
+        "3": {
+          "typeInfo": [
+            "String",
+            "IDREF"
+          ]
+        },
+        "4": {
+          "typeInfo": [
+            "String",
+            "IDREF"
+          ]
+        },
+        "5": {
+          "typeInfo": [
+            "String",
+            "IDREF"
+          ]
+        },
+        "_t": "a"
+      }
+    },
+    "77": {
+      "propertyInfos": {
+        "0": {
+          "typeInfo": [
+            "String",
+            "IDREF"
+          ]
+        },
+        "1": {
+          "typeInfo": [
+            "String",
+            "IDREF"
+          ]
+        },
+        "2": {
+          "typeInfo": [
+            "String",
+            "IDREF"
+          ]
+        },
+        "3": {
+          "typeInfo": [
+            "String",
+            "IDREF"
+          ]
+        },
+        "4": {
+          "typeInfo": [
+            "String",
+            "IDREF"
+          ]
+        },
+        "5": {
+          "typeInfo": [
+            "String",
+            "IDREF"
+          ]
+        },
+        "_t": "a"
+      }
+    },
+    "79": {
+      "propertyInfos": {
+        "0": {
+          "typeInfo": [
+            "String",
+            "IDREF"
+          ]
+        },
+        "_t": "a"
+      }
+    },
+    "80": {
+      "propertyInfos": {
+        "3": {
+          "typeInfo": [
+            "String",
+            "IDREF"
+          ]
+        },
+        "_t": "a"
+      }
+    },
+    "81": {
+      "propertyInfos": {
+        "0": {
+          "typeInfo": [
+            "String",
+            "IDREF"
+          ]
+        },
+        "_t": "a"
+      }
+    },
+    "82": {
+      "propertyInfos": {
+        "1": {
+          "typeInfo": [
+            "String",
+            "IDREF"
+          ]
+        },
+        "_t": "a"
+      }
+    },
+    "83": {
+      "propertyInfos": {
+        "0": {
+          "typeInfo": [
+            "String",
+            "IDREF"
+          ]
+        },
+        "_t": "a"
+      }
+    },
+    "84": {
+      "propertyInfos": {
+        "2": {
+          "typeInfo": [
+            "String",
+            "ID"
+          ]
+        },
+        "_t": "a"
+      }
+    },
+    "87": {
+      "propertyInfos": {
+        "0": {
+          "typeInfo": [
+            "String",
+            "IDREF"
+          ]
+        },
+        "2": {
+          "typeInfo": [
+            "String",
+            "IDREF"
+          ]
+        },
+        "_t": "a"
+      }
+    },
+    "88": {
+      "propertyInfos": {
+        "0": {
+          "typeInfo": [
+            "String",
+            "IDREF"
+          ]
+        },
+        "2": {
+          "typeInfo": [
+            "String",
+            "IDREF"
+          ]
+        },
+        "_t": "a"
+      }
+    },
+    "91": {
+      "propertyInfos": {
+        "0": {
+          "typeInfo": [
+            "String",
+            "IDREF"
+          ]
+        },
+        "3": {
+          "typeInfo": [
+            "String",
+            "IDREF"
+          ]
+        },
+        "4": {
+          "typeInfo": [
+            "String",
+            "IDREF"
+          ]
+        },
+        "_t": "a"
+      }
+    },
+    "92": {
+      "propertyInfos": {
+        "0": {
+          "typeInfo": [
+            "String",
+            "IDREF"
+          ]
+        },
+        "1": {
+          "typeInfo": [
+            "String",
+            "IDREF"
+          ]
+        },
+        "2": {
+          "typeInfo": [
+            "String",
+            "IDREF"
+          ]
+        },
+        "_t": "a"
+      }
+    },
+    "95": {
+      "propertyInfos": {
+        "0": {
+          "typeInfo": [
+            "String",
+            "IDREF"
+          ]
+        },
+        "1": {
+          "typeInfo": [
+            "String",
+            "IDREF"
+          ]
+        },
+        "3": {
+          "typeInfo": [
+            "String",
+            "IDREF"
+          ]
+        },
+        "_t": "a"
+      }
+    },
+    "99": {
+      "propertyInfos": {
+        "1": {
+          "typeInfo": [
+            "String",
+            "IDREF"
+          ]
+        },
+        "3": {
+          "typeInfo": [
+            "String",
+            "IDREF"
+          ]
+        },
+        "4": {
+          "typeInfo": [
+            "String",
+            "IDREF"
+          ]
+        },
+        "7": {
+          "typeInfo": [
+            "String",
+            "IDREF"
+          ]
+        },
+        "_t": "a"
+      }
+    },
+    "100": {
+      "propertyInfos": {
+        "0": {
+          "typeInfo": [
+            "String",
+            "IDREF"
+          ]
+        },
+        "_t": "a"
+      }
+    },
+    "101": {
+      "propertyInfos": {
+        "1": {
+          "typeInfo": [
+            "String",
+            "IDREF"
+          ]
+        },
+        "_t": "a"
+      }
+    },
+    "103": {
+      "propertyInfos": {
+        "2": {
+          "typeInfo": [
+            "String",
+            "IDREF"
+          ]
+        },
+        "5": {
+          "typeInfo": [
+            "String",
+            "IDREF"
+          ]
+        },
+        "9": {
+          "typeInfo": [
+            "String",
+            "IDREF"
+          ]
+        },
+        "11": {
+          "typeInfo": [
+            "String",
+            "IDREF"
+          ]
+        },
+        "12": {
+          "typeInfo": [
+            "String",
+            "IDREF"
+          ]
+        },
+        "13": {
+          "typeInfo": [
+            "String",
+            "IDREF"
+          ]
+        },
+        "14": {
+          "typeInfo": [
+            "String",
+            "IDREF"
+          ]
+        },
+        "15": {
+          "typeInfo": [
+            "String",
+            "IDREF"
+          ]
+        },
+        "16": {
+          "typeInfo": [
+            "String",
+            "IDREF"
+          ]
+        },
+        "18": {
+          "typeInfo": [
+            "String",
+            "IDREF"
+          ]
+        },
+        "19": {
+          "typeInfo": [
+            "String",
+            "IDREF"
+          ]
+        },
+        "20": {
+          "typeInfo": [
+            "String",
+            "IDREF"
+          ]
+        },
+        "_t": "a"
+      }
+    },
+    "104": {
+      "propertyInfos": {
+        "0": {
+          "typeInfo": [
+            "String",
+            "IDREF"
+          ]
+        },
+        "_t": "a"
+      }
+    },
+    "105": {
+      "propertyInfos": {
+        "2": {
+          "typeInfo": [
+            "String",
+            "IDREF"
+          ]
+        },
+        "_t": "a"
+      }
+    },
+    "106": {
+      "propertyInfos": {
+        "0": {
+          "typeInfo": [
+            "String",
+            "IDREF"
+          ]
+        },
+        "_t": "a"
+      }
+    },
+    "107": {
+      "propertyInfos": {
+        "0": {
+          "typeInfo": [
+            "String",
+            "IDREF"
+          ]
+        },
+        "_t": "a"
+      }
+    },
+    "114": {
+      "propertyInfos": {
+        "0": {
+          "typeInfo": [
+            "String",
+            "IDREF"
+          ]
+        },
+        "_t": "a"
+      }
+    },
+    "116": {
+      "propertyInfos": {
+        "0": {
+          "typeInfo": [
+            "String",
+            "IDREF"
+          ]
+        },
+        "1": {
+          "typeInfo": [
+            "String",
+            "IDREF"
+          ]
+        },
+        "_t": "a"
+      }
+    },
+    "119": {
+      "propertyInfos": {
+        "1": {
+          "typeInfo": [
+            "String",
+            "IDREF"
+          ]
+        },
+        "_t": "a"
+      }
+    },
+    "125": {
+      "propertyInfos": {
+        "1": {
+          "typeInfo": [
+            "String",
+            "IDREF"
+          ]
+        },
+        "2": {
+          "typeInfo": [
+            "String",
+            "IDREF"
+          ]
+        },
+        "_t": "a"
+      }
+    },
+    "126": {
+      "propertyInfos": {
+        "0": {
+          "typeInfo": [
+            "String",
+            "IDREF"
+          ]
+        },
+        "_t": "a"
+      }
+    },
+    "128": {
+      "propertyInfos": {
+        "0": {
+          "typeInfo": [
+            "String",
+            "IDREF"
+          ]
+        },
+        "_t": "a"
+      }
+    },
+    "129": {
+      "propertyInfos": {
+        "0": {
+          "typeInfo": [
+            "String",
+            "IDREF"
+          ]
+        },
+        "1": {
+          "typeInfo": [
+            "String",
+            "IDREF"
+          ]
+        },
+        "_t": "a"
+      }
+    },
+    "134": {
+      "propertyInfos": {
+        "0": {
+          "typeInfo": [
+            "String",
+            "IDREF"
+          ]
+        },
+        "_t": "a"
+      }
+    },
+    "135": {
+      "propertyInfos": {
+        "0": {
+          "typeInfo": [
+            "String",
+            "IDREF"
+          ]
+        },
+        "2": {
+          "typeInfo": [
+            "String",
+            "IDREF"
+          ]
+        },
+        "3": {
+          "typeInfo": [
+            "String",
+            "IDREF"
+          ]
+        },
+        "5": {
+          "typeInfo": [
+            "String",
+            "IDREF"
+          ]
+        },
+        "_t": "a"
+      }
+    },
+    "137": {
+      "propertyInfos": {
+        "0": {
+          "typeInfo": [
+            "String",
+            "IDREF"
+          ]
+        },
+        "1": {
+          "typeInfo": [
+            "String",
+            "IDREF"
+          ]
+        },
+        "3": {
+          "typeInfo": [
+            "String",
+            "IDREF"
+          ]
+        },
+        "_t": "a"
+      }
+    },
+    "143": {
+      "propertyInfos": {
+        "2": {
+          "typeInfo": [
+            "String",
+            "IDREF"
+          ]
+        },
+        "_t": "a"
+      }
+    },
+    "144": {
+      "propertyInfos": {
+        "0": {
+          "typeInfo": [
+            "String",
+            "IDREF"
+          ]
+        },
+        "_t": "a"
+      }
+    },
+    "146": {
+      "propertyInfos": {
+        "0": {
+          "typeInfo": [
+            "String",
+            "IDREF"
+          ]
+        },
+        "1": {
+          "typeInfo": [
+            "String",
+            "IDREF"
+          ]
+        },
+        "11": {
+          "typeInfo": [
+            "String",
+            "IDREF"
+          ]
+        },
+        "12": {
+          "typeInfo": [
+            "String",
+            "IDREF"
+          ]
+        },
+        "13": {
+          "typeInfo": [
+            "String",
+            "IDREF"
+          ]
+        },
+        "14": {
+          "typeInfo": [
+            "String",
+            "IDREF"
+          ]
+        },
+        "_t": "a"
+      }
+    },
+    "147": {
+      "propertyInfos": {
+        "0": {
+          "typeInfo": [
+            "String",
+            "IDREF"
+          ]
+        },
+        "_t": "a"
+      }
+    },
+    "152": {
+      "propertyInfos": {
+        "0": {
+          "typeInfo": [
+            "String",
+            "IDREF"
+          ]
+        },
+        "_t": "a"
+      }
+    },
+    "155": {
+      "propertyInfos": {
+        "0": {
+          "typeInfo": [
+            "String",
+            "IDREF"
+          ]
+        },
+        "1": {
+          "typeInfo": [
+            "String",
+            "IDREF"
+          ]
+        },
+        "_t": "a"
+      }
+    },
+    "157": {
+      "propertyInfos": {
+        "0": {
+          "typeInfo": [
+            "String",
+            "IDREF"
+          ]
+        },
+        "3": {
+          "typeInfo": [
+            "String",
+            "IDREF"
+          ]
+        },
+        "6": {
+          "typeInfo": [
+            "String",
+            "IDREF"
+          ]
+        },
+        "7": {
+          "typeInfo": [
+            "String",
+            "IDREF"
+          ]
+        },
+        "8": {
+          "typeInfo": [
+            "String",
+            "IDREF"
+          ]
+        },
+        "_t": "a"
+      }
+    },
+    "160": {
+      "propertyInfos": {
+        "1": {
+          "typeInfo": [
+            "String",
+            "IDREF"
+          ]
+        },
+        "_t": "a"
+      }
+    },
+    "161": {
+      "propertyInfos": {
+        "0": {
+          "typeInfo": [
+            "String",
+            "IDREF"
+          ]
+        },
+        "_t": "a"
+      }
+    },
+    "165": {
+      "propertyInfos": {
+        "3": {
+          "typeInfo": [
+            "String",
+            "IDREF"
+          ]
+        },
+        "_t": "a"
+      }
+    },
+    "_t": "a"
+  }
+}

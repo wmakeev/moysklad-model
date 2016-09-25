@@ -1,7 +1,9 @@
+'use strict'
+
 var jsondiffpatch = require('jsondiffpatch')
 var stringify = require('json-stable-stringify')
 
-const objectHashFunctions = [
+var objectHashFunctions = [
   function (obj) {
     return obj.elementName
   },

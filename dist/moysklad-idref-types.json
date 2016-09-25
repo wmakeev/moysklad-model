@@ -1,0 +1,390 @@
+{
+  "abstractConnectorSetting": {
+    "organizationUuid": null
+  },
+  "abstractDemand": {
+    "customerOrderUuid": "customerOrder",
+    "factureUuid": "factureOut",
+    "invoicesOutUuid": "invoicesOut",
+    "paymentsUuid": {
+      "collection": true,
+      "type": "financeIn"
+    },
+    "salesReturnsUuid": "salesReturns"
+  },
+  "abstractGood": {
+    "buyCurrencyUuid": "currency",
+    "countryUuid": "country",
+    "saleCurrencyUuid": "currency",
+    "supplierUuid": "supplier",
+    "uomUuid": "uom"
+  },
+  "abstractSalesReturn": {
+    "demandUuid": "demand",
+    "lossesUuid": {
+      "collection": true,
+      "type": "loss"
+    },
+    "paymentsUuid": {
+      "collection": true,
+      "type": "financeOut"
+    }
+  },
+  "agentAttributeValue": {
+    "agentUuid": "agent"
+  },
+  "agentDiscount": {
+    "agentUuid": "agent",
+    "discountUuid": "discount"
+  },
+  "amiroCustomAttributeInfo": {
+    "settingsUuid": null
+  },
+  "attributeMetadata": {
+    "dictionaryMetadataUuid": [
+      "embeddedEntityMetadata",
+      "customEntityMetadata"
+    ],
+    "entityMetadataUuid": "embeddedEntityMetadata"
+  },
+  "attributeValue": {
+    "agentValueUuid": "agent",
+    "consignmentValueUuid": "consignment",
+    "contractValueUuid": "contract",
+    "employeeValueUuid": "employee",
+    "entityValueUuid": "customEntity",
+    "goodValueUuid": "good",
+    "metadataUuid": "attributeMetadata",
+    "placeValueUuid": "warehouse",
+    "projectValueUuid": "project"
+  },
+  "cashier": {
+    "employeeUuid": "employee",
+    "retailStoreUuid": "retailStore"
+  },
+  "cmlConnectorSettings": {
+    "goodFolderUuid": "goodFolder"
+  },
+  "commissionReportIn": {
+    "paymentsUuid": {
+      "collection": true,
+      "type": "financeIn"
+    }
+  },
+  "commissionReportOut": {
+    "paymentsUuid": {
+      "collection": true,
+      "type": "financeOut"
+    }
+  },
+  "company": {
+    "priceTypeUuid": "priceType",
+    "stateUuid": "state"
+  },
+  "consignment": {
+    "goodUuid": "good"
+  },
+  "consignmentAttributeValue": {
+    "consignmentUuid": "consignment"
+  },
+  "contract": {
+    "agentAccountUuid": "agentAccount",
+    "agentUuid": "agent",
+    "currencyUuid": "currency",
+    "ownCompanyAccountUuid": "agentAccount",
+    "ownCompanyUuid": "myCompany"
+  },
+  "contractAttributeValue": {
+    "contractUuid": "contract"
+  },
+  "contractDocument": {
+    "contractUuid": "contract"
+  },
+  "customEntity": {
+    "entityMetadataUuid": "customEntityMetadata"
+  },
+  "customerOrder": {
+    "demandsUuid": {
+      "collection": true,
+      "type": "demand"
+    },
+    "invoicesOutUuid": {
+      "collection": true,
+      "type": "invoiceOut"
+    },
+    "paymentsUuid": {
+      "collection": true,
+      "type": "financeIn"
+    },
+    "purchaseOrdersUuid": {
+      "collection": true,
+      "type": "purchaseOrder"
+    }
+  },
+  "demand": {
+    "salesReturnsUuid": {
+      "collection": true,
+      "type": "salesReturn"
+    }
+  },
+  "demandExtension": {
+    "carrierUuid": "agent"
+  },
+  "document": {
+    "miniatureUuid": null
+  },
+  "employeeAttributeValue": {
+    "employeeUuid": "employee"
+  },
+  "enter": {
+    "inventoryUuid": "inventory"
+  },
+  "factureIn": {
+    "paymentsUuid": {
+      "collection": true,
+      "type": "financeOut"
+    },
+    "suppliesUuid": {
+      "collection": true,
+      "type": "supply"
+    }
+  },
+  "factureOut": {
+    "demandsUuid": {
+      "collection": true,
+      "type": "demand"
+    },
+    "paymentsUuid": {
+      "collection": true,
+      "type": "financeIn"
+    },
+    "returnsUuid": {
+      "collection": true,
+      "type": "return"
+    }
+  },
+  "feature": {
+    "goodUuid": "good"
+  },
+  "finance": {
+    "expenseItemUuid": "expenseItem"
+  },
+  "financeIn": {
+    "commissionReportUuid": "commissionReport",
+    "customerOrderUuid": "customerOrder",
+    "demandsUuid": {
+      "collection": true,
+      "type": "demand"
+    },
+    "factureOutUuid": "factureOut",
+    "invoiceOutUuid": "invoiceOut",
+    "purchaseReturnUuid": "purchaseReturn"
+  },
+  "financeOut": {
+    "commissionreportoutUuid": "commissionreportout",
+    "factureInUuid": "factureIn",
+    "invoiceInUuid": "invoiceIn",
+    "purchaseOrderUuid": "purchaseOrder",
+    "salesReturnUuid": "salesReturn",
+    "supplyUuid": "supply"
+  },
+  "goodAttributeValue": {
+    "goodUuid": "good"
+  },
+  "goodFolder": {
+    "parentUuid": "goodFolder"
+  },
+  "goodImage": {
+    "tinyUuid": "tinyImage"
+  },
+  "goodPack": {
+    "uomUuid": "uom"
+  },
+  "goodSlotPreference": {
+    "slotUuid": "slot"
+  },
+  "internalOrder": {
+    "demandsUuid": {
+      "collection": true,
+      "type": "demand"
+    },
+    "purchaseOrdersUuid": {
+      "collection": true,
+      "type": "purchaseOrder"
+    }
+  },
+  "inventory": {
+    "entersUuid": {
+      "collection": true,
+      "type": "enter"
+    },
+    "lossesUuid": {
+      "collection": true,
+      "type": "loss"
+    }
+  },
+  "invoiceIn": {
+    "financesOutUuid": {
+      "collection": true,
+      "type": "financeOut"
+    },
+    "purchaseOrderUuid": "purchaseOrder",
+    "suppliesUuid": {
+      "collection": true,
+      "type": "supply"
+    }
+  },
+  "invoiceOut": {
+    "customerOrderUuid": "customerOrder",
+    "demandsUuid": {
+      "collection": true,
+      "type": "demand"
+    },
+    "paymentsUuid": {
+      "collection": true,
+      "type": "financeIn"
+    }
+  },
+  "loss": {
+    "expenseItemUuid": "expenseItem",
+    "inventoryUuid": "inventory",
+    "salesReturnUuid": "salesReturn"
+  },
+  "motion": {
+    "consignmentUuid": "consignment",
+    "goodPackUuid": "goodPack",
+    "goodUuid": "good",
+    "slotUuid": "slot"
+  },
+  "move": {
+    "internalOrderUuid": "internalOrder"
+  },
+  "movePosition": {
+    "sourceSlotUuid": "slot"
+  },
+  "operation": {
+    "contractUuid": "contract",
+    "currencyUuid": "currency",
+    "projectUuid": "project",
+    "retailShiftUuid": "retailShift",
+    "retailStoreUuid": "retailStore",
+    "sourceAccountUuid": "agentAccount",
+    "sourceAgentUuid": "agent",
+    "sourceStoreUuid": "warehouse",
+    "stateUuid": "state",
+    "targetAccountUuid": "agentAccount",
+    "targetAgentUuid": "agent",
+    "targetStoreUuid": "warehouse"
+  },
+  "operationAttributeValue": {
+    "operationUuid": "operation"
+  },
+  "operationConnectorSetting": {
+    "orderplaceUuid": "warehouse"
+  },
+  "operationDocument": {
+    "operationUuid": "operation"
+  },
+  "operationExtension": {
+    "consigneeUuid": "agent"
+  },
+  "placeAttributeValue": {
+    "placeUuid": "warehouse"
+  },
+  "price": {
+    "currencyUuid": "currency",
+    "priceTypeUuid": "priceType"
+  },
+  "priceListMetadata": {
+    "priceTypeUuid": "priceType"
+  },
+  "processing": {
+    "planUuid": "processingPlan",
+    "processingOrderUuid": "processingOrder"
+  },
+  "processingOrder": {
+    "planUuid": "processingPlan"
+  },
+  "processingPlanFolder": {
+    "parentUuid": "processingPlanFolder"
+  },
+  "processingPlanItem": {
+    "goodUuid": "good",
+    "planUuid": "processingPlan"
+  },
+  "projectAttributeValue": {
+    "projectUuid": "project"
+  },
+  "purchaseOrder": {
+    "customerOrdersUuid": {
+      "collection": true,
+      "type": "customerOrder"
+    },
+    "invoicesUuid": {
+      "collection": true,
+      "type": "invoiceIn"
+    },
+    "paymentsUuid": {
+      "collection": true,
+      "type": "financeOut"
+    },
+    "suppliesUuid": {
+      "collection": true,
+      "type": "supply"
+    }
+  },
+  "purchaseReturn": {
+    "factureUuid": "facture",
+    "paymentsUuid": {
+      "collection": true,
+      "type": "financeIn"
+    },
+    "supplyUuid": "supply"
+  },
+  "retailDemand": {
+    "salesReturnsUuid": {
+      "collection": true,
+      "type": "salesReturn"
+    }
+  },
+  "retailStore": {
+    "acquireAccountUuid": "agentAccount",
+    "acquireUuid": "agent",
+    "myCompanyAccountUuid": "agentAccount",
+    "myCompanyUuid": "myCompany",
+    "priceTypeUuid": "priceType",
+    "warehouseUuid": "warehouse"
+  },
+  "slot": {
+    "warehouseUuid": "warehouse"
+  },
+  "stockMotion": {
+    "countryUuid": "country",
+    "gtdUuid": "gtd"
+  },
+  "supply": {
+    "factureInUuid": "factureIn",
+    "invoicesInUuid": {
+      "collection": true,
+      "type": "invoiceIn"
+    },
+    "paymentsUuid": {
+      "collection": true,
+      "type": "financeOut"
+    },
+    "purchaseOrderUuid": "purchaseOrder",
+    "purchaseReturnsUuid": {
+      "collection": true,
+      "type": "purchaseReturn"
+    }
+  },
+  "thing": {
+    "goodUuid": "good"
+  },
+  "thingAttributeValue": {
+    "thingUuid": "thing"
+  },
+  "warehouse": {
+    "parentUuid": "warehouse"
+  }
+}

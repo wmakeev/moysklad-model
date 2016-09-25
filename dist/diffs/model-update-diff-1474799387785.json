@@ -1,0 +1,303 @@
+{
+  "elementInfos": {
+    "67": [
+      {
+        "elementName": "retailDrawerCashIn",
+        "typeInfo": "moysklad.retailDrawerCashIn"
+      }
+    ],
+    "68": [
+      {
+        "elementName": "retailDrawerCashOut",
+        "typeInfo": "moysklad.retailDrawerCashOut"
+      }
+    ],
+    "_t": "a",
+    "_66": [
+      {
+        "elementName": "retailCashIn",
+        "typeInfo": "moysklad.retailCashIn"
+      },
+      0,
+      0
+    ],
+    "_67": [
+      {
+        "elementName": "retailCashOut",
+        "typeInfo": "moysklad.retailCashOut"
+      },
+      0,
+      0
+    ]
+  },
+  "typeInfos": {
+    "3": {
+      "propertyInfos": {
+        "4": [
+          {
+            "collection": true,
+            "elementName": "salesReturnRef",
+            "name": "salesReturnsUuid",
+            "type": "element",
+            "typeInfo": "IDREF",
+            "wrapperElementName": "salesReturnsUuid"
+          }
+        ],
+        "_t": "a"
+      }
+    },
+    "5": {
+      "propertyInfos": {
+        "0": [
+          {
+            "name": "demandUuid",
+            "type": "attribute",
+            "typeInfo": "IDREF"
+          }
+        ],
+        "_t": "a"
+      }
+    },
+    "24": {
+      "propertyInfos": {
+        "2": {
+          "name": [
+            "printCheck",
+            "printCashin"
+          ]
+        },
+        "3": {
+          "name": [
+            "printCheckFR",
+            "printCashout"
+          ]
+        },
+        "4": {
+          "name": [
+            "retailStoreUuid",
+            "printCheck"
+          ],
+          "typeInfo": [
+            "IDREF",
+            "Boolean"
+          ]
+        },
+        "5": [
+          {
+            "name": "printCheckFR",
+            "type": "attribute",
+            "typeInfo": "Boolean"
+          }
+        ],
+        "6": [
+          {
+            "name": "printReturnCheck",
+            "type": "attribute",
+            "typeInfo": "Boolean"
+          }
+        ],
+        "7": [
+          {
+            "name": "printZ",
+            "type": "attribute",
+            "typeInfo": "Boolean"
+          }
+        ],
+        "8": [
+          {
+            "name": "retailStoreUuid",
+            "type": "attribute",
+            "typeInfo": "IDREF"
+          }
+        ],
+        "_t": "a"
+      }
+    },
+    "53": {
+      "propertyInfos": {
+        "_t": "a",
+        "_3": [
+          {
+            "collection": true,
+            "elementName": "salesReturnRef",
+            "name": "salesReturnsUuid",
+            "type": "element",
+            "typeInfo": "IDREF",
+            "wrapperElementName": "salesReturnsUuid"
+          },
+          0,
+          0
+        ]
+      }
+    },
+    "67": {
+      "propertyInfos": {
+        "44": {
+          "name": [
+            "retailCashIn",
+            "retailDemand"
+          ],
+          "typeInfo": [
+            "moysklad.retailCashIn",
+            "moysklad.retailDemand"
+          ],
+          "wrapperElementName": [
+            "retailCashIn",
+            "retailDemand"
+          ]
+        },
+        "45": {
+          "name": [
+            "retailCashOut",
+            "retailSalesReturn"
+          ],
+          "typeInfo": [
+            "moysklad.retailCashOut",
+            "moysklad.retailSalesReturn"
+          ],
+          "wrapperElementName": [
+            "retailCashOut",
+            "retailSalesReturn"
+          ]
+        },
+        "_t": "a",
+        "_46": [
+          {
+            "collection": true,
+            "name": "retailDemand",
+            "type": "element",
+            "typeInfo": "moysklad.retailDemand",
+            "wrapperElementName": "retailDemand"
+          },
+          0,
+          0
+        ],
+        "_47": [
+          {
+            "collection": true,
+            "name": "retailSalesReturn",
+            "type": "element",
+            "typeInfo": "moysklad.retailSalesReturn",
+            "wrapperElementName": "retailSalesReturn"
+          },
+          0,
+          0
+        ]
+      }
+    },
+    "124": {
+      "propertyInfos": {
+        "0": {
+          "name": [
+            "emailedDate",
+            "publicId"
+          ],
+          "typeInfo": [
+            "DateTime",
+            "String"
+          ]
+        },
+        "_t": "a",
+        "_1": [
+          {
+            "name": "publicId",
+            "type": "attribute",
+            "typeInfo": "String"
+          },
+          0,
+          0
+        ]
+      }
+    },
+    "141": {
+      "propertyInfos": {
+        "_t": "a",
+        "_2": [
+          {
+            "collection": true,
+            "elementName": "salesReturnRef",
+            "name": "salesReturnsUuid",
+            "type": "element",
+            "typeInfo": "IDREF",
+            "wrapperElementName": "salesReturnsUuid"
+          },
+          0,
+          0
+        ]
+      }
+    },
+    "142": [
+      {
+        "baseTypeInfo": "moysklad.retailDrawerCashOperation",
+        "localName": "retailDrawerCashIn",
+        "propertyInfos": [],
+        "type": "classInfo"
+      }
+    ],
+    "143": [
+      {
+        "baseTypeInfo": "moysklad.operation",
+        "localName": "retailDrawerCashOperation",
+        "propertyInfos": [],
+        "type": "classInfo"
+      }
+    ],
+    "144": [
+      {
+        "baseTypeInfo": "moysklad.retailDrawerCashOperation",
+        "localName": "retailDrawerCashOut",
+        "propertyInfos": [],
+        "type": "classInfo"
+      }
+    ],
+    "145": {
+      "propertyInfos": {
+        "_t": "a",
+        "_0": [
+          {
+            "name": "demandUuid",
+            "type": "attribute",
+            "typeInfo": "IDREF"
+          },
+          0,
+          0
+        ]
+      }
+    },
+    "148": {
+      "propertyInfos": {
+        "_t": "a",
+        "_0": [
+          {
+            "name": "demandUuid",
+            "type": "attribute",
+            "typeInfo": "IDREF"
+          },
+          0,
+          0
+        ]
+      }
+    },
+    "_t": "a",
+    "_141": [
+      {
+        "baseTypeInfo": "moysklad.abstractCashIn",
+        "localName": "retailCashIn",
+        "propertyInfos": [],
+        "type": "classInfo"
+      },
+      0,
+      0
+    ],
+    "_142": [
+      {
+        "baseTypeInfo": "moysklad.abstractCashOut",
+        "localName": "retailCashOut",
+        "propertyInfos": [],
+        "type": "classInfo"
+      },
+      0,
+      0
+    ]
+  }
+}

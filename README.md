@@ -30,7 +30,7 @@ DEBUG=moysklad-model
 обновить модель
 
 ```bash
-$ npm run update-model
+$ npm run update
 ```
 
 Если схема данных изменилась, будут отображены изменения и файлы модели в папке `dist` обновятся.
