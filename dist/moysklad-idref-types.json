@@ -5,18 +5,24 @@
   "abstractDemand": {
     "customerOrderUuid": "customerOrder",
     "factureUuid": "factureOut",
-    "invoicesOutUuid": "invoicesOut",
+    "invoicesOutUuid": {
+      "collection": true,
+      "type": "invoiceOut"
+    },
     "paymentsUuid": {
       "collection": true,
       "type": "financeIn"
     },
-    "salesReturnsUuid": "salesReturns"
+    "salesReturnsUuid": {
+      "collection": true,
+      "type": "salesReturn"
+    }
   },
   "abstractGood": {
     "buyCurrencyUuid": "currency",
     "countryUuid": "country",
     "saleCurrencyUuid": "currency",
-    "supplierUuid": "supplier",
+    "supplierUuid": "agent",
     "uomUuid": "uom"
   },
   "abstractSalesReturn": {
@@ -121,12 +127,6 @@
       "type": "purchaseOrder"
     }
   },
-  "demand": {
-    "salesReturnsUuid": {
-      "collection": true,
-      "type": "salesReturn"
-    }
-  },
   "demandExtension": {
     "carrierUuid": "agent"
   },
@@ -160,7 +160,7 @@
     },
     "returnsUuid": {
       "collection": true,
-      "type": "return"
+      "type": "salesReturn"
     }
   },
   "feature": {
@@ -181,7 +181,7 @@
     "purchaseReturnUuid": "purchaseReturn"
   },
   "financeOut": {
-    "commissionreportoutUuid": "commissionreportout",
+    "commissionreportoutUuid": "commissionReportOut",
     "factureInUuid": "factureIn",
     "invoiceInUuid": "invoiceIn",
     "purchaseOrderUuid": "purchaseOrder",
@@ -340,12 +340,6 @@
       "type": "financeIn"
     },
     "supplyUuid": "supply"
-  },
-  "retailDemand": {
-    "salesReturnsUuid": {
-      "collection": true,
-      "type": "salesReturn"
-    }
   },
   "retailStore": {
     "acquireAccountUuid": "agentAccount",

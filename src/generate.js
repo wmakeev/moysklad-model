@@ -19,6 +19,18 @@ generateModel(function (err, model) {
       path.resolve(__dirname, '../dist/moysklad-model.min.json')))
   
   var idrefTypes = getIdrefTypes(model)
+
+  // TODO Разделить генерацию модели и idrefTypes
+  // IDREF types
+  // Shema: min версия
+  fs.writeFileSync(
+    path.resolve(__dirname, '../dist/moysklad-idref-types.min.json'),
+    JSON.stringify(idrefTypes))
+
+  // Shema: beautified version
+  fs.writeFileSync(
+    path.resolve(__dirname, '../dist/moysklad-idref-types.json'),
+    JSON.stringify(idrefTypes, null, 2))
   
   var diff = diffPatch.diff(currentModel, model)
 
@@ -44,17 +56,6 @@ generateModel(function (err, model) {
   fs.writeFileSync(
     path.resolve(__dirname, '../dist/moysklad-model.json'),
     JSON.stringify(model, null, 2))
-
-  // IDREF types
-  // Shema: min версия
-  fs.writeFileSync(
-    path.resolve(__dirname, '../dist/moysklad-idref-types.min.json'),
-    JSON.stringify(idrefTypes))
-
-  // Shema: beautified version
-  fs.writeFileSync(
-    path.resolve(__dirname, '../dist/moysklad-idref-types.json'),
-    JSON.stringify(idrefTypes, null, 2))
 
   log('Модель обновлена')
 })

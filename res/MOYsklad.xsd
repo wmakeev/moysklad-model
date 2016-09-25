@@ -83,49 +83,19 @@
   <xs:element name="warehouse" type="warehouse"/>  
   <xs:element name="workflow" type="workflow"/>  
   <xs:element name="ymlConnectorSettings" type="ymlConnectorSettings"/>  
-  <xs:complexType name="service">
+  <xs:complexType name="uom">
     <xs:complexContent>
-      <xs:extension base="abstractGood">
+      <xs:extension base="predefinedLegendEntity">
         <xs:sequence/>
+        <xs:attribute name="type" type="uomType"/>
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>  
-  <xs:complexType abstract="true" name="abstractGood">
-    <xs:complexContent>
-      <xs:extension base="goodFolder">
-        <xs:sequence>
-          <xs:element minOccurs="0" name="salePrices" type="prices"/>
-          <xs:element maxOccurs="unbounded" minOccurs="0" ref="barcode"/>
-        </xs:sequence>
-        <xs:attribute name="uomUuid" type="xs:IDREF"/>
-        <xs:attribute name="countryUuid" type="xs:IDREF"/>
-        <xs:attribute name="supplierUuid" type="xs:IDREF"/>
-        <xs:attribute name="minPrice" type="xs:double" use="required"/>
-        <xs:attribute name="salePrice" type="xs:double"/>
-        <xs:attribute name="saleCurrencyUuid" type="xs:IDREF"/>
-        <xs:attribute name="buyPrice" type="xs:double"/>
-        <xs:attribute name="buyCurrencyUuid" type="xs:IDREF"/>
-      </xs:extension>
-    </xs:complexContent>
-  </xs:complexType>  
-  <xs:complexType name="goodFolder">
-    <xs:complexContent>
-      <xs:extension base="classifier">
-        <xs:sequence>
-          <xs:element maxOccurs="unbounded" minOccurs="0" name="attribute" type="goodAttributeValue"/>
-        </xs:sequence>
-        <xs:attribute name="archived" type="xs:boolean" use="required"/>
-        <xs:attribute name="atolId" type="xs:int"/>
-        <xs:attribute name="parentUuid" type="xs:IDREF"/>
-        <xs:attribute name="productCode" type="xs:string"/>
-        <xs:attribute name="vat" type="xs:long"/>
-      </xs:extension>
-    </xs:complexContent>
-  </xs:complexType>  
-  <xs:complexType abstract="true" name="classifier">
+  <xs:complexType name="predefinedLegendEntity">
     <xs:complexContent>
       <xs:extension base="legendEntity">
         <xs:sequence/>
+        <xs:attribute name="favourite" type="xs:boolean" use="required"/>
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>  
@@ -172,491 +142,10 @@
       <xs:element minOccurs="0" name="uuid" type="xs:ID"/>
     </xs:sequence>
   </xs:complexType>  
-  <xs:complexType name="uom">
-    <xs:complexContent>
-      <xs:extension base="predefinedLegendEntity">
-        <xs:sequence/>
-        <xs:attribute name="type" type="uomType"/>
-      </xs:extension>
-    </xs:complexContent>
-  </xs:complexType>  
-  <xs:complexType name="predefinedLegendEntity">
-    <xs:complexContent>
-      <xs:extension base="legendEntity">
-        <xs:sequence/>
-        <xs:attribute name="favourite" type="xs:boolean" use="required"/>
-      </xs:extension>
-    </xs:complexContent>
-  </xs:complexType>  
-  <xs:complexType name="country">
-    <xs:complexContent>
-      <xs:extension base="predefinedLegendEntity">
-        <xs:sequence/>
-      </xs:extension>
-    </xs:complexContent>
-  </xs:complexType>  
-  <xs:complexType name="company">
-    <xs:complexContent>
-      <xs:extension base="agent">
-        <xs:sequence>
-          <xs:element maxOccurs="unbounded" minOccurs="0" name="attribute" type="agentAttributeValue"/>
-          <xs:element minOccurs="0" name="requisite" type="requisite"/>
-          <xs:element maxOccurs="unbounded" minOccurs="0" name="bankAccount" type="agentAccount"/>
-          <xs:element minOccurs="0" name="contact" type="contact"/>
-          <xs:element maxOccurs="unbounded" minOccurs="0" name="contactPerson" type="contactPerson"/>
-          <xs:element maxOccurs="unbounded" minOccurs="0" name="agentNewsItem" type="agentNewsItem"/>
-          <xs:element minOccurs="0" name="tags">
-            <xs:complexType>
-              <xs:sequence>
-                <xs:element maxOccurs="unbounded" minOccurs="0" name="tag" type="xs:string"/>
-              </xs:sequence>
-            </xs:complexType>
-          </xs:element>
-          <xs:element minOccurs="0" name="directorSign" type="agentPictureDocument"/>
-          <xs:element minOccurs="0" name="stamp" type="agentPictureDocument"/>
-        </xs:sequence>
-        <xs:attribute name="director" type="xs:string"/>
-        <xs:attribute name="chiefAccountant" type="xs:string"/>
-        <xs:attribute name="payerVat" type="xs:boolean"/>
-        <xs:attribute name="companyType" type="companyType"/>
-        <xs:attribute name="discountCardNumber" type="xs:string"/>
-        <xs:attribute name="stateUuid" type="xs:IDREF"/>
-        <xs:attribute name="priceTypeUuid" type="xs:IDREF"/>
-      </xs:extension>
-    </xs:complexContent>
-  </xs:complexType>  
-  <xs:complexType abstract="true" name="agent">
-    <xs:complexContent>
-      <xs:extension base="legendEntity">
-        <xs:sequence/>
-        <xs:attribute name="archived" type="xs:boolean" use="required"/>
-        <xs:attribute name="created" type="xs:dateTime"/>
-      </xs:extension>
-    </xs:complexContent>
-  </xs:complexType>  
-  <xs:complexType name="agentAttributeValue">
-    <xs:complexContent>
-      <xs:extension base="attributeValue">
-        <xs:sequence/>
-        <xs:attribute name="agentUuid" type="xs:IDREF" use="required"/>
-      </xs:extension>
-    </xs:complexContent>
-  </xs:complexType>  
-  <xs:complexType abstract="true" name="attributeValue">
-    <xs:complexContent>
-      <xs:extension base="infoEntity">
-        <xs:sequence>
-          <xs:element minOccurs="0" name="file" type="attachmentDocument"/>
-        </xs:sequence>
-        <xs:attribute name="metadataUuid" type="xs:IDREF" use="required"/>
-        <xs:attribute name="valueText" type="xs:string"/>
-        <xs:attribute name="valueString" type="xs:string"/>
-        <xs:attribute name="doubleValue" type="xs:double"/>
-        <xs:attribute name="longValue" type="xs:long"/>
-        <xs:attribute name="booleanValue" type="xs:boolean"/>
-        <xs:attribute name="timeValue" type="xs:dateTime"/>
-        <xs:attribute name="entityValueUuid" type="xs:IDREF"/>
-        <xs:attribute name="agentValueUuid" type="xs:IDREF"/>
-        <xs:attribute name="goodValueUuid" type="xs:IDREF"/>
-        <xs:attribute name="placeValueUuid" type="xs:IDREF"/>
-        <xs:attribute name="consignmentValueUuid" type="xs:IDREF"/>
-        <xs:attribute name="contractValueUuid" type="xs:IDREF"/>
-        <xs:attribute name="projectValueUuid" type="xs:IDREF"/>
-        <xs:attribute name="employeeValueUuid" type="xs:IDREF"/>
-      </xs:extension>
-    </xs:complexContent>
-  </xs:complexType>  
-  <xs:complexType name="attributeMetadata">
-    <xs:complexContent>
-      <xs:extension base="legendEntity">
-        <xs:sequence/>
-        <xs:attribute name="atolId" type="xs:int"/>
-        <xs:attribute name="attrType" type="attributeType"/>
-        <xs:attribute name="dictionaryMetadataUuid" type="xs:IDREF"/>
-        <xs:attribute name="entityMetadataUuid" type="xs:IDREF" use="required"/>
-        <xs:attribute name="feature" type="xs:boolean"/>
-        <xs:attribute name="position" type="xs:int" use="required"/>
-        <xs:attribute name="required" type="xs:boolean" use="required"/>
-      </xs:extension>
-    </xs:complexContent>
-  </xs:complexType>  
-  <xs:complexType name="entityMetadata">
-    <xs:complexContent>
-      <xs:extension base="legendEntity">
-        <xs:sequence>
-          <xs:element maxOccurs="unbounded" minOccurs="0" name="attributeMetadata" type="attributeMetadata"/>
-        </xs:sequence>
-        <xs:attribute name="uniqueCode" type="xs:boolean" use="required"/>
-        <xs:attribute name="codeValueType" type="xs:int" use="required"/>
-        <xs:attribute name="independentNameGenerator" type="xs:boolean" use="required"/>
-        <xs:attribute name="partialReserve" type="xs:boolean" use="required"/>
-        <xs:attribute name="noEditFromOtherPlaceSource" type="xs:boolean" use="required"/>
-        <xs:attribute name="noApplicableFromOtherPlaceSource" type="xs:boolean" use="required"/>
-        <xs:attribute name="noEditFromOtherPlaceTarget" type="xs:boolean" use="required"/>
-        <xs:attribute name="noApplicableFromOtherPlaceTarget" type="xs:boolean" use="required"/>
-        <xs:attribute name="editablePeriod" type="editablePeriodType"/>
-        <xs:attribute name="editableCalendarDays" type="xs:int" use="required"/>
-        <xs:attribute name="editableWorkDays" type="xs:int" use="required"/>
-        <xs:attribute name="editableFromDate" type="xs:dateTime"/>
-      </xs:extension>
-    </xs:complexContent>
-  </xs:complexType>  
-  <xs:complexType name="customEntity">
-    <xs:complexContent>
-      <xs:extension base="legendEntity">
-        <xs:sequence/>
-        <xs:attribute name="entityMetadataUuid" type="xs:IDREF" use="required"/>
-      </xs:extension>
-    </xs:complexContent>
-  </xs:complexType>  
-  <xs:complexType name="customEntityMetadata">
-    <xs:complexContent>
-      <xs:extension base="entityMetadata">
-        <xs:sequence/>
-      </xs:extension>
-    </xs:complexContent>
-  </xs:complexType>  
-  <xs:complexType name="attachmentDocument">
-    <xs:complexContent>
-      <xs:extension base="attachableDocument">
-        <xs:sequence/>
-      </xs:extension>
-    </xs:complexContent>
-  </xs:complexType>  
-  <xs:complexType abstract="true" name="attachableDocument">
-    <xs:complexContent>
-      <xs:extension base="document">
-        <xs:sequence/>
-      </xs:extension>
-    </xs:complexContent>
-  </xs:complexType>  
-  <xs:complexType abstract="true" name="document">
-    <xs:complexContent>
-      <xs:extension base="legendEntity">
-        <xs:sequence>
-          <xs:element minOccurs="0" name="contents" type="xs:base64Binary"/>
-        </xs:sequence>
-        <xs:attribute name="created" type="xs:dateTime"/>
-        <xs:attribute name="filename" type="xs:string"/>
-        <xs:attribute name="miniatureUuid" type="xs:IDREF"/>
-      </xs:extension>
-    </xs:complexContent>
-  </xs:complexType>  
-  <xs:complexType name="documentMiniature">
-    <xs:complexContent>
-      <xs:extension base="document">
-        <xs:sequence/>
-      </xs:extension>
-    </xs:complexContent>
-  </xs:complexType>  
-  <xs:complexType name="goodAttributeValue">
-    <xs:complexContent>
-      <xs:extension base="attributeValue">
-        <xs:sequence/>
-        <xs:attribute name="goodUuid" type="xs:IDREF" use="required"/>
-      </xs:extension>
-    </xs:complexContent>
-  </xs:complexType>  
-  <xs:complexType name="warehouse">
-    <xs:complexContent>
-      <xs:extension base="classifier">
-        <xs:sequence>
-          <xs:element maxOccurs="unbounded" minOccurs="0" name="attribute" type="placeAttributeValue"/>
-          <xs:element minOccurs="0" name="contact" type="contact"/>
-          <xs:element minOccurs="0" name="slots">
-            <xs:complexType>
-              <xs:sequence>
-                <xs:element maxOccurs="unbounded" minOccurs="0" ref="slot"/>
-              </xs:sequence>
-            </xs:complexType>
-          </xs:element>
-        </xs:sequence>
-        <xs:attribute name="archived" type="xs:boolean" use="required"/>
-        <xs:attribute name="parentUuid" type="xs:IDREF"/>
-      </xs:extension>
-    </xs:complexContent>
-  </xs:complexType>  
-  <xs:complexType name="placeAttributeValue">
-    <xs:complexContent>
-      <xs:extension base="attributeValue">
-        <xs:sequence/>
-        <xs:attribute name="placeUuid" type="xs:IDREF" use="required"/>
-      </xs:extension>
-    </xs:complexContent>
-  </xs:complexType>  
-  <xs:complexType name="contact">
-    <xs:sequence/>
-    <xs:attribute name="address" type="xs:string"/>
-    <xs:attribute name="phones" type="xs:string"/>
-    <xs:attribute name="faxes" type="xs:string"/>
-    <xs:attribute name="mobiles" type="xs:string"/>
-    <xs:attribute name="email" type="xs:string" use="required"/>
-  </xs:complexType>  
-  <xs:complexType name="slot">
-    <xs:complexContent>
-      <xs:extension base="legendEntity">
-        <xs:sequence/>
-        <xs:attribute name="warehouseUuid" type="xs:IDREF"/>
-      </xs:extension>
-    </xs:complexContent>
-  </xs:complexType>  
-  <xs:complexType name="consignment">
-    <xs:complexContent>
-      <xs:extension base="legendEntity">
-        <xs:sequence>
-          <xs:element maxOccurs="unbounded" minOccurs="0" ref="barcode"/>
-          <xs:element maxOccurs="unbounded" minOccurs="0" name="attribute" type="consignmentAttributeValue"/>
-          <xs:element minOccurs="0" ref="feature"/>
-        </xs:sequence>
-        <xs:attribute name="goodUuid" type="xs:IDREF"/>
-        <xs:attribute name="isDefault" type="xs:boolean" use="required"/>
-      </xs:extension>
-    </xs:complexContent>
-  </xs:complexType>  
-  <xs:complexType name="barcode">
-    <xs:complexContent>
-      <xs:extension base="entity">
-        <xs:sequence/>
-        <xs:attribute name="barcode" type="xs:string"/>
-        <xs:attribute name="barcodeType" type="barcodeType"/>
-      </xs:extension>
-    </xs:complexContent>
-  </xs:complexType>  
-  <xs:complexType name="consignmentAttributeValue">
-    <xs:complexContent>
-      <xs:extension base="attributeValue">
-        <xs:sequence/>
-        <xs:attribute name="consignmentUuid" type="xs:IDREF" use="required"/>
-      </xs:extension>
-    </xs:complexContent>
-  </xs:complexType>  
-  <xs:complexType name="feature">
-    <xs:complexContent>
-      <xs:extension base="legendEntity">
-        <xs:sequence>
-          <xs:element maxOccurs="unbounded" minOccurs="0" name="attribute" type="featureAttributeValue"/>
-        </xs:sequence>
-        <xs:attribute name="archived" type="xs:boolean" use="required"/>
-        <xs:attribute name="isDefault" type="xs:boolean" use="required"/>
-        <xs:attribute name="goodUuid" type="xs:IDREF" use="required"/>
-        <xs:attribute name="atolId" type="xs:int"/>
-      </xs:extension>
-    </xs:complexContent>
-  </xs:complexType>  
-  <xs:complexType name="featureAttributeValue">
-    <xs:complexContent>
-      <xs:extension base="attributeValue">
-        <xs:sequence/>
-        <xs:attribute name="atolId" type="xs:int"/>
-      </xs:extension>
-    </xs:complexContent>
-  </xs:complexType>  
-  <xs:complexType name="contract">
-    <xs:complexContent>
-      <xs:extension base="legendEntity">
-        <xs:sequence>
-          <xs:element maxOccurs="unbounded" minOccurs="0" name="attribute" type="contractAttributeValue"/>
-          <xs:element maxOccurs="unbounded" minOccurs="0" name="document" type="contractDocument"/>
-          <xs:element minOccurs="0" name="sum" type="moneyAmount"/>
-        </xs:sequence>
-        <xs:attribute name="agentUuid" type="xs:IDREF"/>
-        <xs:attribute name="agentAccountUuid" type="xs:IDREF"/>
-        <xs:attribute name="archived" type="xs:boolean" use="required"/>
-        <xs:attribute name="contractType" type="contractType"/>
-        <xs:attribute name="currencyUuid" type="xs:IDREF"/>
-        <xs:attribute name="moment" type="xs:dateTime"/>
-        <xs:attribute name="ownCompanyUuid" type="xs:IDREF"/>
-        <xs:attribute name="ownCompanyAccountUuid" type="xs:IDREF"/>
-        <xs:attribute name="rewardPercent" type="xs:double" use="required"/>
-        <xs:attribute name="rewardType" type="rewardType"/>
-      </xs:extension>
-    </xs:complexContent>
-  </xs:complexType>  
-  <xs:complexType name="agentAccount">
-    <xs:complexContent>
-      <xs:extension base="infoEntity">
-        <xs:sequence/>
-        <xs:attribute name="accountNumber" type="xs:string"/>
-        <xs:attribute name="bankLocation" type="xs:string"/>
-        <xs:attribute name="bankName" type="xs:string"/>
-        <xs:attribute name="bic" type="xs:string"/>
-        <xs:attribute name="correspondentAccount" type="xs:string"/>
-        <xs:attribute name="isDefault" type="xs:boolean"/>
-      </xs:extension>
-    </xs:complexContent>
-  </xs:complexType>  
-  <xs:complexType name="contractAttributeValue">
-    <xs:complexContent>
-      <xs:extension base="attributeValue">
-        <xs:sequence/>
-        <xs:attribute name="contractUuid" type="xs:IDREF" use="required"/>
-      </xs:extension>
-    </xs:complexContent>
-  </xs:complexType>  
-  <xs:complexType name="currency">
-    <xs:complexContent>
-      <xs:extension base="legendEntity">
-        <xs:sequence>
-          <xs:element minOccurs="0" name="major" type="unit"/>
-          <xs:element minOccurs="0" name="minor" type="unit"/>
-        </xs:sequence>
-        <xs:attribute name="enteredRate" type="xs:double" use="required"/>
-        <xs:attribute name="invertRate" type="xs:boolean" use="required"/>
-        <xs:attribute name="isoCode" type="xs:string"/>
-        <xs:attribute name="rate" type="xs:double" use="required"/>
-      </xs:extension>
-    </xs:complexContent>
-  </xs:complexType>  
-  <xs:complexType name="unit">
-    <xs:all/>
-    <xs:attribute name="s1" type="xs:string"/>
-    <xs:attribute name="s24" type="xs:string"/>
-    <xs:attribute name="s5" type="xs:string"/>
-    <xs:attribute name="sex" type="xs:unsignedShort" use="required"/>
-  </xs:complexType>  
-  <xs:complexType name="contractDocument">
-    <xs:complexContent>
-      <xs:extension base="printedDocument">
-        <xs:sequence/>
-        <xs:attribute name="contractUuid" type="xs:IDREF"/>
-      </xs:extension>
-    </xs:complexContent>
-  </xs:complexType>  
-  <xs:complexType abstract="true" name="printedDocument">
-    <xs:complexContent>
-      <xs:extension base="document">
-        <xs:sequence/>
-        <xs:attribute name="publicId" type="xs:string"/>
-      </xs:extension>
-    </xs:complexContent>
-  </xs:complexType>  
-  <xs:complexType name="moneyAmount">
-    <xs:sequence/>
-    <xs:attribute name="sum" type="xs:double"/>
-    <xs:attribute name="sumInCurrency" type="xs:double"/>
-  </xs:complexType>  
-  <xs:complexType name="project">
-    <xs:complexContent>
-      <xs:extension base="legendEntity">
-        <xs:sequence>
-          <xs:element maxOccurs="unbounded" minOccurs="0" name="attribute" type="projectAttributeValue"/>
-        </xs:sequence>
-        <xs:attribute name="archived" type="xs:boolean" use="required"/>
-      </xs:extension>
-    </xs:complexContent>
-  </xs:complexType>  
-  <xs:complexType name="projectAttributeValue">
-    <xs:complexContent>
-      <xs:extension base="attributeValue">
-        <xs:sequence/>
-        <xs:attribute name="projectUuid" type="xs:IDREF" use="required"/>
-      </xs:extension>
-    </xs:complexContent>
-  </xs:complexType>  
-  <xs:complexType name="employee">
-    <xs:complexContent>
-      <xs:extension base="agent">
-        <xs:sequence>
-          <xs:element maxOccurs="unbounded" minOccurs="0" name="attribute" type="employeeAttributeValue"/>
-        </xs:sequence>
-        <xs:attribute name="atolId" type="xs:int"/>
-        <xs:attribute name="city" type="xs:string"/>
-        <xs:attribute name="email" type="xs:string"/>
-        <xs:attribute name="fax" type="xs:string"/>
-        <xs:attribute name="firstName" type="xs:string"/>
-        <xs:attribute name="icqNumber" type="xs:string"/>
-        <xs:attribute name="lastName" type="xs:string"/>
-        <xs:attribute name="middleName" type="xs:string"/>
-        <xs:attribute name="mobile" type="xs:string"/>
-        <xs:attribute name="phone" type="xs:string"/>
-        <xs:attribute name="postalAddress" type="xs:string"/>
-        <xs:attribute name="postalCode" type="xs:string"/>
-        <xs:attribute name="pzInternalNumber" type="xs:string"/>
-        <xs:attribute name="skypeName" type="xs:string"/>
-        <xs:attribute name="uid" type="xs:string"/>
-      </xs:extension>
-    </xs:complexContent>
-  </xs:complexType>  
-  <xs:complexType name="employeeAttributeValue">
-    <xs:complexContent>
-      <xs:extension base="attributeValue">
-        <xs:sequence/>
-        <xs:attribute name="employeeUuid" type="xs:IDREF" use="required"/>
-      </xs:extension>
-    </xs:complexContent>
-  </xs:complexType>  
-  <xs:complexType name="requisite">
+  <xs:complexType name="collectionContainer">
     <xs:sequence>
-      <xs:element minOccurs="0" name="bankAccount" type="agentAccount"/>
+      <xs:any maxOccurs="unbounded" minOccurs="0" namespace="##other" processContents="lax"/>
     </xs:sequence>
-    <xs:attribute name="legalTitle" type="xs:string"/>
-    <xs:attribute name="legalAddress" type="xs:string"/>
-    <xs:attribute name="actualAddress" type="xs:string"/>
-    <xs:attribute name="inn" type="xs:string"/>
-    <xs:attribute name="kpp" type="xs:string"/>
-    <xs:attribute name="okpo" type="xs:string"/>
-    <xs:attribute name="ogrn" type="xs:string"/>
-    <xs:attribute name="ogrnip" type="xs:string"/>
-    <xs:attribute name="nomerSvidetelstva" type="xs:string"/>
-    <xs:attribute name="dataSvidetelstva" type="xs:dateTime"/>
-  </xs:complexType>  
-  <xs:complexType name="contactPerson">
-    <xs:complexContent>
-      <xs:extension base="legendEntity">
-        <xs:sequence/>
-        <xs:attribute name="email" type="xs:string"/>
-        <xs:attribute name="phone" type="xs:string"/>
-        <xs:attribute name="position" type="xs:string"/>
-      </xs:extension>
-    </xs:complexContent>
-  </xs:complexType>  
-  <xs:complexType name="agentNewsItem">
-    <xs:complexContent>
-      <xs:extension base="infoEntity">
-        <xs:sequence>
-          <xs:element minOccurs="0" name="text" type="xs:string"/>
-        </xs:sequence>
-        <xs:attribute name="moment" type="xs:dateTime"/>
-      </xs:extension>
-    </xs:complexContent>
-  </xs:complexType>  
-  <xs:complexType name="agentPictureDocument">
-    <xs:complexContent>
-      <xs:extension base="attachableDocument">
-        <xs:sequence/>
-      </xs:extension>
-    </xs:complexContent>
-  </xs:complexType>  
-  <xs:complexType name="state">
-    <xs:complexContent>
-      <xs:extension base="legendEntity">
-        <xs:sequence/>
-      </xs:extension>
-    </xs:complexContent>
-  </xs:complexType>  
-  <xs:complexType name="priceType">
-    <xs:complexContent>
-      <xs:extension base="infoEntity">
-        <xs:sequence/>
-        <xs:attribute name="index" type="xs:int" use="required"/>
-        <xs:attribute name="name" type="xs:string"/>
-      </xs:extension>
-    </xs:complexContent>
-  </xs:complexType>  
-  <xs:complexType name="prices">
-    <xs:sequence>
-      <xs:element maxOccurs="unbounded" minOccurs="0" name="price" type="price"/>
-    </xs:sequence>
-  </xs:complexType>  
-  <xs:complexType name="price">
-    <xs:complexContent>
-      <xs:extension base="entity">
-        <xs:sequence/>
-        <xs:attribute name="currencyUuid" type="xs:IDREF"/>
-        <xs:attribute name="priceTypeUuid" type="xs:IDREF"/>
-        <xs:attribute name="value" type="xs:double"/>
-      </xs:extension>
-    </xs:complexContent>
   </xs:complexType>  
   <xs:complexType name="exchangeContainer">
     <xs:sequence>
@@ -1136,6 +625,515 @@
       <xs:extension base="attributeValue">
         <xs:sequence/>
         <xs:attribute name="operationUuid" type="xs:IDREF" use="required"/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>  
+  <xs:complexType abstract="true" name="attributeValue">
+    <xs:complexContent>
+      <xs:extension base="infoEntity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="file" type="attachmentDocument"/>
+        </xs:sequence>
+        <xs:attribute name="metadataUuid" type="xs:IDREF" use="required"/>
+        <xs:attribute name="valueText" type="xs:string"/>
+        <xs:attribute name="valueString" type="xs:string"/>
+        <xs:attribute name="doubleValue" type="xs:double"/>
+        <xs:attribute name="longValue" type="xs:long"/>
+        <xs:attribute name="booleanValue" type="xs:boolean"/>
+        <xs:attribute name="timeValue" type="xs:dateTime"/>
+        <xs:attribute name="entityValueUuid" type="xs:IDREF"/>
+        <xs:attribute name="agentValueUuid" type="xs:IDREF"/>
+        <xs:attribute name="goodValueUuid" type="xs:IDREF"/>
+        <xs:attribute name="placeValueUuid" type="xs:IDREF"/>
+        <xs:attribute name="consignmentValueUuid" type="xs:IDREF"/>
+        <xs:attribute name="contractValueUuid" type="xs:IDREF"/>
+        <xs:attribute name="projectValueUuid" type="xs:IDREF"/>
+        <xs:attribute name="employeeValueUuid" type="xs:IDREF"/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>  
+  <xs:complexType name="attributeMetadata">
+    <xs:complexContent>
+      <xs:extension base="legendEntity">
+        <xs:sequence/>
+        <xs:attribute name="atolId" type="xs:int"/>
+        <xs:attribute name="attrType" type="attributeType"/>
+        <xs:attribute name="dictionaryMetadataUuid" type="xs:IDREF"/>
+        <xs:attribute name="entityMetadataUuid" type="xs:IDREF" use="required"/>
+        <xs:attribute name="feature" type="xs:boolean"/>
+        <xs:attribute name="position" type="xs:int" use="required"/>
+        <xs:attribute name="required" type="xs:boolean" use="required"/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>  
+  <xs:complexType name="entityMetadata">
+    <xs:complexContent>
+      <xs:extension base="legendEntity">
+        <xs:sequence>
+          <xs:element maxOccurs="unbounded" minOccurs="0" name="attributeMetadata" type="attributeMetadata"/>
+        </xs:sequence>
+        <xs:attribute name="uniqueCode" type="xs:boolean" use="required"/>
+        <xs:attribute name="codeValueType" type="xs:int" use="required"/>
+        <xs:attribute name="independentNameGenerator" type="xs:boolean" use="required"/>
+        <xs:attribute name="partialReserve" type="xs:boolean" use="required"/>
+        <xs:attribute name="noEditFromOtherPlaceSource" type="xs:boolean" use="required"/>
+        <xs:attribute name="noApplicableFromOtherPlaceSource" type="xs:boolean" use="required"/>
+        <xs:attribute name="noEditFromOtherPlaceTarget" type="xs:boolean" use="required"/>
+        <xs:attribute name="noApplicableFromOtherPlaceTarget" type="xs:boolean" use="required"/>
+        <xs:attribute name="editablePeriod" type="editablePeriodType"/>
+        <xs:attribute name="editableCalendarDays" type="xs:int" use="required"/>
+        <xs:attribute name="editableWorkDays" type="xs:int" use="required"/>
+        <xs:attribute name="editableFromDate" type="xs:dateTime"/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>  
+  <xs:complexType name="customEntity">
+    <xs:complexContent>
+      <xs:extension base="legendEntity">
+        <xs:sequence/>
+        <xs:attribute name="entityMetadataUuid" type="xs:IDREF" use="required"/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>  
+  <xs:complexType name="customEntityMetadata">
+    <xs:complexContent>
+      <xs:extension base="entityMetadata">
+        <xs:sequence/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>  
+  <xs:complexType name="attachmentDocument">
+    <xs:complexContent>
+      <xs:extension base="attachableDocument">
+        <xs:sequence/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>  
+  <xs:complexType abstract="true" name="attachableDocument">
+    <xs:complexContent>
+      <xs:extension base="document">
+        <xs:sequence/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>  
+  <xs:complexType abstract="true" name="document">
+    <xs:complexContent>
+      <xs:extension base="legendEntity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="contents" type="xs:base64Binary"/>
+        </xs:sequence>
+        <xs:attribute name="created" type="xs:dateTime"/>
+        <xs:attribute name="filename" type="xs:string"/>
+        <xs:attribute name="miniatureUuid" type="xs:IDREF"/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>  
+  <xs:complexType name="documentMiniature">
+    <xs:complexContent>
+      <xs:extension base="document">
+        <xs:sequence/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>  
+  <xs:complexType name="company">
+    <xs:complexContent>
+      <xs:extension base="agent">
+        <xs:sequence>
+          <xs:element maxOccurs="unbounded" minOccurs="0" name="attribute" type="agentAttributeValue"/>
+          <xs:element minOccurs="0" name="requisite" type="requisite"/>
+          <xs:element maxOccurs="unbounded" minOccurs="0" name="bankAccount" type="agentAccount"/>
+          <xs:element minOccurs="0" name="contact" type="contact"/>
+          <xs:element maxOccurs="unbounded" minOccurs="0" name="contactPerson" type="contactPerson"/>
+          <xs:element maxOccurs="unbounded" minOccurs="0" name="agentNewsItem" type="agentNewsItem"/>
+          <xs:element minOccurs="0" name="tags">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element maxOccurs="unbounded" minOccurs="0" name="tag" type="xs:string"/>
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+          <xs:element minOccurs="0" name="directorSign" type="agentPictureDocument"/>
+          <xs:element minOccurs="0" name="stamp" type="agentPictureDocument"/>
+        </xs:sequence>
+        <xs:attribute name="director" type="xs:string"/>
+        <xs:attribute name="chiefAccountant" type="xs:string"/>
+        <xs:attribute name="payerVat" type="xs:boolean"/>
+        <xs:attribute name="companyType" type="companyType"/>
+        <xs:attribute name="discountCardNumber" type="xs:string"/>
+        <xs:attribute name="stateUuid" type="xs:IDREF"/>
+        <xs:attribute name="priceTypeUuid" type="xs:IDREF"/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>  
+  <xs:complexType abstract="true" name="agent">
+    <xs:complexContent>
+      <xs:extension base="legendEntity">
+        <xs:sequence/>
+        <xs:attribute name="archived" type="xs:boolean" use="required"/>
+        <xs:attribute name="created" type="xs:dateTime"/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>  
+  <xs:complexType name="agentAttributeValue">
+    <xs:complexContent>
+      <xs:extension base="attributeValue">
+        <xs:sequence/>
+        <xs:attribute name="agentUuid" type="xs:IDREF" use="required"/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>  
+  <xs:complexType name="requisite">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="bankAccount" type="agentAccount"/>
+    </xs:sequence>
+    <xs:attribute name="legalTitle" type="xs:string"/>
+    <xs:attribute name="legalAddress" type="xs:string"/>
+    <xs:attribute name="actualAddress" type="xs:string"/>
+    <xs:attribute name="inn" type="xs:string"/>
+    <xs:attribute name="kpp" type="xs:string"/>
+    <xs:attribute name="okpo" type="xs:string"/>
+    <xs:attribute name="ogrn" type="xs:string"/>
+    <xs:attribute name="ogrnip" type="xs:string"/>
+    <xs:attribute name="nomerSvidetelstva" type="xs:string"/>
+    <xs:attribute name="dataSvidetelstva" type="xs:dateTime"/>
+  </xs:complexType>  
+  <xs:complexType name="agentAccount">
+    <xs:complexContent>
+      <xs:extension base="infoEntity">
+        <xs:sequence/>
+        <xs:attribute name="accountNumber" type="xs:string"/>
+        <xs:attribute name="bankLocation" type="xs:string"/>
+        <xs:attribute name="bankName" type="xs:string"/>
+        <xs:attribute name="bic" type="xs:string"/>
+        <xs:attribute name="correspondentAccount" type="xs:string"/>
+        <xs:attribute name="isDefault" type="xs:boolean"/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>  
+  <xs:complexType name="contact">
+    <xs:sequence/>
+    <xs:attribute name="address" type="xs:string"/>
+    <xs:attribute name="phones" type="xs:string"/>
+    <xs:attribute name="faxes" type="xs:string"/>
+    <xs:attribute name="mobiles" type="xs:string"/>
+    <xs:attribute name="email" type="xs:string" use="required"/>
+  </xs:complexType>  
+  <xs:complexType name="contactPerson">
+    <xs:complexContent>
+      <xs:extension base="legendEntity">
+        <xs:sequence/>
+        <xs:attribute name="email" type="xs:string"/>
+        <xs:attribute name="phone" type="xs:string"/>
+        <xs:attribute name="position" type="xs:string"/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>  
+  <xs:complexType name="agentNewsItem">
+    <xs:complexContent>
+      <xs:extension base="infoEntity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="text" type="xs:string"/>
+        </xs:sequence>
+        <xs:attribute name="moment" type="xs:dateTime"/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>  
+  <xs:complexType name="agentPictureDocument">
+    <xs:complexContent>
+      <xs:extension base="attachableDocument">
+        <xs:sequence/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>  
+  <xs:complexType name="state">
+    <xs:complexContent>
+      <xs:extension base="legendEntity">
+        <xs:sequence/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>  
+  <xs:complexType name="priceType">
+    <xs:complexContent>
+      <xs:extension base="infoEntity">
+        <xs:sequence/>
+        <xs:attribute name="index" type="xs:int" use="required"/>
+        <xs:attribute name="name" type="xs:string"/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>  
+  <xs:complexType name="goodFolder">
+    <xs:complexContent>
+      <xs:extension base="classifier">
+        <xs:sequence>
+          <xs:element maxOccurs="unbounded" minOccurs="0" name="attribute" type="goodAttributeValue"/>
+        </xs:sequence>
+        <xs:attribute name="archived" type="xs:boolean" use="required"/>
+        <xs:attribute name="atolId" type="xs:int"/>
+        <xs:attribute name="parentUuid" type="xs:IDREF"/>
+        <xs:attribute name="productCode" type="xs:string"/>
+        <xs:attribute name="vat" type="xs:long"/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>  
+  <xs:complexType abstract="true" name="classifier">
+    <xs:complexContent>
+      <xs:extension base="legendEntity">
+        <xs:sequence/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>  
+  <xs:complexType name="goodAttributeValue">
+    <xs:complexContent>
+      <xs:extension base="attributeValue">
+        <xs:sequence/>
+        <xs:attribute name="goodUuid" type="xs:IDREF" use="required"/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>  
+  <xs:complexType name="warehouse">
+    <xs:complexContent>
+      <xs:extension base="classifier">
+        <xs:sequence>
+          <xs:element maxOccurs="unbounded" minOccurs="0" name="attribute" type="placeAttributeValue"/>
+          <xs:element minOccurs="0" name="contact" type="contact"/>
+          <xs:element minOccurs="0" name="slots">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element maxOccurs="unbounded" minOccurs="0" ref="slot"/>
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:sequence>
+        <xs:attribute name="archived" type="xs:boolean" use="required"/>
+        <xs:attribute name="parentUuid" type="xs:IDREF"/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>  
+  <xs:complexType name="placeAttributeValue">
+    <xs:complexContent>
+      <xs:extension base="attributeValue">
+        <xs:sequence/>
+        <xs:attribute name="placeUuid" type="xs:IDREF" use="required"/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>  
+  <xs:complexType name="slot">
+    <xs:complexContent>
+      <xs:extension base="legendEntity">
+        <xs:sequence/>
+        <xs:attribute name="warehouseUuid" type="xs:IDREF"/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>  
+  <xs:complexType name="consignment">
+    <xs:complexContent>
+      <xs:extension base="legendEntity">
+        <xs:sequence>
+          <xs:element maxOccurs="unbounded" minOccurs="0" ref="barcode"/>
+          <xs:element maxOccurs="unbounded" minOccurs="0" name="attribute" type="consignmentAttributeValue"/>
+          <xs:element minOccurs="0" ref="feature"/>
+        </xs:sequence>
+        <xs:attribute name="goodUuid" type="xs:IDREF"/>
+        <xs:attribute name="isDefault" type="xs:boolean" use="required"/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>  
+  <xs:complexType name="barcode">
+    <xs:complexContent>
+      <xs:extension base="entity">
+        <xs:sequence/>
+        <xs:attribute name="barcode" type="xs:string"/>
+        <xs:attribute name="barcodeType" type="barcodeType"/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>  
+  <xs:complexType name="consignmentAttributeValue">
+    <xs:complexContent>
+      <xs:extension base="attributeValue">
+        <xs:sequence/>
+        <xs:attribute name="consignmentUuid" type="xs:IDREF" use="required"/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>  
+  <xs:complexType name="feature">
+    <xs:complexContent>
+      <xs:extension base="legendEntity">
+        <xs:sequence>
+          <xs:element maxOccurs="unbounded" minOccurs="0" name="attribute" type="featureAttributeValue"/>
+        </xs:sequence>
+        <xs:attribute name="archived" type="xs:boolean" use="required"/>
+        <xs:attribute name="isDefault" type="xs:boolean" use="required"/>
+        <xs:attribute name="goodUuid" type="xs:IDREF" use="required"/>
+        <xs:attribute name="atolId" type="xs:int"/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>  
+  <xs:complexType name="featureAttributeValue">
+    <xs:complexContent>
+      <xs:extension base="attributeValue">
+        <xs:sequence/>
+        <xs:attribute name="atolId" type="xs:int"/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>  
+  <xs:complexType abstract="true" name="abstractGood">
+    <xs:complexContent>
+      <xs:extension base="goodFolder">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="salePrices" type="prices"/>
+          <xs:element maxOccurs="unbounded" minOccurs="0" ref="barcode"/>
+        </xs:sequence>
+        <xs:attribute name="uomUuid" type="xs:IDREF"/>
+        <xs:attribute name="countryUuid" type="xs:IDREF"/>
+        <xs:attribute name="supplierUuid" type="xs:IDREF"/>
+        <xs:attribute name="minPrice" type="xs:double" use="required"/>
+        <xs:attribute name="salePrice" type="xs:double"/>
+        <xs:attribute name="saleCurrencyUuid" type="xs:IDREF"/>
+        <xs:attribute name="buyPrice" type="xs:double"/>
+        <xs:attribute name="buyCurrencyUuid" type="xs:IDREF"/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>  
+  <xs:complexType name="country">
+    <xs:complexContent>
+      <xs:extension base="predefinedLegendEntity">
+        <xs:sequence/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>  
+  <xs:complexType name="currency">
+    <xs:complexContent>
+      <xs:extension base="legendEntity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="major" type="unit"/>
+          <xs:element minOccurs="0" name="minor" type="unit"/>
+        </xs:sequence>
+        <xs:attribute name="enteredRate" type="xs:double" use="required"/>
+        <xs:attribute name="invertRate" type="xs:boolean" use="required"/>
+        <xs:attribute name="isoCode" type="xs:string"/>
+        <xs:attribute name="rate" type="xs:double" use="required"/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>  
+  <xs:complexType name="unit">
+    <xs:all/>
+    <xs:attribute name="s1" type="xs:string"/>
+    <xs:attribute name="s24" type="xs:string"/>
+    <xs:attribute name="s5" type="xs:string"/>
+    <xs:attribute name="sex" type="xs:unsignedShort" use="required"/>
+  </xs:complexType>  
+  <xs:complexType name="prices">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="price" type="price"/>
+    </xs:sequence>
+  </xs:complexType>  
+  <xs:complexType name="price">
+    <xs:complexContent>
+      <xs:extension base="entity">
+        <xs:sequence/>
+        <xs:attribute name="currencyUuid" type="xs:IDREF"/>
+        <xs:attribute name="priceTypeUuid" type="xs:IDREF"/>
+        <xs:attribute name="value" type="xs:double"/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>  
+  <xs:complexType name="contract">
+    <xs:complexContent>
+      <xs:extension base="legendEntity">
+        <xs:sequence>
+          <xs:element maxOccurs="unbounded" minOccurs="0" name="attribute" type="contractAttributeValue"/>
+          <xs:element maxOccurs="unbounded" minOccurs="0" name="document" type="contractDocument"/>
+          <xs:element minOccurs="0" name="sum" type="moneyAmount"/>
+        </xs:sequence>
+        <xs:attribute name="agentUuid" type="xs:IDREF"/>
+        <xs:attribute name="agentAccountUuid" type="xs:IDREF"/>
+        <xs:attribute name="archived" type="xs:boolean" use="required"/>
+        <xs:attribute name="contractType" type="contractType"/>
+        <xs:attribute name="currencyUuid" type="xs:IDREF"/>
+        <xs:attribute name="moment" type="xs:dateTime"/>
+        <xs:attribute name="ownCompanyUuid" type="xs:IDREF"/>
+        <xs:attribute name="ownCompanyAccountUuid" type="xs:IDREF"/>
+        <xs:attribute name="rewardPercent" type="xs:double" use="required"/>
+        <xs:attribute name="rewardType" type="rewardType"/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>  
+  <xs:complexType name="contractAttributeValue">
+    <xs:complexContent>
+      <xs:extension base="attributeValue">
+        <xs:sequence/>
+        <xs:attribute name="contractUuid" type="xs:IDREF" use="required"/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>  
+  <xs:complexType name="contractDocument">
+    <xs:complexContent>
+      <xs:extension base="printedDocument">
+        <xs:sequence/>
+        <xs:attribute name="contractUuid" type="xs:IDREF"/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>  
+  <xs:complexType abstract="true" name="printedDocument">
+    <xs:complexContent>
+      <xs:extension base="document">
+        <xs:sequence/>
+        <xs:attribute name="publicId" type="xs:string"/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>  
+  <xs:complexType name="moneyAmount">
+    <xs:sequence/>
+    <xs:attribute name="sum" type="xs:double"/>
+    <xs:attribute name="sumInCurrency" type="xs:double"/>
+  </xs:complexType>  
+  <xs:complexType name="project">
+    <xs:complexContent>
+      <xs:extension base="legendEntity">
+        <xs:sequence>
+          <xs:element maxOccurs="unbounded" minOccurs="0" name="attribute" type="projectAttributeValue"/>
+        </xs:sequence>
+        <xs:attribute name="archived" type="xs:boolean" use="required"/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>  
+  <xs:complexType name="projectAttributeValue">
+    <xs:complexContent>
+      <xs:extension base="attributeValue">
+        <xs:sequence/>
+        <xs:attribute name="projectUuid" type="xs:IDREF" use="required"/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>  
+  <xs:complexType name="employee">
+    <xs:complexContent>
+      <xs:extension base="agent">
+        <xs:sequence>
+          <xs:element maxOccurs="unbounded" minOccurs="0" name="attribute" type="employeeAttributeValue"/>
+        </xs:sequence>
+        <xs:attribute name="atolId" type="xs:int"/>
+        <xs:attribute name="city" type="xs:string"/>
+        <xs:attribute name="email" type="xs:string"/>
+        <xs:attribute name="fax" type="xs:string"/>
+        <xs:attribute name="firstName" type="xs:string"/>
+        <xs:attribute name="icqNumber" type="xs:string"/>
+        <xs:attribute name="lastName" type="xs:string"/>
+        <xs:attribute name="middleName" type="xs:string"/>
+        <xs:attribute name="mobile" type="xs:string"/>
+        <xs:attribute name="phone" type="xs:string"/>
+        <xs:attribute name="postalAddress" type="xs:string"/>
+        <xs:attribute name="postalCode" type="xs:string"/>
+        <xs:attribute name="pzInternalNumber" type="xs:string"/>
+        <xs:attribute name="skypeName" type="xs:string"/>
+        <xs:attribute name="uid" type="xs:string"/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>  
+  <xs:complexType name="employeeAttributeValue">
+    <xs:complexContent>
+      <xs:extension base="attributeValue">
+        <xs:sequence/>
+        <xs:attribute name="employeeUuid" type="xs:IDREF" use="required"/>
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>  
@@ -1972,6 +1970,13 @@
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>  
+  <xs:complexType name="service">
+    <xs:complexContent>
+      <xs:extension base="abstractGood">
+        <xs:sequence/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>  
   <xs:complexType name="processingPlan">
     <xs:complexContent>
       <xs:extension base="processingPlanFolder">
@@ -2293,11 +2298,6 @@
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>  
-  <xs:complexType name="collectionContainer">
-    <xs:sequence>
-      <xs:any maxOccurs="unbounded" minOccurs="0" namespace="##other" processContents="lax"/>
-    </xs:sequence>
-  </xs:complexType>  
   <xs:complexType name="cashier">
     <xs:complexContent>
       <xs:extension base="entity">
@@ -2422,6 +2422,13 @@
       <xs:enumeration value="DATE"/>
     </xs:restriction>
   </xs:simpleType>  
+  <xs:simpleType name="companyType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="URLI"/>
+      <xs:enumeration value="INPR"/>
+      <xs:enumeration value="FILI"/>
+    </xs:restriction>
+  </xs:simpleType>  
   <xs:simpleType name="barcodeType">
     <xs:restriction base="xs:string">
       <xs:enumeration value="EAN8"/>
@@ -2439,13 +2446,6 @@
     <xs:restriction base="xs:string">
       <xs:enumeration value="PercentOfSales"/>
       <xs:enumeration value="None"/>
-    </xs:restriction>
-  </xs:simpleType>  
-  <xs:simpleType name="companyType">
-    <xs:restriction base="xs:string">
-      <xs:enumeration value="URLI"/>
-      <xs:enumeration value="INPR"/>
-      <xs:enumeration value="FILI"/>
     </xs:restriction>
   </xs:simpleType>  
   <xs:simpleType name="overheadDistribution">
